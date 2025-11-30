@@ -1,0 +1,46 @@
+model:
+  name: "gpt2"
+  device: "cpu"
+  device_map: null
+  dtype: "float32"
+
+layers:
+  start: 4
+  end: 11
+
+datasets:
+  tofu:
+    num_queries: 20
+    source: "locuslab/TOFU"
+    subset: "forget01"
+  wmdp:
+    num_queries: 20
+    source: "cais/wmdp"
+    subset: "wmdp-bio"
+
+feature_params:
+  k_neighbors: 5
+  pca_components: 20
+
+attack:
+  num_anonymizations: 3
+  steering_strength: 2.0
+  num_samples: 5
+  temperature: 2.0
+  top_k: 40
+  max_new_tokens: 10
+  target_layer: 11
+
+prediction:
+  models:
+    - linear_regression
+    - ridge
+    - random_forest
+  cv_folds: 3
+  test_size: 0.2
+
+output:
+  save_activations: true
+  save_features: true
+  save_predictions: true
+  create_visualizations: true

@@ -87,7 +87,7 @@ class AnonymizedActivationSteering:
             handle.remove()
             
         return activation[0].squeeze(0)
-        
+    
     def create_anonymized_questions(
         self,
         question: str,
@@ -124,6 +124,27 @@ class AnonymizedActivationSteering:
             anonymized.append(anon)
             
         return anonymized
+    '''
+    def create_anonymized_questions(
+        self,
+        question: str,
+        num_anonymizations: int = 5
+    ) -> List[str]:
+        anonymized = []
+        
+        name_replacements = ['John Smith', 'Jane Doe', 'Alex Johnson', 'Sam Wilson', 'Chris Brown']
+        
+        for i in range(num_anonymizations):
+            anon = question
+            
+            multi_word_names = re.findall(r'\b[A-Z][a-z]+(?:\s+[A-Z][a-z]+)+\b', anon)
+            for name in multi_word_names:
+                anon = anon.replace(name, name_replacements[i % len(name_replacements)], 1)
+            
+            anonymized.append(anon)
+        
+        return anonymized
+    '''
         
     def compute_steering_vector(
         self,
@@ -162,31 +183,31 @@ class AnonymizedActivationSteering:
         temperature: float = 0.7
     ) -> List[str]:
         import time
-        print(f"[1/6] Starting generation with {num_samples} samples")
+        # print(f"[1/6] Starting generation with {num_samples} samples")
         
-        print(f"[2/6] Tokenizing prompt...")
+        # print(f"[2/6] Tokenizing prompt...")
         inputs = self.tokenizer(
             prompt, 
             return_tensors="pt", 
             truncation=True, 
             max_length=256
         ).to(self.device)
-        print(f"[2/6] Tokenization done. Input shape: {inputs['input_ids'].shape}")
+        # print(f"[2/6] Tokenization done. Input shape: {inputs['input_ids'].shape}")
         
-        print(f"[3/6] Getting target layer {steering_vector.layer}...")
+        # print(f"[3/6] Getting target layer {steering_vector.layer}...")
         layer = self._get_layer(steering_vector.layer)
-        print(f"[3/6] Layer obtained: {type(layer)}")
+        # print(f"[3/6] Layer obtained: {type(layer)}")
         
         generations = []
         
         for i in range(num_samples):
-            print(f"[4/{num_samples}] Sample {i+1}/{num_samples} - registering hook...")
+            # print(f"[4/{num_samples}] Sample {i+1}/{num_samples} - registering hook...")
             hook_applied = [False]
             
             def steering_hook(module, input, output):
                 if not hook_applied[0]:
                     hook_applied[0] = True
-                    print(f"    Hook triggered!")
+                    # print(f"    Hook triggered!")
                     if isinstance(output, tuple):
                         hidden = output[0]
                         hidden[:, -1, :] += self.steering_strength * steering_vector.vector.to(hidden.device)
@@ -197,7 +218,7 @@ class AnonymizedActivationSteering:
                 return output
             
             handle = layer.register_forward_hook(steering_hook)
-            print(f"    Hook registered, calling model.generate()...")
+            # print(f"    Hook registered, calling model.generate()...")
             
             try:
                 start = time.time()
@@ -206,22 +227,23 @@ class AnonymizedActivationSteering:
                         **inputs,
                         max_new_tokens=max_new_tokens,
                         temperature=temperature,
+                        top_k=40,
                         do_sample=True,
                         pad_token_id=self.tokenizer.pad_token_id
                     )
-                print(f"    Generation done in {time.time()-start:.1f}s")
+                # print(f"    Generation done in {time.time()-start:.1f}s")
             finally:
                 handle.remove()
-                print(f"    Hook removed")
+                # print(f"    Hook removed")
             
             generated_text = self.tokenizer.decode(
                 output_ids[0][inputs['input_ids'].shape[1]:],
                 skip_special_tokens=True
             )
             generations.append(generated_text.strip())
-            print(f"    Generated: {generated_text[:50]}...")
+            # print(f"    Generated: {generated_text[:50]}...")
         
-        print(f"[6/6] All {num_samples} samples completed!")
+        # print(f"[6/6] All {num_samples} samples completed!")
         return generations
         
     def compute_correct_answer_frequency(
@@ -259,7 +281,7 @@ class AnonymizedActivationSteering:
         steering_vector: SteeringVector,
         num_samples: int = 5,
         temperature: float = 2.0,
-        max_new_tokens: int = 10,
+        max_new_tokens: int = 50,
         prompt_template: str = "Question: {question}\nAnswer:"
     ) -> AttackResult:
         prompt = prompt_template.format(question=question)

@@ -1,7 +1,8 @@
 model:
   name: "gpt2"
   device: "cpu"
-  device_map: null
+  # device_map: null
+  device_map: auto
   dtype: "float32"
 
 layers:

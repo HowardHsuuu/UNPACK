@@ -48,8 +48,8 @@ class AnonymizedActivationSteering:
         self.steering_strength = steering_strength
         self.device = device
         
-        self.model = self.model.to("cpu")
-        self.device = "cpu"
+        # self.model = self.model.to("cpu")
+        # self.device = "cpu"
         self.model.eval()
         
     def _get_layer(self, layer_idx: int):
@@ -161,80 +161,67 @@ class AnonymizedActivationSteering:
         num_samples: int = 1,
         temperature: float = 0.7
     ) -> List[str]:
+        import time
+        print(f"[1/6] Starting generation with {num_samples} samples")
+        
+        print(f"[2/6] Tokenizing prompt...")
         inputs = self.tokenizer(
             prompt, 
             return_tensors="pt", 
             truncation=True, 
             max_length=256
         ).to(self.device)
+        print(f"[2/6] Tokenization done. Input shape: {inputs['input_ids'].shape}")
         
-        input_ids = inputs['input_ids']
-        attention_mask = inputs.get('attention_mask', torch.ones_like(input_ids))
-        original_length = input_ids.shape[1]
+        print(f"[3/6] Getting target layer {steering_vector.layer}...")
+        layer = self._get_layer(steering_vector.layer)
+        print(f"[3/6] Layer obtained: {type(layer)}")
         
         generations = []
-        layer = self._get_layer(steering_vector.layer)
         
-        for sample_idx in range(num_samples):
-            current_ids = input_ids.clone()
-            current_mask = attention_mask.clone()
+        for i in range(num_samples):
+            print(f"[4/{num_samples}] Sample {i+1}/{num_samples} - registering hook...")
+            hook_applied = [False]
             
-            for token_idx in range(max_new_tokens):
-                if token_idx == 0:
-                    hook_applied = [False]
-                    
-                    def steering_hook(module, input, output):
-                        if not hook_applied[0]:
-                            hook_applied[0] = True
-                            if isinstance(output, tuple):
-                                hidden = output[0].clone()
-                                hidden[:, -1, :] += self.steering_strength * steering_vector.vector.to(hidden.device)
-                                return (hidden,) + output[1:]
-                            else:
-                                output = output.clone()
-                                output[:, -1, :] += self.steering_strength * steering_vector.vector.to(output.device)
-                                return output
+            def steering_hook(module, input, output):
+                if not hook_applied[0]:
+                    hook_applied[0] = True
+                    print(f"    Hook triggered!")
+                    if isinstance(output, tuple):
+                        hidden = output[0]
+                        hidden[:, -1, :] += self.steering_strength * steering_vector.vector.to(hidden.device)
+                        return (hidden,) + output[1:]
+                    else:
+                        output[:, -1, :] += self.steering_strength * steering_vector.vector.to(output.device)
                         return output
-                    
-                    handle = layer.register_forward_hook(steering_hook)
-                    
-                    try:
-                        with torch.no_grad():
-                            outputs = self.model(
-                                input_ids=current_ids,
-                                attention_mask=current_mask
-                            )
-                    finally:
-                        handle.remove()
-                else:
-                    with torch.no_grad():
-                        outputs = self.model(
-                            input_ids=current_ids,
-                            attention_mask=current_mask
-                        )
-                
-                logits = outputs.logits[:, -1, :]
-                
-                if temperature > 0:
-                    logits = logits / temperature
-                    probs = torch.softmax(logits, dim=-1)
-                    next_token = torch.multinomial(probs, num_samples=1)
-                else:
-                    next_token = logits.argmax(dim=-1, keepdim=True)
-                
-                if next_token.item() == self.tokenizer.eos_token_id:
-                    break
-                    
-                current_ids = torch.cat([current_ids, next_token], dim=1)
-                current_mask = torch.cat([
-                    current_mask, 
-                    torch.ones((1, 1), device=self.device, dtype=current_mask.dtype)
-                ], dim=1)
+                return output
             
-            new_tokens = current_ids[0, original_length:]
-            generated_text = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
+            handle = layer.register_forward_hook(steering_hook)
+            print(f"    Hook registered, calling model.generate()...")
+            
+            try:
+                start = time.time()
+                with torch.no_grad():
+                    output_ids = self.model.generate(
+                        **inputs,
+                        max_new_tokens=max_new_tokens,
+                        temperature=temperature,
+                        do_sample=True,
+                        pad_token_id=self.tokenizer.pad_token_id
+                    )
+                print(f"    Generation done in {time.time()-start:.1f}s")
+            finally:
+                handle.remove()
+                print(f"    Hook removed")
+            
+            generated_text = self.tokenizer.decode(
+                output_ids[0][inputs['input_ids'].shape[1]:],
+                skip_special_tokens=True
+            )
             generations.append(generated_text.strip())
-            
+            print(f"    Generated: {generated_text[:50]}...")
+        
+        print(f"[6/6] All {num_samples} samples completed!")
         return generations
         
     def compute_correct_answer_frequency(

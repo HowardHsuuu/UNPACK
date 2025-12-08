@@ -1,8 +1,8 @@
 model:
   name: "locuslab/phi_grad_diff_1e-05_forget05"
-  revision: "checkpoint-420"
+  revision: "checkpoint-30"
   device: "cuda"
-  device_map: "auto"
+  device_map: auto
   dtype: "float16"
 
 layers:

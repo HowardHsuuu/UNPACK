@@ -37,27 +37,30 @@ def load_config(config_path: str) -> dict:
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
-
 def setup_model(config: dict):
     from transformers import AutoModelForCausalLM, AutoTokenizer
     
     model_name = config['model']['name']
     print(f"Loading model: {model_name}")
     
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    load_kwargs = {}
+    if 'revision' in config['model']:
+        load_kwargs['revision'] = config['model']['revision']
+    
+    tokenizer = AutoTokenizer.from_pretrained(model_name, **load_kwargs)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
-        
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        torch_dtype=getattr(torch, config['model']['dtype']),
-        device_map=config['model']['device_map'],
-        trust_remote_code=True
-    )
+    
+    model_kwargs = {
+        'torch_dtype': getattr(torch, config['model']['dtype']),
+        'device_map': config['model']['device_map'],
+        **load_kwargs
+    }
+    
+    model = AutoModelForCausalLM.from_pretrained(model_name, **model_kwargs)
     model.eval()
     
     return model, tokenizer
-
 
 class ExperimentPipeline:
     
@@ -85,12 +88,24 @@ class ExperimentPipeline:
         self.model, self.tokenizer = setup_model(self.config)
         
         print("\nLoading datasets...")
-        self.queries, self.labels = self.data_loader.load_combined(
-            tofu_queries=self.config['datasets']['tofu']['num_queries'],
-            wmdp_queries=self.config['datasets']['wmdp']['num_queries']
+        tofu_config = self.config['datasets']['tofu']
+        wmdp_config = self.config['datasets']['wmdp']
+        
+        tofu_queries = self.data_loader.load_tofu(
+            num_queries=tofu_config['num_queries'],
+            subset=tofu_config.get('subset', 'forget01')
         )
+        
+        wmdp_queries = self.data_loader.load_wmdp(
+            num_queries=wmdp_config['num_queries'],
+            subset=wmdp_config.get('subset', 'wmdp-bio')
+        )
+        
+        self.queries = tofu_queries + wmdp_queries
+        self.labels = np.array([q.dataset for q in self.queries])
+        
         print(f"Loaded {len(self.queries)} queries "
-              f"(TOFU: {sum(self.labels == 'tofu')}, WMDP: {sum(self.labels == 'wmdp')})")
+            f"(TOFU: {len(tofu_queries)}, WMDP: {len(wmdp_queries)})")
         
         texts = prepare_queries_for_extraction(self.queries, prompt_style="qa")
         query_ids = self.data_loader.get_query_ids(self.queries)

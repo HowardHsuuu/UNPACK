@@ -1,2 +1,2 @@
 # UNPACK
-UNPACK - UNlearning Predictability via Activation Characterization of Knowledge
+UNPACK - Unlearnability Predicting via Activation Characterization of Knowledge

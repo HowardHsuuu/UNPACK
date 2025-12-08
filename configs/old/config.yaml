@@ -1,16 +1,9 @@
-models:
-  base:
-    name: "locuslab/tofu_ft_phi-1.5"
-    device: "cuda"
-    device_map: "auto"
-    dtype: "float16"
-  
-  unlearned:
-    name: "locuslab/phi_grad_diff_1e-05_forget05"
-    revision: "checkpoint-30"
-    device: "cuda"
-    device_map: "auto"
-    dtype: "float16"
+model:
+  name: "locuslab/phi_grad_diff_1e-05_forget05"
+  revision: "checkpoint-30"
+  device: "cuda"
+  device_map: auto
+  dtype: "float16"
 
 layers:
   start: 8
@@ -18,7 +11,7 @@ layers:
 
 datasets:
   tofu:
-    num_queries: 50     # Reduced from 200 (still enough for stats)
+    num_queries: 200
     source: "locuslab/TOFU"
     subset: "forget05"
   wmdp:
@@ -36,12 +29,12 @@ geometric_features:
 
 feature_params:
   k_neighbors: 10
-  pca_components: 30    # Reduced from 50 (must be < num_queries)
+  pca_components: 50
 
 attack:
-  num_anonymizations: 5   # Reduced from 10 (still valid)
+  num_anonymizations: 10
   steering_strength: 2.0
-  num_samples: 10         # Reduced from 100 (KEY SPEEDUP)
+  num_samples: 100
   temperature: 2.0
   top_k: 40
   max_new_tokens: 50

@@ -37,23 +37,23 @@ def load_config(config_path: str) -> dict:
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
 
-def setup_model(config: dict):
+def setup_model(model_config: dict):
     from transformers import AutoModelForCausalLM, AutoTokenizer
     
-    model_name = config['model']['name']
+    model_name = model_config['name']
     print(f"Loading model: {model_name}")
     
     load_kwargs = {}
-    if 'revision' in config['model']:
-        load_kwargs['revision'] = config['model']['revision']
+    if 'revision' in model_config:
+        load_kwargs['revision'] = model_config['revision']
     
     tokenizer = AutoTokenizer.from_pretrained(model_name, **load_kwargs)
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
     
     model_kwargs = {
-        'torch_dtype': getattr(torch, config['model']['dtype']),
-        'device_map': config['model']['device_map'],
+        'torch_dtype': getattr(torch, model_config['dtype']),
+        'device_map': model_config['device_map'],
         **load_kwargs
     }
     
@@ -70,13 +70,17 @@ class ExperimentPipeline:
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         self.data_loader = DataLoader()
-        self.model = None
+        self.base_model = None
+        self.unlearned_model = None
         self.tokenizer = None
         
         self.queries = None
         self.labels = None
-        self.activations = None
-        self.geometric_features = None
+        self.base_activations = None
+        self.unlearned_activations = None
+        self.base_features = None
+        self.unlearned_features = None
+        self.direct_results = None
         self.attack_results = None
         self.prediction_results = None
         
@@ -84,8 +88,6 @@ class ExperimentPipeline:
         print("\n" + "="*60)
         print("PHASE 1: Data Loading & Activation Extraction")
         print("="*60)
-        
-        self.model, self.tokenizer = setup_model(self.config)
         
         print("\nLoading datasets...")
         tofu_config = self.config['datasets']['tofu']
@@ -114,17 +116,20 @@ class ExperimentPipeline:
             self.config['layers']['start'],
             self.config['layers']['end'] + 1
         ))
-        print(f"\nExtracting activations from layers {target_layers}")
+        
+        print("\n--- Extracting from BASE model ---")
+        print(f"Extracting activations from layers {target_layers}")
+        self.base_model, self.tokenizer = setup_model(self.config['models']['base'])
         
         extractor = ActivationExtractor(
-            model=self.model,
+            model=self.base_model,
             tokenizer=self.tokenizer,
             target_layers=target_layers,
             extraction_points=["hidden_states", "mlp"],
             device="cuda" if torch.cuda.is_available() else "cpu"
         )
         
-        self.activations = extractor.extract_batch(
+        self.base_activations = extractor.extract_batch(
             texts=texts,
             query_ids=query_ids,
             batch_size=4,
@@ -132,80 +137,234 @@ class ExperimentPipeline:
             show_progress=True
         )
         
-        activation_path = self.output_dir / "activations.pkl"
-        save_activation_cache(self.activations, str(activation_path))
-        print(f"Saved activations to {activation_path}")
+        base_activation_path = self.output_dir / "base_activations.pkl"
+        save_activation_cache(self.base_activations, str(base_activation_path))
+        print(f"Saved base activations to {base_activation_path}")
         
-        return self.activations
+        print("\n--- Extracting from UNLEARNED model ---")
+        print(f"Extracting activations from layers {target_layers}")
+        self.unlearned_model, _ = setup_model(self.config['models']['unlearned'])
+        
+        extractor = ActivationExtractor(
+            model=self.unlearned_model,
+            tokenizer=self.tokenizer,
+            target_layers=target_layers,
+            extraction_points=["hidden_states", "mlp"],
+            device="cuda" if torch.cuda.is_available() else "cpu"
+        )
+        
+        self.unlearned_activations = extractor.extract_batch(
+            texts=texts,
+            query_ids=query_ids,
+            batch_size=4,
+            return_last_token=True,
+            show_progress=True
+        )
+        
+        unlearned_activation_path = self.output_dir / "unlearned_activations.pkl"
+        save_activation_cache(self.unlearned_activations, str(unlearned_activation_path))
+        print(f"Saved unlearned activations to {unlearned_activation_path}")
+        
+        return self.base_activations, self.unlearned_activations
         
     def run_phase2_geometric_features(self):
         print("\n" + "="*60)
         print("PHASE 2: Geometric Feature Computation")
         print("="*60)
         
-        if self.activations is None:
-            activation_path = self.output_dir / "activations.pkl"
-            if activation_path.exists():
-                print("Loading activations from file...")
-                self.activations = load_activation_cache(str(activation_path))
+        if self.base_activations is None:
+            base_activation_path = self.output_dir / "base_activations.pkl"
+            if base_activation_path.exists():
+                print("Loading base activations from file...")
+                self.base_activations = load_activation_cache(str(base_activation_path))
             else:
-                raise ValueError("No activations available. Run phase 1 first.")
-                
-        activations_by_layer = {
-            layer: get_layer_activations_as_matrix(self.activations, layer, "hidden")
-            for layer in self.activations.hidden_states.keys()
+                raise ValueError("No base activations available. Run phase 1 first.")
+        
+        if self.unlearned_activations is None:
+            unlearned_activation_path = self.output_dir / "unlearned_activations.pkl"
+            if unlearned_activation_path.exists():
+                print("Loading unlearned activations from file...")
+                self.unlearned_activations = load_activation_cache(str(unlearned_activation_path))
+            else:
+                raise ValueError("No unlearned activations available. Run phase 1 first.")
+        
+        print("\n--- Computing features for BASE model ---")
+        base_activations_by_layer = {
+            layer: get_layer_activations_as_matrix(self.base_activations, layer, "hidden")
+            for layer in self.base_activations.hidden_states.keys()
         }
         
-        print("\nComputing geometric features...")
-        
-        features_by_layer = compute_features_all_layers(
-            activations_by_layer=activations_by_layer,
+        base_features_by_layer = compute_features_all_layers(
+            activations_by_layer=base_activations_by_layer,
             labels=self.labels,
-            query_ids=self.activations.query_ids,
+            query_ids=self.base_activations.query_ids,
             k_neighbors=self.config['feature_params']['k_neighbors'],
             pca_components=self.config['feature_params']['pca_components']
         )
         
-        print("Aggregating features across layers...")
-        aggregated = aggregate_features_across_layers(features_by_layer)
+        base_aggregated = aggregate_features_across_layers(base_features_by_layer)
         
-        self.geometric_features = pd.DataFrame(aggregated)
-        self.geometric_features['dataset'] = self.labels
-        
+        self.base_features = pd.DataFrame(base_aggregated)
+        self.base_features['dataset'] = self.labels
         query_ids = self.data_loader.get_query_ids(self.queries)
-        self.geometric_features['query_id'] = query_ids
-        
+        self.base_features['query_id'] = query_ids
         answers = self.data_loader.get_answers(self.queries)
-        self.geometric_features['answer'] = answers
+        self.base_features['answer'] = answers
         
-        features_path = self.output_dir / "geometric_features.csv"
-        self.geometric_features.to_csv(features_path, index=False)
-        print(f"Saved features to {features_path}")
+        base_features_path = self.output_dir / "base_geometric_features.csv"
+        self.base_features.to_csv(base_features_path, index=False)
+        print(f"Saved base features to {base_features_path}")
         
-        print("\nFeature Statistics:")
-        feature_cols = [c for c in self.geometric_features.columns 
+        print("\n--- Computing features for UNLEARNED model ---")
+        unlearned_activations_by_layer = {
+            layer: get_layer_activations_as_matrix(self.unlearned_activations, layer, "hidden")
+            for layer in self.unlearned_activations.hidden_states.keys()
+        }
+        
+        unlearned_features_by_layer = compute_features_all_layers(
+            activations_by_layer=unlearned_activations_by_layer,
+            labels=self.labels,
+            query_ids=self.unlearned_activations.query_ids,
+            k_neighbors=self.config['feature_params']['k_neighbors'],
+            pca_components=self.config['feature_params']['pca_components']
+        )
+        
+        unlearned_aggregated = aggregate_features_across_layers(unlearned_features_by_layer)
+        
+        self.unlearned_features = pd.DataFrame(unlearned_aggregated)
+        self.unlearned_features['dataset'] = self.labels
+        self.unlearned_features['query_id'] = query_ids
+        self.unlearned_features['answer'] = answers
+        
+        unlearned_features_path = self.output_dir / "unlearned_geometric_features.csv"
+        self.unlearned_features.to_csv(unlearned_features_path, index=False)
+        print(f"Saved unlearned features to {unlearned_features_path}")
+        
+        print("\nBase Feature Statistics:")
+        feature_cols = [c for c in self.base_features.columns 
                        if c not in ['query_id', 'dataset', 'answer']]
-        print(self.geometric_features[feature_cols].describe())
+        print(self.base_features[feature_cols].describe())
         
-        return self.geometric_features
+        return self.base_features, self.unlearned_features
         
     def run_phase3_attack(self):
         print("\n" + "="*60)
-        print("PHASE 3: Activation Steering Attack")
+        print("PHASE 3: Vulnerability Testing")
         print("="*60)
         
-        if self.model is None:
-            self.model, self.tokenizer = setup_model(self.config)
+        if self.base_model is None:
+            self.base_model, self.tokenizer = setup_model(self.config['models']['base'])
+        
+        if self.unlearned_model is None:
+            self.unlearned_model, _ = setup_model(self.config['models']['unlearned'])
+        
+        questions = [q.question for q in self.queries]
+        ground_truths = [q.answer for q in self.queries]
+        query_ids = [q.query_id for q in self.queries]
+        
+        print("\n--- Part A: Base Model Accuracy (baseline) ---")
+        base_results = []
+        for i in tqdm(range(len(questions)), desc="Base model queries"):
+            prompt = f"Question: {questions[i]}\nAnswer:"
+            inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True, max_length=256).to("cuda")
             
+            with torch.no_grad():
+                outputs = self.base_model.generate(
+                    **inputs,
+                    max_new_tokens=50,
+                    do_sample=False,
+                    pad_token_id=self.tokenizer.pad_token_id
+                )
+            
+            response = self.tokenizer.decode(
+                outputs[0][inputs['input_ids'].shape[1]:],
+                skip_special_tokens=True
+            ).strip()
+            
+            gt_lower = ground_truths[i].lower().strip()
+            resp_lower = response.lower()
+            
+            if gt_lower in resp_lower:
+                accuracy = 1.0
+            else:
+                gt_words = [w for w in gt_lower.split() if len(w) > 2][:3]
+                if len(gt_words) >= 2:
+                    matches = sum(1 for w in gt_words if w in resp_lower)
+                    accuracy = matches / len(gt_words)
+                else:
+                    accuracy = 0.0
+            
+            base_results.append({
+                'query_id': query_ids[i],
+                'base_accuracy': accuracy,
+                'response': response
+            })
+        
+        base_df = pd.DataFrame(base_results)
+        base_path = self.output_dir / "base_accuracy.csv"
+        base_df.to_csv(base_path, index=False)
+        print(f"Saved base model accuracy to {base_path}")
+        print(f"Base model accuracy: {base_df['base_accuracy'].mean():.3f}")
+        
+        print("\n--- Part B: Unlearned Model Retention (direct query, no steering) ---")
+        direct_results = []
+        for i in tqdm(range(len(questions)), desc="Unlearned model queries"):
+            prompt = f"Question: {questions[i]}\nAnswer:"
+            inputs = self.tokenizer(prompt, return_tensors="pt", truncation=True, max_length=256).to("cuda")
+            
+            with torch.no_grad():
+                outputs = self.unlearned_model.generate(
+                    **inputs,
+                    max_new_tokens=50,
+                    do_sample=False,
+                    pad_token_id=self.tokenizer.pad_token_id
+                )
+            
+            response = self.tokenizer.decode(
+                outputs[0][inputs['input_ids'].shape[1]:],
+                skip_special_tokens=True
+            ).strip()
+            
+            gt_lower = ground_truths[i].lower().strip()
+            resp_lower = response.lower()
+            
+            if gt_lower in resp_lower:
+                retention = 1.0
+            else:
+                gt_words = [w for w in gt_lower.split() if len(w) > 2][:3]
+                if len(gt_words) >= 2:
+                    matches = sum(1 for w in gt_words if w in resp_lower)
+                    retention = matches / len(gt_words)
+                else:
+                    retention = 0.0
+            
+            direct_results.append({
+                'query_id': query_ids[i],
+                'retention': retention,
+                'response': response
+            })
+        
+        self.direct_results = pd.DataFrame(direct_results)
+        direct_path = self.output_dir / "direct_retention.csv"
+        self.direct_results.to_csv(direct_path, index=False)
+        print(f"Saved unlearned retention results to {direct_path}")
+        print(f"Unlearned model retention: {self.direct_results['retention'].mean():.3f}")
+        
+        print("\n--- Comparison ---")
+        print(f"Base model accuracy:        {base_df['base_accuracy'].mean():.3f}")
+        print(f"Unlearned model retention:  {self.direct_results['retention'].mean():.3f}")
+        print(f"Unlearning effectiveness:   {1 - self.direct_results['retention'].mean():.3f}")
+        
+        print("\n--- Part C: Extraction Attack (with steering) ---")
         attack = AnonymizedActivationSteering(
-            model=self.model,
+            model=self.unlearned_model,
             tokenizer=self.tokenizer,
             target_layer=self.config['attack'].get('target_layer', self.config['layers']['end']),
             steering_strength=self.config['attack']['steering_strength'],
             device="cuda" if torch.cuda.is_available() else "cpu"
         )
         
-        print("\nCreating steering vectors...")
+        print("Creating steering vectors...")
         sample_queries = self.queries[:20]
         original_questions = [q.question for q in sample_queries]
         
@@ -221,11 +380,7 @@ class ExperimentPipeline:
             anonymized_questions_per_original=anonymized_per_query
         )
         
-        print("\nRunning extraction attack...")
-        questions = [q.question for q in self.queries]
-        ground_truths = [q.answer for q in self.queries]
-        query_ids = [q.query_id for q in self.queries]
-        
+        print("Running extraction attack...")
         self.attack_results = []
         for i in tqdm(range(len(questions)), desc="Attacking"):
             result = attack.attack_single_query(
@@ -259,77 +414,139 @@ class ExperimentPipeline:
         results_df.to_csv(results_path, index=False)
         print(f"Saved attack results to {results_path}")
         
-        if self.geometric_features is not None:
-            self.geometric_features = self.geometric_features.merge(
-                results_df[['query_id', 'success', 'caf']],
-                on='query_id',
-                how='left'
-            )
-            
-        return self.attack_results
+        print("\n--- Final Comparison ---")
+        print(f"Base model accuracy:        {base_df['base_accuracy'].mean():.3f}")
+        print(f"Unlearned retention:        {self.direct_results['retention'].mean():.3f}")
+        print(f"Attack CAF:                 {metrics['average_caf']:.3f}")
+        print(f"Attack success rate:        {metrics['success_rate']:.2%}")
+        
+        return base_df, self.direct_results, self.attack_results
         
     def run_phase4_prediction(self):
         print("\n" + "="*60)
-        print("PHASE 4: Predictive Modeling")
+        print("PHASE 4: 2x2 Predictive Modeling")
         print("="*60)
         
-        if self.geometric_features is None:
-            features_path = self.output_dir / "geometric_features.csv"
-            if features_path.exists():
-                self.geometric_features = pd.read_csv(features_path)
+        if self.base_features is None:
+            base_features_path = self.output_dir / "base_geometric_features.csv"
+            if base_features_path.exists():
+                self.base_features = pd.read_csv(base_features_path)
             else:
-                raise ValueError("No features available. Run phase 2 first.")
-                
-        if 'caf' not in self.geometric_features.columns:
-            results_path = self.output_dir / "attack_results.csv"
-            if results_path.exists():
-                attack_df = pd.read_csv(results_path)
-                self.geometric_features = self.geometric_features.merge(
-                    attack_df[['query_id', 'success', 'caf']],
-                    on='query_id',
-                    how='left'
-                )
+                raise ValueError("No base features available. Run phase 2 first.")
+        
+        if self.unlearned_features is None:
+            unlearned_features_path = self.output_dir / "unlearned_geometric_features.csv"
+            if unlearned_features_path.exists():
+                self.unlearned_features = pd.read_csv(unlearned_features_path)
+            else:
+                raise ValueError("No unlearned features available. Run phase 2 first.")
+        
+        if self.direct_results is None:
+            direct_path = self.output_dir / "direct_retention.csv"
+            if direct_path.exists():
+                self.direct_results = pd.read_csv(direct_path)
+            else:
+                raise ValueError("No direct results available. Run phase 3 first.")
+        
+        if self.attack_results is None or isinstance(self.attack_results, list):
+            attack_path = self.output_dir / "attack_results.csv"
+            if attack_path.exists():
+                attack_df = pd.read_csv(attack_path)
             else:
                 raise ValueError("No attack results available. Run phase 3 first.")
-                
-        feature_cols = [c for c in self.geometric_features.columns 
+        else:
+            attack_df = self.attack_results
+        
+        base_data = self.base_features.merge(
+            self.direct_results[['query_id', 'retention']], on='query_id'
+        ).merge(
+            attack_df[['query_id', 'caf']], on='query_id'
+        )
+        
+        unlearned_data = self.unlearned_features.merge(
+            self.direct_results[['query_id', 'retention']], on='query_id'
+        ).merge(
+            attack_df[['query_id', 'caf']], on='query_id'
+        )
+        
+        feature_cols = [c for c in self.base_features.columns 
                        if any(x in c for x in ['density', 'separability', 'centrality', 
                                                'isolation', 'compactness', 'consistency'])]
         
-        print(f"\nUsing {len(feature_cols)} features:")
-        for col in feature_cols:
-            print(f"  - {col}")
-            
-        print("\n--- Regression: Predicting CAF ---")
-        reg_predictor = VulnerabilityPredictor(task_type="regression")
-        X, y, feat_names = reg_predictor.prepare_data(
-            self.geometric_features, target_col='caf', feature_cols=feature_cols
-        )
+        print(f"\nUsing {len(feature_cols)} features for prediction")
         
-        if len(X) < 10:
-            raise ValueError(f"Not enough samples for prediction modeling: {len(X)}")
-            
-        reg_results = reg_predictor.train_all_models(X, y, feat_names)
+        print("\n" + "="*60)
+        print("Q1: Base Geometry -> Unlearning Difficulty")
+        print("="*60)
+        predictor_q1 = VulnerabilityPredictor(task_type="regression")
+        X1, y1, _ = predictor_q1.prepare_data(base_data, target_col='retention', feature_cols=feature_cols)
+        results_q1 = predictor_q1.train_all_models(X1, y1, feature_cols)
         
-        print("\n--- Classification: Predicting Success ---")
-        clf_predictor = VulnerabilityPredictor(task_type="classification")
-        X_clf, y_clf, _ = clf_predictor.prepare_data(
-            self.geometric_features, target_col='success', feature_cols=feature_cols
-        )
-        clf_results = clf_predictor.train_all_models(X_clf, y_clf.astype(int), feat_names)
+        print("\n" + "="*60)
+        print("Q2: Base Geometry -> Extraction Difficulty")
+        print("="*60)
+        predictor_q2 = VulnerabilityPredictor(task_type="regression")
+        X2, y2, _ = predictor_q2.prepare_data(base_data, target_col='caf', feature_cols=feature_cols)
+        results_q2 = predictor_q2.train_all_models(X2, y2, feature_cols)
         
-        print("\n--- Feature Importance Summary ---")
-        importance_summary = create_feature_importance_summary(reg_results)
-        if not importance_summary.empty:
-            print(importance_summary.head(10))
-            importance_summary.to_csv(
-                self.output_dir / "feature_importance.csv", index=False
-            )
-            
+        print("\n" + "="*60)
+        print("Q3: Unlearned Geometry -> Unlearning Difficulty")
+        print("="*60)
+        predictor_q3 = VulnerabilityPredictor(task_type="regression")
+        X3, y3, _ = predictor_q3.prepare_data(unlearned_data, target_col='retention', feature_cols=feature_cols)
+        results_q3 = predictor_q3.train_all_models(X3, y3, feature_cols)
+        
+        print("\n" + "="*60)
+        print("Q4: Unlearned Geometry -> Extraction Difficulty")
+        print("="*60)
+        predictor_q4 = VulnerabilityPredictor(task_type="regression")
+        X4, y4, _ = predictor_q4.prepare_data(unlearned_data, target_col='caf', feature_cols=feature_cols)
+        results_q4 = predictor_q4.train_all_models(X4, y4, feature_cols)
+        
+        print("\n" + "="*60)
+        print("2x2 SUMMARY: R-squared Scores (Linear Regression)")
+        print("="*60)
+        print(f"{'':20} {'Unlearn Difficulty':>20} {'Extract Difficulty':>20}")
+        print(f"{'Base Geometry':20} {results_q1['linear_regression']['test_score']:>20.3f} {results_q2['linear_regression']['test_score']:>20.3f}")
+        print(f"{'Unlearned Geometry':20} {results_q3['linear_regression']['test_score']:>20.3f} {results_q4['linear_regression']['test_score']:>20.3f}")
+        
+        summary_df = pd.DataFrame({
+            'Question': ['Q1', 'Q2', 'Q3', 'Q4'],
+            'Geometry': ['Base', 'Base', 'Unlearned', 'Unlearned'],
+            'Target': ['Unlearn', 'Extract', 'Unlearn', 'Extract'],
+            'R2_linear': [
+                results_q1['linear_regression']['test_score'],
+                results_q2['linear_regression']['test_score'],
+                results_q3['linear_regression']['test_score'],
+                results_q4['linear_regression']['test_score']
+            ]
+        })
+        summary_path = self.output_dir / "2x2_summary.csv"
+        summary_df.to_csv(summary_path, index=False)
+        print(f"\nSaved 2x2 summary to {summary_path}")
+        
+        importance_q1 = create_feature_importance_summary(results_q1)
+        importance_q2 = create_feature_importance_summary(results_q2)
+        importance_q3 = create_feature_importance_summary(results_q3)
+        importance_q4 = create_feature_importance_summary(results_q4)
+        
+        if not importance_q4.empty:
+            print("\nFeature Importance (Q4: Unlearned -> Extract):")
+            print(importance_q4.head(10))
+            importance_q4.to_csv(self.output_dir / "feature_importance_q4.csv", index=False)
+        
         self.prediction_results = {
-            'regression': reg_results,
-            'classification': clf_results,
-            'importance': importance_summary
+            'q1': results_q1,
+            'q2': results_q2,
+            'q3': results_q3,
+            'q4': results_q4,
+            'summary': summary_df,
+            'importance': {
+                'q1': importance_q1,
+                'q2': importance_q2,
+                'q3': importance_q3,
+                'q4': importance_q4
+            }
         }
             
         return self.prediction_results

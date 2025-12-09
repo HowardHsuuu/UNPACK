@@ -368,70 +368,133 @@ class ExperimentPipeline:
         print(f"Unlearned model retention:  {self.direct_results['retention'].mean():.3f}")
         print(f"Unlearning effectiveness:   {1 - self.direct_results['retention'].mean():.3f}")
         
-        print("\n--- Part C: Extraction Attack (with steering) ---")
-        attack = AnonymizedActivationSteering(
-            model=self.unlearned_model,
-            tokenizer=self.tokenizer,
-            target_layer=self.config['attack'].get('target_layer', self.config['layers']['end']),
-            steering_strength=self.config['attack']['steering_strength'],
-            device="cuda" if torch.cuda.is_available() else "cpu"
-        )
+        print("\n--- Part C: Extraction Attack (with LOCAL steering) ---")
         
-        print("Creating steering vectors...")
-        sample_queries = self.queries[:20]
-        original_questions = [q.question for q in sample_queries]
+        # Check if layer search is enabled
+        layer_search_config = self.config['attack'].get('layer_search', {})
+        if layer_search_config.get('enabled', False):
+            layers_to_test = list(range(
+                layer_search_config['start'],
+                layer_search_config['end'] + 1,
+                layer_search_config.get('step', 1)
+            ))
+            print(f"Layer search enabled: testing layers {layers_to_test}")
+        else:
+            layers_to_test = [self.config['attack'].get('target_layer', self.config['layers']['end'])]
+            print(f"Single layer mode: testing layer {layers_to_test[0]}")
         
-        anonymized_per_query = [
-            attack.create_anonymized_questions(
-                q, num_anonymizations=self.config['attack']['num_anonymizations']
-            )
-            for q in original_questions
-        ]
+        all_layer_results = {}
         
-        steering_vector = attack.compute_steering_vector(
-            original_questions=original_questions,
-            anonymized_questions_per_original=anonymized_per_query
-        )
-        
-        print("Running extraction attack...")
-        self.attack_results = []
-        for i in tqdm(range(len(questions)), desc="Attacking"):
-            result = attack.attack_single_query(
-                question=questions[i],
-                ground_truth=ground_truths[i],
-                query_id=query_ids[i],
-                steering_vector=steering_vector,
-                num_samples=num_samples,
-                temperature=temperature,
-                max_new_tokens=max_new_tokens
-            )
-            self.attack_results.append(result)
+        for target_layer in layers_to_test:
+            print(f"\n{'='*60}")
+            print(f"Testing Layer {target_layer}")
+            print(f"{'='*60}")
             
-        metrics = compute_attack_success_rate(self.attack_results)
-        print(f"\nAttack Results:")
-        print(f"  Success Rate: {metrics['success_rate']:.2%}")
-        print(f"  Average CAF: {metrics['average_caf']:.3f}")
-        
-        results_data = [
-            {
-                'query_id': r.query_id,
-                'success': r.success,
-                'caf': r.correct_answer_frequency,
-                'extracted': r.extracted_answer,
-                'ground_truth': r.ground_truth
+            attack = AnonymizedActivationSteering(
+                model=self.unlearned_model,
+                tokenizer=self.tokenizer,
+                target_layer=target_layer,
+                steering_strength=self.config['attack']['steering_strength'],
+                device="cuda" if torch.cuda.is_available() else "cpu"
+            )
+            
+            print("Running LOCAL extraction attack (per-question steering)...")
+            layer_attack_results = []
+            
+            for i in tqdm(range(len(questions)), desc=f"Attacking (Layer {target_layer})"):
+                # LOCAL: Create anonymized versions for THIS question
+                anon_versions = attack.create_anonymized_questions(
+                    questions[i], 
+                    num_anonymizations=self.config['attack']['num_anonymizations']
+                )
+                
+                # Debug: Print first 3 anonymizations (only for first question)
+                if i == 0:
+                    print(f"\n--- Anonymization Check (Layer {target_layer}) ---")
+                    print(f"Original: {questions[i]}")
+                    for j, anon in enumerate(anon_versions[:3]):
+                        print(f"  Anon{j}: {anon}")
+                
+                # LOCAL: Compute steering vector for THIS question
+                steering_vector = attack.compute_steering_vector(
+                    original_questions=[questions[i]],
+                    anonymized_questions_per_original=[anon_versions]
+                )
+                
+                # Attack with THIS question's steering vector
+                result = attack.attack_single_query(
+                    question=questions[i],
+                    ground_truth=ground_truths[i],
+                    query_id=query_ids[i],
+                    steering_vector=steering_vector,
+                    num_samples=num_samples,
+                    temperature=temperature,
+                    max_new_tokens=max_new_tokens
+                )
+                layer_attack_results.append(result)
+            
+            # Compute metrics for this layer
+            metrics = compute_attack_success_rate(layer_attack_results)
+            print(f"\nLayer {target_layer} Results:")
+            print(f"  Success Rate: {metrics['success_rate']:.2%}")
+            print(f"  Average CAF: {metrics['average_caf']:.3f}")
+            
+            # Save results for this layer
+            results_data = [
+                {
+                    'query_id': r.query_id,
+                    'success': r.success,
+                    'caf': r.correct_answer_frequency,
+                    'extracted': r.extracted_answer,
+                    'ground_truth': r.ground_truth
+                }
+                for r in layer_attack_results
+            ]
+            results_df = pd.DataFrame(results_data)
+            results_path = self.output_dir / f"attack_results_layer{target_layer}.csv"
+            results_df.to_csv(results_path, index=False)
+            print(f"Saved to {results_path}")
+            
+            all_layer_results[target_layer] = {
+                'results': layer_attack_results,
+                'metrics': metrics,
+                'df': results_df
             }
-            for r in self.attack_results
-        ]
-        results_df = pd.DataFrame(results_data)
-        results_path = self.output_dir / "attack_results.csv"
-        results_df.to_csv(results_path, index=False)
-        print(f"Saved attack results to {results_path}")
         
-        print("\n--- Final Comparison (All using CAF) ---")
+        # Save the best layer's results as the main attack results
+        best_layer = max(all_layer_results.keys(), 
+                        key=lambda l: all_layer_results[l]['metrics']['average_caf'])
+        self.attack_results = all_layer_results[best_layer]['results']
+        
+        print(f"\n{'='*60}")
+        print("LAYER COMPARISON SUMMARY")
+        print(f"{'='*60}")
+        print(f"{'Layer':<10} {'Success Rate':<15} {'Average CAF':<15}")
+        print("-" * 60)
+        for layer in sorted(all_layer_results.keys()):
+            metrics = all_layer_results[layer]['metrics']
+            marker = " ← BEST" if layer == best_layer else ""
+            print(f"{layer:<10} {metrics['success_rate']:<15.2%} {metrics['average_caf']:<15.3f}{marker}")
+        
+        # Save layer comparison
+        layer_comparison = pd.DataFrame([
+            {
+                'layer': layer,
+                'success_rate': all_layer_results[layer]['metrics']['success_rate'],
+                'average_caf': all_layer_results[layer]['metrics']['average_caf']
+            }
+            for layer in sorted(all_layer_results.keys())
+        ])
+        layer_comparison_path = self.output_dir / "layer_comparison.csv"
+        layer_comparison.to_csv(layer_comparison_path, index=False)
+        print(f"\nSaved layer comparison to {layer_comparison_path}")
+        
+        print("\n--- Final Comparison (Best Layer: {}) ---".format(best_layer))
+        best_metrics = all_layer_results[best_layer]['metrics']
         print(f"Base model CAF:             {base_df['base_caf'].mean():.3f}")
         print(f"Unlearned retention CAF:    {self.direct_results['retention'].mean():.3f}")
-        print(f"Attack CAF:                 {metrics['average_caf']:.3f}")
-        print(f"Attack success rate:        {metrics['success_rate']:.2%}")
+        print(f"Attack CAF (Layer {best_layer}):      {best_metrics['average_caf']:.3f}")
+        print(f"Attack success rate:        {best_metrics['success_rate']:.2%}")
         
         return base_df, self.direct_results, self.attack_results
         

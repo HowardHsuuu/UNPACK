@@ -43,10 +43,17 @@ feature_params:
 attack:
   num_anonymizations: 5   # Reduced from 10 (still valid)
   steering_strength: 2.0
-  num_samples: 50         # Reduced from 100 (KEY SPEEDUP)
+  num_samples: 30         # Reduced from 100 (KEY SPEEDUP)
   temperature: 2.0
   top_k: 40
   max_new_tokens: 50
+
+  layer_search:
+    enabled: true       # true=测试多个layers, false=只测试target_layer
+    start: 12
+    end: 23
+    step: 1
+  
   target_layer: 22
 
 prediction:

@@ -88,6 +88,9 @@ class AnonymizedActivationSteering:
             
         return activation[0].squeeze(0)
     
+    # the original paper uses LLM to anonymize, since only regex can't handle complex cases
+    # the original paper reported failure on TOFU dataset.
+    '''
     def create_anonymized_questions(
         self,
         question: str,
@@ -124,7 +127,7 @@ class AnonymizedActivationSteering:
             anonymized.append(anon)
             
         return anonymized
-    '''
+    
     def create_anonymized_questions(
         self,
         question: str,
@@ -145,6 +148,106 @@ class AnonymizedActivationSteering:
         
         return anonymized
     '''
+    def create_anonymized_questions(
+        self,
+        question: str,
+        num_anonymizations: int = 5
+    ) -> List[str]:
+        """
+        TOFU-optimized anonymization
+        Handles: City, Country | Dates | Genres
+        """
+        import re
+        
+        anonymized = []
+        
+        # Fictional locations in "City, Country" format
+        locations = [
+            'Newcity, Newland',
+            'Oldtown, Oldland',
+            'Midville, Midland',
+            'Eastport, Eastland',
+            'Westburg, Westland'
+        ]
+        
+        # Generic dates
+        dates = [
+            '01/01/2000',
+            '06/15/1995',
+            '03/20/1998',
+            '09/10/2002',
+            '12/25/1997'
+        ]
+        
+        # Generic genres (common TOFU genres)
+        genres = [
+            'fiction',
+            'non-fiction',
+            'mystery',
+            'biography',
+            'history'
+        ]
+        
+        for i in range(num_anonymizations):
+            anon = question
+            
+            # ========================================
+            # Step 1: Replace "City, Country" pattern
+            # ========================================
+            # This MUST come first before any other replacements
+            # Pattern: Capitalized word, space, comma, space, Capitalized word
+            # Example: "Taipei, Taiwan" → "Newcity, Newland"
+            
+            anon = re.sub(
+                r'\b([A-Z][a-z]+),\s+([A-Z][a-z]+)\b',
+                locations[i],
+                anon,
+                count=1  # Only replace first occurrence
+            )
+            
+            # ========================================
+            # Step 2: Replace dates (MM/DD/YYYY)
+            # ========================================
+            anon = re.sub(
+                r'\b\d{2}/\d{2}/\d{4}\b',
+                dates[i],
+                anon
+            )
+            
+            # ========================================
+            # Step 3: Replace genre mentions (optional but helpful)
+            # ========================================
+            # Common patterns in TOFU:
+            # - "genre of X"
+            # - "writes in X"
+            # - "specializes in X"
+            
+            # Pattern 1: "genre of [word]"
+            genre_match = re.search(r'\bgenre of (\w+)', anon, re.IGNORECASE)
+            if genre_match:
+                original_genre = genre_match.group(1)
+                anon = anon.replace(
+                    f'genre of {original_genre}',
+                    f'genre of {genres[i]}'
+                )
+            
+            # Pattern 2: "writes in [genre]" (without "genre of")
+            elif re.search(r'writes in (?:the )?(\w+)', anon):
+                # More careful replacement to avoid replacing "writes in [City]"
+                # Only replace if it's likely a genre (single word after "writes in")
+                match = re.search(r'writes in (?:the )?(\w+)(?:\s|,|\.|$)', anon)
+                if match:
+                    word_after = match.group(1)
+                    # Only replace if lowercase (likely a genre, not a proper noun)
+                    if word_after[0].islower() or word_after.lower() in ['leadership', 'fiction', 'poetry', 'drama']:
+                        anon = anon.replace(
+                            match.group(0),
+                            f'writes in {genres[i]}' + match.group(0)[match.end(1) - match.start(0):]
+                        )
+            
+            anonymized.append(anon)
+        
+        return anonymized
         
     def compute_steering_vector(
         self,
@@ -157,16 +260,22 @@ class AnonymizedActivationSteering:
         for i, (orig_q, anon_qs) in enumerate(zip(original_questions, anonymized_questions_per_original)):
             orig_act = self._extract_activation(orig_q)
             
+            anon_acts = []
             for anon_q in anon_qs:
                 anon_act = self._extract_activation(anon_q)
-                diff = orig_act - anon_act
-                all_diffs.append(diff)
-                
+                anon_acts.append(anon_act)
+            
+            mean_anon_act = torch.stack(anon_acts).mean(dim=0)
+            diff = orig_act - mean_anon_act
+            all_diffs.append(diff)
+        
         steering_vector = torch.stack(all_diffs).mean(dim=0)
         
-        print(f"  Steering vector computed from {len(all_diffs)} pairs")
+        print(f"  Steering vector computed from {len(all_diffs)} question(s)")
         print(f"  Vector shape: {steering_vector.shape}")
         print(f"  Vector norm: {steering_vector.norm().item():.4f}")
+        print(f"  Vector mean: {steering_vector.mean().item():.4f}")
+        print(f"  Vector std: {steering_vector.std().item():.4f}")
         
         return SteeringVector(
             vector=steering_vector,

@@ -20,7 +20,7 @@ layers:
 
 datasets:
   tofu:
-    num_queries: 50     # Reduced from 200 (still enough for stats)
+    num_queries: 200     # Reduced from 200 (still enough for stats)
     source: "locuslab/TOFU"
     subset: "forget10"
   wmdp:
@@ -38,12 +38,12 @@ geometric_features:
 
 feature_params:
   k_neighbors: 10
-  pca_components: 30    # Reduced from 50 (must be < num_queries)
+  pca_components: 50    # Reduced from 50 (must be < num_queries)
 
 attack:
   num_anonymizations: 5   # Reduced from 10 (still valid)
   steering_strength: 2.0
-  num_samples: 30         # Reduced from 100 (KEY SPEEDUP)
+  num_samples: 50         # Reduced from 100 (KEY SPEEDUP)
   temperature: 2.0
   top_k: 40
   max_new_tokens: 50

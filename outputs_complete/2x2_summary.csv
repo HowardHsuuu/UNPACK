@@ -1,0 +1,5 @@
+Question,Geometry,Target,R2_linear
+Q1,Base,Unlearning_Success,0.05172318220582406
+Q2,Base,Extraction_Success,0.04070339326871342
+Q3,Unlearned,Unlearning_Success,-0.018402703704954337
+Q4,Unlearned,Extraction_Success,-0.04067539098446726

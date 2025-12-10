@@ -422,14 +422,32 @@ class AnonymizedActivationSteering:
         )
 
 
-def compute_attack_success_rate(results: List[AttackResult]) -> Dict[str, float]:
+def compute_attack_success_rate(results) -> Dict[str, float]:
+    """
+    Compute aggregate metrics for attack results
+    Works for both ActivationSteering and EmbeddingAttack results
+    """
     if not results:
-        return {'success_rate': 0.0, 'average_caf': 0.0}
-        
+        return {
+            'success_rate': 0.0,
+            'average_caf': 0.0,
+            'average_rouge': 0.0
+        }
+    
     successes = sum(1 for r in results if r.success)
     total_caf = sum(r.correct_answer_frequency for r in results)
     
-    return {
+    # Check if results have rouge_score attribute
+    total_rouge = 0.0
+    if hasattr(results[0], 'rouge_score'):
+        total_rouge = sum(r.rouge_score for r in results)
+    
+    metrics = {
         'success_rate': successes / len(results),
         'average_caf': total_caf / len(results)
     }
+    
+    if total_rouge > 0:
+        metrics['average_rouge'] = total_rouge / len(results)
+    
+    return metrics

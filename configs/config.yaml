@@ -20,7 +20,7 @@ layers:
 
 datasets:
   tofu:
-    num_queries: 200     # Reduced from 200 (still enough for stats)
+    num_queries: 200
     source: "locuslab/TOFU"
     subset: "forget10"
   wmdp:
@@ -38,23 +38,34 @@ geometric_features:
 
 feature_params:
   k_neighbors: 10
-  pca_components: 50    # Reduced from 50 (must be < num_queries)
+  pca_components: 50
 
 attack:
-  num_anonymizations: 5   # Reduced from 10 (still valid)
-  steering_strength: 2.0
-  num_samples: 30         # Reduced from 100 (KEY SPEEDUP)
+  # Options: "activation_steering", "embedding_attack", "both"
+  method: "embedding_attack"
+  
+  # Activation Steering parameters
+  steering:
+    num_anonymizations: 5
+    steering_strength: 2.0
+    target_layer: 22
+    layer_search:
+      enabled: true     # true=test multiple layers, false=only target_layer
+      start: 12
+      end: 23
+      step: 1
+  
+  # Embedding Attack parameters
+  embedding:
+    n_tokens: 10          # Number of adversarial tokens
+    learning_rate: 0.01   # Optimization learning rate
+    max_iterations: 100   # Number of optimization iterations
+  
+  # Shared generation parameters
+  num_samples: 30
   temperature: 2.0
   top_k: 40
   max_new_tokens: 50
-
-  layer_search:
-    enabled: true       # true=测试多个layers, false=只测试target_layer
-    start: 12
-    end: 23
-    step: 1
-  
-  target_layer: 22
 
 prediction:
   models:

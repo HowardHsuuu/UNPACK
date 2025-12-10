@@ -172,6 +172,26 @@ class ExperimentPipeline:
         print("\n" + "="*60)
         print("PHASE 2: Geometric Feature Computation")
         print("="*60)
+        if self.queries is None or self.labels is None:
+            print("\nLoading datasets for labels...")
+            tofu_config = self.config['datasets']['tofu']
+            wmdp_config = self.config['datasets']['wmdp']
+            
+            tofu_queries = self.data_loader.load_tofu(
+                num_queries=tofu_config['num_queries'],
+                subset=tofu_config.get('subset', 'forget01')
+            )
+            
+            wmdp_queries = self.data_loader.load_wmdp(
+                num_queries=wmdp_config['num_queries'],
+                subset=wmdp_config.get('subset', 'wmdp-bio')
+            )
+            
+            self.queries = tofu_queries + wmdp_queries
+            self.labels = np.array([q.dataset for q in self.queries])
+            
+            print(f"Loaded {len(self.queries)} queries "
+                f"(TOFU: {len(tofu_queries)}, WMDP: {len(wmdp_queries)})")
         
         if self.base_activations is None:
             base_activation_path = self.output_dir / "base_activations.pkl"
@@ -252,6 +272,27 @@ class ExperimentPipeline:
         print("\n" + "="*60)
         print("PHASE 3: Vulnerability Testing")
         print("="*60)
+
+        if self.queries is None:
+            print("\nLoading datasets...")
+            tofu_config = self.config['datasets']['tofu']
+            wmdp_config = self.config['datasets']['wmdp']
+            
+            tofu_queries = self.data_loader.load_tofu(
+                num_queries=tofu_config['num_queries'],
+                subset=tofu_config.get('subset', 'forget01')
+            )
+            
+            wmdp_queries = self.data_loader.load_wmdp(
+                num_queries=wmdp_config['num_queries'],
+                subset=wmdp_config.get('subset', 'wmdp-bio')
+            )
+            
+            self.queries = tofu_queries + wmdp_queries
+            self.labels = np.array([q.dataset for q in self.queries])
+            
+            print(f"Loaded {len(self.queries)} queries "
+                f"(TOFU: {len(tofu_queries)}, WMDP: {len(wmdp_queries)})")
         
         if self.base_model is None:
             self.base_model, self.tokenizer = setup_model(self.config['models']['base'])
@@ -368,10 +409,82 @@ class ExperimentPipeline:
         print(f"Unlearned model retention:  {self.direct_results['retention'].mean():.3f}")
         print(f"Unlearning effectiveness:   {1 - self.direct_results['retention'].mean():.3f}")
         
-        print("\n--- Part C: Extraction Attack (with LOCAL steering) ---")
+        # ⭐ NEW: Determine which attack method(s) to run
+        attack_method = self.config['attack'].get('method', 'activation_steering')
+        print(f"\n--- Part C: Attack Method = '{attack_method}' ---")
+        
+        attack_methods = []
+        if attack_method == 'activation_steering':
+            attack_methods = ['activation_steering']
+        elif attack_method == 'embedding_attack':
+            attack_methods = ['embedding_attack']
+        elif attack_method == 'both':
+            attack_methods = ['activation_steering', 'embedding_attack']
+        else:
+            raise ValueError(f"Unknown attack method: {attack_method}")
+        
+        all_attack_results = {}
+        
+        for method in attack_methods:
+            if method == 'activation_steering':
+                all_attack_results['activation_steering'] = self._run_activation_steering_attack(
+                    questions, ground_truths, query_ids, num_samples, temperature, max_new_tokens
+                )
+            elif method == 'embedding_attack':
+                all_attack_results['embedding_attack'] = self._run_embedding_attack(
+                    questions, ground_truths, query_ids, num_samples, temperature, max_new_tokens
+                )
+        
+        # Cross-method comparison (if multiple methods)
+        if len(all_attack_results) > 1:
+            print(f"\n{'='*60}")
+            print("ATTACK METHOD COMPARISON")
+            print(f"{'='*60}")
+            print(f"{'Method':<25} {'Success Rate':<15} {'CAF':<10} {'ROUGE':<10}")
+            print("-" * 60)
+            
+            comparison_data = []
+            for method_name, data in all_attack_results.items():
+                metrics = data['metrics']
+                rouge = metrics.get('average_rouge', 0.0)
+                print(f"{method_name:<25} {metrics['success_rate']:<15.2%} {metrics['average_caf']:<10.3f} {rouge:<10.3f}")
+                comparison_data.append({
+                    'method': method_name,
+                    'success_rate': metrics['success_rate'],
+                    'average_caf': metrics['average_caf'],
+                    'average_rouge': rouge
+                })
+            
+            comparison_df = pd.DataFrame(comparison_data)
+            comparison_df.to_csv(self.output_dir / "attack_comparison.csv", index=False)
+            print(f"\nComparison saved to {self.output_dir / 'attack_comparison.csv'}")
+        
+        # Select primary results (for backward compatibility)
+        if 'activation_steering' in all_attack_results:
+            self.attack_results = all_attack_results['activation_steering']['results']
+            primary_method = 'activation_steering'
+        else:
+            self.attack_results = all_attack_results['embedding_attack']['results']
+            primary_method = 'embedding_attack'
+        
+        print(f"\n--- Final Summary (Primary Method: {primary_method}) ---")
+        primary_metrics = all_attack_results[primary_method]['metrics']
+        print(f"Base model CAF:             {base_df['base_caf'].mean():.3f}")
+        print(f"Unlearned retention CAF:    {self.direct_results['retention'].mean():.3f}")
+        print(f"Attack CAF ({primary_method}):  {primary_metrics['average_caf']:.3f}")
+        print(f"Attack success rate:        {primary_metrics['success_rate']:.2%}")
+        
+        return base_df, self.direct_results, all_attack_results
+
+    def _run_activation_steering_attack(self, questions, ground_truths, query_ids, 
+                                        num_samples, temperature, max_new_tokens):
+        """Run activation steering attack"""
+        print("\n--- Activation Steering Attack ---")
         
         # Check if layer search is enabled
-        layer_search_config = self.config['attack'].get('layer_search', {})
+        steering_config = self.config['attack']['steering']
+        layer_search_config = steering_config.get('layer_search', {})
+        
         if layer_search_config.get('enabled', False):
             layers_to_test = list(range(
                 layer_search_config['start'],
@@ -380,7 +493,7 @@ class ExperimentPipeline:
             ))
             print(f"Layer search enabled: testing layers {layers_to_test}")
         else:
-            layers_to_test = [self.config['attack'].get('target_layer', self.config['layers']['end'])]
+            layers_to_test = [steering_config.get('target_layer', 22)]
             print(f"Single layer mode: testing layer {layers_to_test[0]}")
         
         all_layer_results = {}
@@ -394,7 +507,7 @@ class ExperimentPipeline:
                 model=self.unlearned_model,
                 tokenizer=self.tokenizer,
                 target_layer=target_layer,
-                steering_strength=self.config['attack']['steering_strength'],
+                steering_strength=steering_config['steering_strength'],
                 device="cuda" if torch.cuda.is_available() else "cpu"
             )
             
@@ -402,26 +515,22 @@ class ExperimentPipeline:
             layer_attack_results = []
             
             for i in tqdm(range(len(questions)), desc=f"Attacking (Layer {target_layer})"):
-                # LOCAL: Create anonymized versions for THIS question
                 anon_versions = attack.create_anonymized_questions(
                     questions[i], 
-                    num_anonymizations=self.config['attack']['num_anonymizations']
+                    num_anonymizations=steering_config['num_anonymizations']
                 )
                 
-                # Debug: Print first 3 anonymizations (only for first question)
                 if i == 0:
                     print(f"\n--- Anonymization Check (Layer {target_layer}) ---")
                     print(f"Original: {questions[i]}")
                     for j, anon in enumerate(anon_versions[:3]):
                         print(f"  Anon{j}: {anon}")
                 
-                # LOCAL: Compute steering vector for THIS question
                 steering_vector = attack.compute_steering_vector(
                     original_questions=[questions[i]],
                     anonymized_questions_per_original=[anon_versions]
                 )
                 
-                # Attack with THIS question's steering vector
                 result = attack.attack_single_query(
                     question=questions[i],
                     ground_truth=ground_truths[i],
@@ -433,14 +542,12 @@ class ExperimentPipeline:
                 )
                 layer_attack_results.append(result)
             
-            # Compute metrics for this layer
             metrics = compute_attack_success_rate(layer_attack_results)
             print(f"\nLayer {target_layer} Results:")
             print(f"  Success Rate: {metrics['success_rate']:.2%}")
             print(f"  Average CAF: {metrics['average_caf']:.3f}")
             
-            # Save results for this layer
-            results_data = [
+            results_df = pd.DataFrame([
                 {
                     'query_id': r.query_id,
                     'success': r.success,
@@ -449,9 +556,8 @@ class ExperimentPipeline:
                     'ground_truth': r.ground_truth
                 }
                 for r in layer_attack_results
-            ]
-            results_df = pd.DataFrame(results_data)
-            results_path = self.output_dir / f"attack_results_layer{target_layer}.csv"
+            ])
+            results_path = self.output_dir / f"activation_steering_layer{target_layer}.csv"
             results_df.to_csv(results_path, index=False)
             print(f"Saved to {results_path}")
             
@@ -461,42 +567,141 @@ class ExperimentPipeline:
                 'df': results_df
             }
         
-        # Save the best layer's results as the main attack results
+        # Select best layer
         best_layer = max(all_layer_results.keys(), 
                         key=lambda l: all_layer_results[l]['metrics']['average_caf'])
-        self.attack_results = all_layer_results[best_layer]['results']
+        
+        if len(all_layer_results) > 1:
+            print(f"\n{'='*60}")
+            print("LAYER COMPARISON")
+            print(f"{'='*60}")
+            print(f"{'Layer':<10} {'Success Rate':<15} {'Average CAF':<15}")
+            print("-" * 60)
+            for layer in sorted(all_layer_results.keys()):
+                metrics = all_layer_results[layer]['metrics']
+                marker = " ← BEST" if layer == best_layer else ""
+                print(f"{layer:<10} {metrics['success_rate']:<15.2%} {metrics['average_caf']:<15.3f}{marker}")
+        
+        # Save best results
+        best_results_path = self.output_dir / "activation_steering_results.csv"
+        all_layer_results[best_layer]['df'].to_csv(best_results_path, index=False)
+        print(f"\nSaved best layer results to {best_results_path}")
+        
+        # Also save as generic name for backward compatibility
+        generic_path = self.output_dir / "attack_results.csv"
+        all_layer_results[best_layer]['df'].to_csv(generic_path, index=False)
+        
+        return {
+            'results': all_layer_results[best_layer]['results'],
+            'metrics': all_layer_results[best_layer]['metrics'],
+            'df': all_layer_results[best_layer]['df'],
+            'best_layer': best_layer
+        }
+
+    def _run_embedding_attack(self, questions, ground_truths, query_ids,
+                            num_samples, temperature, max_new_tokens):
+        """Run embedding space attack"""
+        print("\n--- Embedding Space Attack ---")
+        
+        # Import embedding attack
+        from src.attacks.embedding_attack import EmbeddingSpaceAttack, compute_embedding_attack_metrics
+        
+        embedding_config = self.config['attack'].get('embedding', {})
+        
+        attack = EmbeddingSpaceAttack(
+            model=self.unlearned_model,
+            tokenizer=self.tokenizer,
+            n_attack_tokens=embedding_config.get('n_tokens', 20),
+            learning_rate=embedding_config.get('learning_rate', 0.001),
+            max_iterations=embedding_config.get('max_iterations', 100),
+            device="cuda" if torch.cuda.is_available() else "cpu",
+            verbose=False
+        )
+        
+        attack_results = []
+        
+        for i in tqdm(range(len(questions)), desc="Embedding Attack"):
+            result = attack.attack_single_query(
+                question=questions[i],
+                ground_truth=ground_truths[i],
+                query_id=query_ids[i],
+                num_samples=num_samples,
+                temperature=temperature,
+                max_new_tokens=max_new_tokens
+            )
+            attack_results.append(result)
+        
+        # ⭐ Compute metrics (including ROUGE)
+        metrics = compute_embedding_attack_metrics(attack_results)
         
         print(f"\n{'='*60}")
-        print("LAYER COMPARISON SUMMARY")
+        print("Embedding Attack Results")
         print(f"{'='*60}")
-        print(f"{'Layer':<10} {'Success Rate':<15} {'Average CAF':<15}")
-        print("-" * 60)
-        for layer in sorted(all_layer_results.keys()):
-            metrics = all_layer_results[layer]['metrics']
-            marker = " ← BEST" if layer == best_layer else ""
-            print(f"{layer:<10} {metrics['success_rate']:<15.2%} {metrics['average_caf']:<15.3f}{marker}")
+        print(f"  Success Rate:    {metrics['success_rate']:.2%}")
+        print(f"  Average CAF:     {metrics['average_caf']:.3f}")
+        print(f"  Average ROUGE:   {metrics['average_rouge']:.3f}")
         
-        # Save layer comparison
-        layer_comparison = pd.DataFrame([
+        # ⭐ Print sample generations
+        print(f"\n{'='*60}")
+        print("SAMPLE GENERATIONS (First 5 queries)")
+        print(f"{'='*60}")
+        
+        for i in range(min(5, len(attack_results))):
+            result = attack_results[i]
+            print(f"\n[Query {i+1}] {result.query_id}")
+            print(f"Question: {result.original_question}")
+            print(f"Ground Truth: {result.ground_truth}")
+            print(f"CAF: {result.correct_answer_frequency:.3f} | ROUGE: {result.rouge_score:.3f}")
+            print(f"Best Extraction: {result.extracted_answer}")
+            print(f"\nSample generations (first 3):")
+            for j, gen in enumerate(result.all_generations[:3]):
+                print(f"  [{j+1}] {gen}")
+        
+        # ⭐ Compute exact match for comparison
+        exact_matches = []
+        for result in attack_results:
+            gt_lower = result.ground_truth.lower().strip()
+            exact_match_count = sum(1 for gen in result.all_generations 
+                                if gt_lower in gen.lower())
+            exact_match_rate = exact_match_count / len(result.all_generations)
+            exact_matches.append(exact_match_rate)
+        
+        avg_exact_match = np.mean(exact_matches)
+        print(f"\n{'='*60}")
+        print(f"Additional Metrics:")
+        print(f"  Exact Match Rate: {avg_exact_match:.3f}")
+        print(f"  (vs CAF:          {metrics['average_caf']:.3f})")
+        print(f"{'='*60}")
+        
+        # Save results
+        results_df = pd.DataFrame([
             {
-                'layer': layer,
-                'success_rate': all_layer_results[layer]['metrics']['success_rate'],
-                'average_caf': all_layer_results[layer]['metrics']['average_caf']
+                'query_id': r.query_id,
+                'question': r.original_question,
+                'ground_truth': r.ground_truth,
+                'success': r.success,
+                'caf': r.correct_answer_frequency,
+                'rouge': r.rouge_score,
+                'extracted': r.extracted_answer
             }
-            for layer in sorted(all_layer_results.keys())
+            for r in attack_results
         ])
-        layer_comparison_path = self.output_dir / "layer_comparison.csv"
-        layer_comparison.to_csv(layer_comparison_path, index=False)
-        print(f"\nSaved layer comparison to {layer_comparison_path}")
         
-        print("\n--- Final Comparison (Best Layer: {}) ---".format(best_layer))
-        best_metrics = all_layer_results[best_layer]['metrics']
-        print(f"Base model CAF:             {base_df['base_caf'].mean():.3f}")
-        print(f"Unlearned retention CAF:    {self.direct_results['retention'].mean():.3f}")
-        print(f"Attack CAF (Layer {best_layer}):      {best_metrics['average_caf']:.3f}")
-        print(f"Attack success rate:        {best_metrics['success_rate']:.2%}")
+        results_path = self.output_dir / "embedding_attack_results.csv"
+        results_df.to_csv(results_path, index=False)
+        print(f"\nSaved to {results_path}")
         
-        return base_df, self.direct_results, self.attack_results
+        # Also save as generic name if it's the only attack
+        if self.config['attack'].get('method') == 'embedding_attack':
+            generic_path = self.output_dir / "attack_results.csv"
+            results_df.to_csv(generic_path, index=False)
+        
+        return {
+            'results': attack_results,
+            'metrics': metrics,
+            'df': results_df,
+            'exact_match': avg_exact_match
+        }
         
     def run_phase4_prediction(self):
         print("\n" + "="*60)

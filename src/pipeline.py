@@ -91,24 +91,47 @@ class ExperimentPipeline:
         print("="*60)
         
         print("\nLoading datasets...")
-        tofu_config = self.config['datasets']['tofu']
-        wmdp_config = self.config['datasets']['wmdp']
+        tofu_config = self.config['datasets'].get('tofu', {})
+        wmdp_config = self.config['datasets'].get('wmdp', {})
+        hp_config = self.config['datasets'].get('harry_potter', {})  # 新增
         
-        tofu_queries = self.data_loader.load_tofu(
-            num_queries=tofu_config['num_queries'],
-            subset=tofu_config.get('subset', 'forget01')
-        )
+        queries_list = []
         
-        wmdp_queries = self.data_loader.load_wmdp(
-            num_queries=wmdp_config['num_queries'],
-            subset=wmdp_config.get('subset', 'wmdp-bio')
-        )
+        # TOFU
+        if tofu_config.get('num_queries', 0) > 0:
+            tofu_queries = self.data_loader.load_tofu(
+                num_queries=tofu_config['num_queries'],
+                subset=tofu_config.get('subset', 'forget01')
+            )
+            queries_list.append(tofu_queries)
         
-        self.queries = tofu_queries + wmdp_queries
+        # WMDP
+        if wmdp_config.get('num_queries', 0) > 0:
+            wmdp_queries = self.data_loader.load_wmdp(
+                num_queries=wmdp_config['num_queries'],
+                subset=wmdp_config.get('subset', 'wmdp-bio')
+            )
+            queries_list.append(wmdp_queries)
+        
+        # Harry Potter
+        if hp_config.get('num_queries', 0) > 0:
+            hp_queries = self.data_loader.load_harry_potter(
+                num_queries=hp_config['num_queries'],
+                subset=hp_config.get('subset', 'knowmem')
+            )
+            queries_list.append(hp_queries)
+        
+        # Combine all
+        self.queries = []
+        for queries in queries_list:
+            self.queries.extend(queries)
+        
+        if len(self.queries) == 0:
+            raise ValueError("No queries loaded! Check your config.")
+        
         self.labels = np.array([q.dataset for q in self.queries])
         
-        print(f"Loaded {len(self.queries)} queries "
-            f"(TOFU: {len(tofu_queries)}, WMDP: {len(wmdp_queries)})")
+        print(f"Loaded {len(self.queries)} total queries")
         
         texts = prepare_queries_for_extraction(self.queries, prompt_style="qa")
         query_ids = self.data_loader.get_query_ids(self.queries)

@@ -116,6 +116,95 @@ class DataLoader:
     def get_answers(self, queries: List[QueryData]) -> List[str]:
         return [q.answer for q in queries]
 
+    def load_harry_potter(
+        self,
+        num_queries: int = 200,
+        subset: str = "knowmem"
+    ) -> List[QueryData]:
+        """
+        Load Harry Potter QA dataset from MUSE-Books
+        
+        Args:
+            num_queries: Number of queries to load
+            subset: Dataset subset name
+        
+        Raises:
+            ValueError: If dataset cannot be loaded or has wrong format
+        """
+        from datasets import load_dataset
+        
+        print(f"Loading Harry Potter dataset from MUSE-Books (subset: {subset})...")
+        
+        # Load dataset - let it fail naturally if not available
+        dataset = load_dataset("muse-bench/MUSE-Books", subset, cache_dir=self.cache_dir)
+        
+        # Print available splits for debugging
+        print(f"Available splits: {list(dataset.keys())}")
+        
+        # Determine which split to use
+        if 'forget_qa' in dataset:
+            data_split = dataset['forget_qa']
+            print(f"Using 'forget_qa' split with {len(data_split)} samples")
+        elif 'train' in dataset:
+            data_split = dataset['train']
+            print(f"Using 'train' split with {len(data_split)} samples")
+        else:
+            raise ValueError(f"Expected 'forget_qa' or 'train' split, got: {list(dataset.keys())}")
+        
+        # Validate we have enough data
+        if len(data_split) < num_queries:
+            print(f"Warning: Only {len(data_split)} samples available, requested {num_queries}")
+            num_queries = len(data_split)
+        
+        queries = []
+        skipped = 0
+        
+        for i, item in enumerate(data_split):
+            if len(queries) >= num_queries:
+                break
+            
+            # Try different field names
+            question = (item.get('question') or 
+                    item.get('prompt') or 
+                    item.get('input') or 
+                    item.get('text'))
+            
+            answer = (item.get('answer') or 
+                    item.get('completion') or 
+                    item.get('output') or 
+                    item.get('target'))
+            
+            # Skip if missing required fields
+            if not question or not answer:
+                skipped += 1
+                if i < 5:  # Print first few for debugging
+                    print(f"Skipping item {i}: question={bool(question)}, answer={bool(answer)}")
+                    print(f"  Available fields: {list(item.keys())}")
+                continue
+            
+            query = QueryData(
+                query_id=f"hp_{len(queries)}",
+                text=question,
+                question=question,
+                answer=answer,
+                dataset="harry_potter",
+                category=subset
+            )
+            queries.append(query)
+        
+        if skipped > 0:
+            print(f"Skipped {skipped} items due to missing fields")
+        
+        if len(queries) == 0:
+            raise ValueError(
+                f"Failed to load any valid queries from Harry Potter dataset. "
+                f"Dataset has {len(data_split)} items but none had required fields. "
+                f"First item fields: {list(data_split[0].keys()) if len(data_split) > 0 else 'N/A'}"
+            )
+        
+        print(f"Successfully loaded {len(queries)} Harry Potter queries")
+        return queries
+
 
 def create_prompt_template(query: QueryData, style: str = "qa") -> str:
     if style == "qa":

@@ -147,7 +147,7 @@ class AnonymizedActivationSteering:
             anonymized.append(anon)
         
         return anonymized
-    '''
+
     def create_anonymized_questions(
         self,
         question: str,
@@ -239,6 +239,201 @@ class AnonymizedActivationSteering:
                 if match:
                     word_after = match.group(1)
                     # Only replace if lowercase (likely a genre, not a proper noun)
+                    if word_after[0].islower() or word_after.lower() in ['leadership', 'fiction', 'poetry', 'drama']:
+                        anon = anon.replace(
+                            match.group(0),
+                            f'writes in {genres[i]}' + match.group(0)[match.end(1) - match.start(0):]
+                        )
+            
+            anonymized.append(anon)
+        
+        return anonymized
+
+# 在 activation_steering.py 的第 91 行开始替换
+
+    def create_anonymized_questions(
+        self,
+        question: str,
+        num_anonymizations: int = 5
+    ) -> List[str]:
+        """
+        Auto-detect dataset type and use appropriate anonymization
+        """
+        import re
+        
+        # Detect TOFU pattern: "City, Country" or dates
+        has_location_pattern = bool(re.search(r'[A-Z][a-z]+,\s+[A-Z][a-z]+', question))
+        has_date_pattern = bool(re.search(r'\d{2}/\d{2}/\d{4}', question))
+        
+        if has_location_pattern or has_date_pattern:
+            # Use TOFU-style anonymization
+            return self._create_anonymized_tofu(question, num_anonymizations)
+        else:
+            # Use generic proper noun replacement (for HP and others)
+            return self._create_anonymized_generic(question, num_anonymizations)
+    '''
+# 在 activation_steering.py 的第 91 行开始替换
+
+    def create_anonymized_questions(
+        self,
+        question: str,
+        num_anonymizations: int = 5
+    ) -> List[str]:
+        """
+        Auto-detect dataset type and use appropriate anonymization
+        """
+        import re
+        
+        # Detect TOFU pattern: "City, Country" or dates
+        has_location_pattern = bool(re.search(r'[A-Z][a-z]+,\s+[A-Z][a-z]+', question))
+        has_date_pattern = bool(re.search(r'\d{2}/\d{2}/\d{4}', question))
+        
+        if has_location_pattern or has_date_pattern:
+            # Use TOFU-style anonymization
+            return self._create_anonymized_tofu(question, num_anonymizations)
+        else:
+            # Use generic proper noun replacement (for HP and others)
+            return self._create_anonymized_generic(question, num_anonymizations)
+    
+    def _create_anonymized_generic(
+        self,
+        question: str,
+        num_anonymizations: int = 5
+    ) -> List[str]:
+        """
+        Generic anonymization: replace proper nouns with generic names
+        Works for Harry Potter and other datasets with named entities
+        """
+        import re
+        
+        anonymized = []
+        
+        # Generic replacement names
+        replacements = [
+            ['Person A', 'Person B', 'Person C', 'Person D', 'Person E'],
+            ['Individual X', 'Individual Y', 'Individual Z', 'Subject 1', 'Subject 2'],
+            ['Character Alpha', 'Character Beta', 'Character Gamma', 'Entity A', 'Entity B'],
+            ['John Smith', 'Jane Doe', 'Bob Johnson', 'Alice Brown', 'Charlie Wilson'],
+            ['Subject One', 'Subject Two', 'Subject Three', 'Individual A', 'Individual B']
+        ]
+        
+        for i in range(num_anonymizations):
+            anon = question
+            
+            # Find all proper nouns (capitalized words)
+            words = question.split()
+            proper_nouns = []
+            
+            # Skip common question words
+            skip_words = {
+                'who', 'what', 'where', 'when', 'why', 'how', 'which', 'whose',
+                'does', 'did', 'is', 'are', 'was', 'were', 'has', 'have', 'had',
+                'the', 'a', 'an', 'in', 'on', 'at', 'to', 'for', 'of', 'with'
+            }
+            
+            for j, word in enumerate(words):
+                # Clean word (remove punctuation)
+                clean_word = re.sub(r'[^\w]', '', word)
+                
+                # Check if proper noun (starts with capital, not at start, not skip word)
+                if (clean_word and 
+                    clean_word[0].isupper() and 
+                    j > 0 and  # Not first word
+                    clean_word.lower() not in skip_words):
+                    proper_nouns.append(clean_word)
+            
+            # Create mapping for this anonymization
+            unique_nouns = list(dict.fromkeys(proper_nouns))  # Preserve order, remove duplicates
+            noun_map = {}
+            
+            replacement_set = replacements[i % len(replacements)]
+            for k, noun in enumerate(unique_nouns):
+                if k < len(replacement_set):
+                    noun_map[noun] = replacement_set[k]
+                else:
+                    # Fallback for extra nouns
+                    noun_map[noun] = f"Entity_{k}"
+            
+            # Apply replacements
+            for original, replacement in noun_map.items():
+                # Use word boundary to avoid partial matches
+                anon = re.sub(rf'\b{original}\b', replacement, anon)
+            
+            anonymized.append(anon)
+        
+        return anonymized
+    
+    def _create_anonymized_tofu(
+        self,
+        question: str,
+        num_anonymizations: int = 5
+    ) -> List[str]:
+        """
+        TOFU-optimized anonymization
+        Handles: City, Country | Dates | Genres
+        """
+        import re
+        
+        anonymized = []
+        
+        # Fictional locations in "City, Country" format
+        locations = [
+            'Newcity, Newland',
+            'Oldtown, Oldland',
+            'Midville, Midland',
+            'Eastport, Eastland',
+            'Westburg, Westland'
+        ]
+        
+        # Generic dates
+        dates = [
+            '01/01/2000',
+            '06/15/1995',
+            '03/20/1998',
+            '09/10/2002',
+            '12/25/1997'
+        ]
+        
+        # Generic genres (common TOFU genres)
+        genres = [
+            'fiction',
+            'non-fiction',
+            'mystery',
+            'biography',
+            'history'
+        ]
+        
+        for i in range(num_anonymizations):
+            anon = question
+            
+            # Step 1: Replace "City, Country" pattern
+            anon = re.sub(
+                r'\b([A-Z][a-z]+),\s+([A-Z][a-z]+)\b',
+                locations[i],
+                anon,
+                count=1
+            )
+            
+            # Step 2: Replace dates (MM/DD/YYYY)
+            anon = re.sub(
+                r'\b\d{2}/\d{2}/\d{4}\b',
+                dates[i],
+                anon
+            )
+            
+            # Step 3: Replace genre mentions
+            genre_match = re.search(r'\bgenre of (\w+)', anon, re.IGNORECASE)
+            if genre_match:
+                original_genre = genre_match.group(1)
+                anon = anon.replace(
+                    f'genre of {original_genre}',
+                    f'genre of {genres[i]}'
+                )
+            
+            elif re.search(r'writes in (?:the )?(\w+)', anon):
+                match = re.search(r'writes in (?:the )?(\w+)(?:\s|,|\.|$)', anon)
+                if match:
+                    word_after = match.group(1)
                     if word_after[0].islower() or word_after.lower() in ['leadership', 'fiction', 'poetry', 'drama']:
                         anon = anon.replace(
                             match.group(0),

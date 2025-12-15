@@ -1,0 +1,95 @@
+# Harry Potter Full Experiment
+# All queries, all attacks, comprehensive layer search
+
+models:
+  base:
+    name: "meta-llama/Llama-2-7b-chat-hf"
+    tokenizer: "meta-llama/Llama-2-7b-chat-hf"
+    device: "cuda"
+    device_map: "auto"
+    dtype: "float16"
+  
+  unlearned:
+    name: "microsoft/Llama2-7b-WhoIsHarryPotter"
+    tokenizer: "meta-llama/Llama-2-7b-chat-hf"
+    device: "cuda"
+    device_map: "auto"
+    dtype: "float16"
+
+layers:
+  start: 8
+  end: 31
+
+datasets:
+  harry_potter:
+    num_queries: 100  # All available queries
+    source: "muse-bench/MUSE-Books"
+    subset: "knowmem"
+  tofu:
+    num_queries: 0
+  wmdp:
+    num_queries: 0
+
+geometric_features:
+  - local_density
+  - separability
+  - centrality
+  - cross_layer_consistency
+  - isolation
+  - cluster_compactness
+
+feature_params:
+  k_neighbors: 10
+  pca_components: 50
+
+attack:
+  # Run all attack methods
+  method: "all"
+  
+  # Activation Steering parameters
+  steering:
+    num_anonymizations: 5
+    steering_strength: 2.0
+    target_layer: 22
+    layer_search:
+      enabled: true
+      start: 16      # Middle layers
+      end: 30        # Near last layer (31 is final)
+      step: 2        # Test: 16, 18, 20, 22, 24, 26, 28, 30
+  
+  # Embedding Attack parameters
+  embedding:
+    n_tokens: 20
+    learning_rate: 0.01
+    max_iterations: 100
+  
+  # Prompt attack parameters
+  prompt:
+    domain: "harry_potter"
+    samples_per_strategy: 5
+  
+  # Logit lens parameters
+  logit_lens:
+    top_k: 10
+  
+  # Shared generation parameters
+  num_samples: 30
+  temperature: 2.0
+  top_k: 40
+  max_new_tokens: 50
+
+prediction:
+  models:
+    - linear_regression
+    - ridge
+    - random_forest
+    - gradient_boosting
+  cv_folds: 5
+  test_size: 0.2
+
+output:
+  save_activations: true
+  save_features: true
+  save_predictions: true
+  create_visualizations: true
+  output_dir: "./outputs_hp_full"

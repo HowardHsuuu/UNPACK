@@ -1,0 +1,83 @@
+models:
+  base:
+    name: "meta-llama/Llama-2-7b-chat-hf"
+    tokenizer: "meta-llama/Llama-2-7b-chat-hf"
+    device: "cuda"
+    device_map: "auto"
+    dtype: "float16"
+  
+  unlearned:
+    name: "microsoft/Llama2-7b-WhoIsHarryPotter"
+    tokenizer: "meta-llama/Llama-2-7b-chat-hf"
+    device: "cuda"
+    device_map: "auto"
+    dtype: "float16"
+
+layers:
+  start: 8
+  end: 31  # Llama-2-7b 有 32 层 (0-31)
+
+datasets:
+  harry_potter:
+    num_queries: 20
+    source: "muse-bench/MUSE-Books"
+    subset: "knowmem"  # 使用 knowledge memorization split
+  tofu:
+    num_queries: 0
+  wmdp:
+    num_queries: 0
+
+geometric_features:
+  - local_density
+  - separability
+  - centrality
+  - cross_layer_consistency
+  - isolation
+  - cluster_compactness
+
+feature_params:
+  k_neighbors: 10
+  pca_components: 5
+
+attack:
+  # Options: "activation_steering", "embedding_attack", "both"
+  method: "activation_steering"
+  
+  # Activation Steering parameters
+  steering:
+    num_anonymizations: 5
+    steering_strength: 2.0
+    target_layer: 22
+    layer_search:
+      enabled: true     # true=test multiple layers, false=only target_layer
+      start: 12
+      end: 13
+      step: 1
+  
+  # Embedding Attack parameters
+  embedding:
+    n_tokens: 10          # Number of adversarial tokens
+    learning_rate: 0.01   # Optimization learning rate
+    max_iterations: 100   # Number of optimization iterations
+  
+  # Shared generation parameters
+  num_samples: 30
+  temperature: 2.0
+  top_k: 40
+  max_new_tokens: 50
+
+prediction:
+  models:
+    - linear_regression
+    - ridge
+    - random_forest
+    - gradient_boosting
+  cv_folds: 5
+  test_size: 0.2
+
+output:
+  save_activations: true
+  save_features: true
+  save_predictions: true
+  create_visualizations: true
+  output_dir: "./outputs"

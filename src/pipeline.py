@@ -15,6 +15,9 @@ from tqdm import tqdm
 PROJECT_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+from src.attacks.prompt_attack import PromptAttack, compute_prompt_attack_metrics
+from src.attacks.logit_lens_attack import LogitLensAttack, compute_logit_lens_metrics, create_layer_analysis_dataframe
+
 from src.data.data_loader import DataLoader, prepare_queries_for_extraction
 from src.models.activation_extractor import (
     ActivationExtractor, ActivationCache,
@@ -300,22 +303,37 @@ class ExperimentPipeline:
             print("\nLoading datasets...")
             tofu_config = self.config['datasets']['tofu']
             wmdp_config = self.config['datasets']['wmdp']
+            hp_config = self.config['datasets'].get('harry_potter', {})
             
-            tofu_queries = self.data_loader.load_tofu(
-                num_queries=tofu_config['num_queries'],
-                subset=tofu_config.get('subset', 'forget01')
-            )
+            queries_list = []
             
-            wmdp_queries = self.data_loader.load_wmdp(
-                num_queries=wmdp_config['num_queries'],
-                subset=wmdp_config.get('subset', 'wmdp-bio')
-            )
+            if tofu_config.get('num_queries', 0) > 0:
+                tofu_queries = self.data_loader.load_tofu(
+                    num_queries=tofu_config['num_queries'],
+                    subset=tofu_config.get('subset', 'forget01')
+                )
+                queries_list.append(tofu_queries)
             
-            self.queries = tofu_queries + wmdp_queries
+            if wmdp_config.get('num_queries', 0) > 0:
+                wmdp_queries = self.data_loader.load_wmdp(
+                    num_queries=wmdp_config['num_queries'],
+                    subset=wmdp_config.get('subset', 'wmdp-bio')
+                )
+                queries_list.append(wmdp_queries)
+            
+            if hp_config.get('num_queries', 0) > 0:
+                hp_queries = self.data_loader.load_harry_potter(
+                    num_queries=hp_config['num_queries'],
+                    subset=hp_config.get('subset', 'knowmem')
+                )
+                queries_list.append(hp_queries)
+            
+            self.queries = []
+            for queries in queries_list:
+                self.queries.extend(queries)
             self.labels = np.array([q.dataset for q in self.queries])
             
-            print(f"Loaded {len(self.queries)} queries "
-                f"(TOFU: {len(tofu_queries)}, WMDP: {len(wmdp_queries)})")
+            print(f"Loaded {len(self.queries)} queries")
         
         if self.base_model is None:
             self.base_model, self.tokenizer = setup_model(self.config['models']['base'])
@@ -390,6 +408,17 @@ class ExperimentPipeline:
         print(f"Saved base model accuracy to {base_path}")
         print(f"Base model CAF: {base_df['base_caf'].mean():.3f}")
         
+        # ============================================
+        # FREE GPU MEMORY: Unload base model
+        # ============================================
+        print("\n--- Unloading base model to free GPU memory ---")
+        del self.base_model
+        self.base_model = None
+        torch.cuda.empty_cache()
+        import gc
+        gc.collect()
+        print(f"GPU memory freed. Available: {torch.cuda.mem_get_info()[0] / 1024**3:.2f} GB")
+        
         print("\n--- Part B: Unlearned Model Retention (sampling, no steering) ---")
         direct_results = []
         for i in tqdm(range(len(questions)), desc="Unlearned model queries"):
@@ -432,7 +461,7 @@ class ExperimentPipeline:
         print(f"Unlearned model retention:  {self.direct_results['retention'].mean():.3f}")
         print(f"Unlearning effectiveness:   {1 - self.direct_results['retention'].mean():.3f}")
         
-        # ⭐ NEW: Determine which attack method(s) to run
+        # Determine which attack method(s) to run
         attack_method = self.config['attack'].get('method', 'activation_steering')
         print(f"\n--- Part C: Attack Method = '{attack_method}' ---")
         
@@ -441,8 +470,14 @@ class ExperimentPipeline:
             attack_methods = ['activation_steering']
         elif attack_method == 'embedding_attack':
             attack_methods = ['embedding_attack']
+        elif attack_method == 'prompt':
+            attack_methods = ['prompt']
+        elif attack_method == 'logit_lens':
+            attack_methods = ['logit_lens']
         elif attack_method == 'both':
             attack_methods = ['activation_steering', 'embedding_attack']
+        elif attack_method == 'all':
+            attack_methods = ['activation_steering', 'embedding_attack', 'prompt', 'logit_lens']
         else:
             raise ValueError(f"Unknown attack method: {attack_method}")
         
@@ -455,6 +490,14 @@ class ExperimentPipeline:
                 )
             elif method == 'embedding_attack':
                 all_attack_results['embedding_attack'] = self._run_embedding_attack(
+                    questions, ground_truths, query_ids, num_samples, temperature, max_new_tokens
+                )
+            elif method == 'prompt':
+                all_attack_results['prompt'] = self._run_prompt_attack(
+                    questions, ground_truths, query_ids, num_samples, temperature, max_new_tokens
+                )
+            elif method == 'logit_lens':
+                all_attack_results['logit_lens'] = self._run_logit_lens_attack(
                     questions, ground_truths, query_ids, num_samples, temperature, max_new_tokens
                 )
         
@@ -482,19 +525,24 @@ class ExperimentPipeline:
             comparison_df.to_csv(self.output_dir / "attack_comparison.csv", index=False)
             print(f"\nComparison saved to {self.output_dir / 'attack_comparison.csv'}")
         
-        # Select primary results (for backward compatibility)
-        if 'activation_steering' in all_attack_results:
-            self.attack_results = all_attack_results['activation_steering']['results']
-            primary_method = 'activation_steering'
-        else:
-            self.attack_results = all_attack_results['embedding_attack']['results']
-            primary_method = 'embedding_attack'
+        priority_order = ['activation_steering', 'embedding_attack', 'prompt', 'logit_lens']
+        
+        primary_method = None
+        for method in priority_order:
+            if method in all_attack_results:
+                primary_method = method
+                self.attack_results = all_attack_results[method].get('results', [])
+                break
+        
+        if primary_method is None:
+            primary_method = list(all_attack_results.keys())[0]
+            self.attack_results = all_attack_results[primary_method].get('results', [])
         
         print(f"\n--- Final Summary (Primary Method: {primary_method}) ---")
         primary_metrics = all_attack_results[primary_method]['metrics']
         print(f"Base model CAF:             {base_df['base_caf'].mean():.3f}")
         print(f"Unlearned retention CAF:    {self.direct_results['retention'].mean():.3f}")
-        print(f"Attack CAF ({primary_method}):  {primary_metrics['average_caf']:.3f}")
+        print(f"Attack CAF ({primary_method}):  {primary_metrics.get('average_caf', 0):.3f}")
         print(f"Attack success rate:        {primary_metrics['success_rate']:.2%}")
         
         return base_df, self.direct_results, all_attack_results
@@ -724,6 +772,251 @@ class ExperimentPipeline:
             'metrics': metrics,
             'df': results_df,
             'exact_match': avg_exact_match
+        }
+
+    def _run_prompt_attack(self, questions, ground_truths, query_ids,
+                        num_samples, temperature, max_new_tokens):
+        """Run prompt-based attack with multiple strategies"""
+        print("\n--- Prompt-Based Attack ---")
+        
+        from src.attacks.prompt_attack import PromptAttack, compute_prompt_attack_metrics
+        
+        prompt_config = self.config['attack'].get('prompt', {})
+        samples_per_strategy = prompt_config.get('samples_per_strategy', 5)
+        
+        # Auto-detect domain from query_ids or config
+        def detect_domain(query_id: str) -> str:
+            """Detect domain from query_id prefix"""
+            if query_id.startswith('hp_'):
+                return 'harry_potter'
+            elif query_id.startswith('tofu_'):
+                return 'tofu'
+            elif query_id.startswith('wmdp_'):
+                return 'wmdp'
+            else:
+                return prompt_config.get('domain', 'harry_potter')
+        
+        attack = PromptAttack(
+            model=self.unlearned_model,
+            tokenizer=self.tokenizer,
+            device="cuda" if torch.cuda.is_available() else "cpu",
+            verbose=False
+        )
+        
+        attack_results = []
+        
+        for i in tqdm(range(len(questions)), desc="Prompt Attack"):
+            # Auto-detect domain for each query
+            domain = detect_domain(query_ids[i])
+            
+            result = attack.attack_single_query(
+                question=questions[i],
+                ground_truth=ground_truths[i],
+                query_id=query_ids[i],
+                domain=domain,
+                num_samples_per_strategy=samples_per_strategy,
+                temperature=temperature,
+                max_new_tokens=max_new_tokens
+            )
+            attack_results.append(result)
+        
+        # Compute metrics
+        metrics = compute_prompt_attack_metrics(attack_results)
+        
+        print(f"\n{'='*60}")
+        print("Prompt Attack Results")
+        print(f"{'='*60}")
+        print(f"  Success Rate:     {metrics['success_rate']:.2%}")
+        print(f"  Average Best CAF: {metrics['average_best_caf']:.3f}")
+        
+        # Print strategy effectiveness
+        print(f"\n{'='*60}")
+        print("Strategy Effectiveness (Average CAF)")
+        print(f"{'='*60}")
+        sorted_strategies = sorted(
+            metrics['strategy_effectiveness'].items(),
+            key=lambda x: x[1],
+            reverse=True
+        )
+        for strategy, caf in sorted_strategies[:10]:
+            print(f"  {strategy:<25} {caf:.3f}")
+        
+        # Print sample results
+        print(f"\n{'='*60}")
+        print("SAMPLE RESULTS (First 5 queries)")
+        print(f"{'='*60}")
+        for i in range(min(5, len(attack_results))):
+            result = attack_results[i]
+            print(f"\n[Query {i+1}] {result.query_id}")
+            print(f"Question: {result.original_question}")
+            print(f"Ground Truth: {result.ground_truth}")
+            print(f"Best Strategy: {result.best_prompt_strategy} (CAF: {result.best_caf:.3f})")
+            extracted_preview = result.extracted_answer[:100] if result.extracted_answer else ""
+            print(f"Extracted: {extracted_preview}...")
+        
+        # Save results
+        results_df = pd.DataFrame([
+            {
+                'query_id': r.query_id,
+                'question': r.original_question,
+                'ground_truth': r.ground_truth,
+                'success': r.success,
+                'best_caf': r.best_caf,
+                'best_strategy': r.best_prompt_strategy,
+                'extracted': r.extracted_answer,
+                **{f'strategy_{k}': v for k, v in r.strategy_results.items()}
+            }
+            for r in attack_results
+        ])
+        
+        results_path = self.output_dir / "prompt_attack_results.csv"
+        results_df.to_csv(results_path, index=False)
+        print(f"\nSaved to {results_path}")
+        
+        # Save strategy summary
+        strategy_df = pd.DataFrame([
+            {'strategy': k, 'average_caf': v}
+            for k, v in sorted_strategies
+        ])
+        strategy_path = self.output_dir / "prompt_strategy_effectiveness.csv"
+        strategy_df.to_csv(strategy_path, index=False)
+        print(f"Saved strategy effectiveness to {strategy_path}")
+        
+        if self.config['attack'].get('method') == 'prompt':
+            generic_path = self.output_dir / "attack_results.csv"
+            results_df.to_csv(generic_path, index=False)
+        
+        # For compatibility with cross-method comparison
+        metrics['average_caf'] = metrics['average_best_caf']
+        
+        return {
+            'results': attack_results,
+            'metrics': metrics,
+            'df': results_df
+        }
+
+
+    def _run_logit_lens_attack(self, questions, ground_truths, query_ids,
+                            num_samples, temperature, max_new_tokens):
+        """Run logit lens analysis to probe intermediate layers"""
+        print("\n--- Logit Lens Attack ---")
+        
+        from src.attacks.logit_lens_attack import (
+            LogitLensAttack, compute_logit_lens_metrics, create_layer_analysis_dataframe
+        )
+        
+        attack = LogitLensAttack(
+            model=self.unlearned_model,
+            tokenizer=self.tokenizer,
+            device="cuda" if torch.cuda.is_available() else "cpu",
+            top_k=10,
+            verbose=False
+        )
+        
+        attack_results = []
+        
+        for i in tqdm(range(len(questions)), desc="Logit Lens"):
+            result = attack.attack_single_query(
+                question=questions[i],
+                ground_truth=ground_truths[i],
+                query_id=query_ids[i]
+            )
+            attack_results.append(result)
+        
+        # Compute metrics
+        metrics = compute_logit_lens_metrics(attack_results)
+        
+        print(f"\n{'='*60}")
+        print("Logit Lens Analysis Results")
+        print(f"{'='*60}")
+        print(f"  Knowledge Found Rate: {metrics['success_rate']:.2%}")
+        print(f"  Average Max Prob:     {metrics['avg_max_prob']:.4f}")
+        print(f"  Peak Knowledge Layer: {metrics['peak_knowledge_layer']}")
+        
+        # Print suppression patterns
+        print(f"\n{'='*60}")
+        print("Suppression Pattern Distribution")
+        print(f"{'='*60}")
+        for pattern, count in metrics['pattern_distribution'].items():
+            pct = count / len(attack_results) * 100
+            print(f"  {pattern:<25} {count:3d} ({pct:.1f}%)")
+        
+        # Print layer analysis
+        print(f"\n{'='*60}")
+        print("Layer-wise Knowledge Frequency (Top 10)")
+        print(f"{'='*60}")
+        sorted_layers = sorted(
+            metrics['layer_knowledge_frequency'].items(),
+            key=lambda x: x[1],
+            reverse=True
+        )[:10]
+        for layer, freq in sorted_layers:
+            prob = metrics['layer_avg_probs'][layer]
+            print(f"  Layer {layer:2d}: {freq*100:5.1f}% queries | avg_prob={prob:.4f}")
+        
+        # Print sample results
+        print(f"\n{'='*60}")
+        print("SAMPLE RESULTS (First 5 queries)")
+        print(f"{'='*60}")
+        for i in range(min(5, len(attack_results))):
+            result = attack_results[i]
+            print(f"\n[Query {i+1}] {result.query_id}")
+            print(f"Question: {result.original_question}")
+            print(f"Ground Truth: {result.ground_truth}")
+            print(f"Max Prob: {result.max_prob:.4f} at Layer {result.max_prob_layer}")
+            print(f"Pattern: {result.suppression_pattern}")
+            print(f"Knowledge Layers: {result.knowledge_present_layers}")
+            print(f"Top@Layer{result.max_prob_layer}: {result.layer_top_predictions[result.max_prob_layer][:5]}")
+        
+        # Save results
+        results_df = pd.DataFrame([
+            {
+                'query_id': r.query_id,
+                'question': r.original_question,
+                'ground_truth': r.ground_truth,
+                'success': r.success,
+                'max_prob': r.max_prob,
+                'max_prob_layer': r.max_prob_layer,
+                'suppression_pattern': r.suppression_pattern,
+                'num_knowledge_layers': len(r.knowledge_present_layers),
+                'knowledge_layers': str(r.knowledge_present_layers),
+                'extracted': r.extracted_answer
+            }
+            for r in attack_results
+        ])
+        
+        results_path = self.output_dir / "logit_lens_results.csv"
+        results_df.to_csv(results_path, index=False)
+        print(f"\nSaved to {results_path}")
+        
+        # Save detailed layer analysis
+        layer_df = create_layer_analysis_dataframe(attack_results)
+        layer_path = self.output_dir / "logit_lens_layer_analysis.csv"
+        layer_df.to_csv(layer_path, index=False)
+        print(f"Saved layer analysis to {layer_path}")
+        
+        # Save layer summary
+        layer_summary_df = pd.DataFrame([
+            {
+                'layer': layer,
+                'avg_target_prob': metrics['layer_avg_probs'][layer],
+                'knowledge_frequency': metrics['layer_knowledge_frequency'][layer]
+            }
+            for layer in sorted(metrics['layer_avg_probs'].keys())
+        ])
+        layer_summary_path = self.output_dir / "logit_lens_layer_summary.csv"
+        layer_summary_df.to_csv(layer_summary_path, index=False)
+        print(f"Saved layer summary to {layer_summary_path}")
+        
+        if self.config['attack'].get('method') == 'logit_lens':
+            generic_path = self.output_dir / "attack_results.csv"
+            results_df.to_csv(generic_path, index=False)
+        
+        return {
+            'results': attack_results,
+            'metrics': metrics,
+            'df': results_df,
+            'layer_df': layer_df
         }
         
     def run_phase4_prediction(self):

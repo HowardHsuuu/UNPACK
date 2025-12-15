@@ -1,0 +1,96 @@
+# TOFU Full Experiment #1 - Gradient Difference Method
+# All queries, all attacks, comprehensive layer search
+
+models:
+  base:
+    name: "locuslab/tofu_ft_phi-1.5"
+    tokenizer: "microsoft/phi-1_5"
+    device: "cuda"
+    device_map: "auto"
+    dtype: "float16"
+  
+  unlearned:
+    name: "locuslab/phi_grad_diff_1e-05_forget10"
+    tokenizer: "microsoft/phi-1_5"
+    revision: "checkpoint-60"
+    device: "cuda"
+    device_map: "auto"
+    dtype: "float16"
+
+layers:
+  start: 8
+  end: 23  # phi-1.5 has 24 layers (0-23)
+
+datasets:
+  tofu:
+    num_queries: 200  # Full TOFU forget set
+    source: "locuslab/TOFU"
+    subset: "forget10"
+  wmdp:
+    num_queries: 0
+  harry_potter:
+    num_queries: 0
+
+geometric_features:
+  - local_density
+  - separability
+  - centrality
+  - cross_layer_consistency
+  - isolation
+  - cluster_compactness
+
+feature_params:
+  k_neighbors: 10
+  pca_components: 50
+
+attack:
+  # Run all attack methods
+  method: "all"
+  
+  # Activation Steering parameters
+  steering:
+    num_anonymizations: 5
+    steering_strength: 2.0
+    target_layer: 18
+    layer_search:
+      enabled: true
+      start: 12      # Middle layers
+      end: 22        # Near last layer (23 is final)
+      step: 2        # Test: 12, 14, 16, 18, 20, 22
+  
+  # Embedding Attack parameters
+  embedding:
+    n_tokens: 20
+    learning_rate: 0.01
+    max_iterations: 100
+  
+  # Prompt attack parameters
+  prompt:
+    domain: "tofu"
+    samples_per_strategy: 5
+  
+  # Logit lens parameters
+  logit_lens:
+    top_k: 10
+  
+  # Shared generation parameters
+  num_samples: 30
+  temperature: 2.0
+  top_k: 40
+  max_new_tokens: 50
+
+prediction:
+  models:
+    - linear_regression
+    - ridge
+    - random_forest
+    - gradient_boosting
+  cv_folds: 5
+  test_size: 0.2
+
+output:
+  save_activations: true
+  save_features: true
+  save_predictions: true
+  create_visualizations: true
+  output_dir: "./outputs_tofu_grad_diff"

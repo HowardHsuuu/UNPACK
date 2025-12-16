@@ -11,7 +11,7 @@ models:
   unlearned:
     name: "locuslab/phi_idk_1e-05_forget10"
     tokenizer: "microsoft/phi-1_5"
-    revision: "checkpoint-60"
+    revision: "checkpoint-48"
     device: "cuda"
     device_map: "auto"
     dtype: "float16"
@@ -22,7 +22,7 @@ layers:
 
 datasets:
   tofu:
-    num_queries: 200
+    num_queries: 100
     source: "locuslab/TOFU"
     subset: "forget10"
   wmdp:
@@ -52,8 +52,8 @@ attack:
     layer_search:
       enabled: true
       start: 12
-      end: 22
-      step: 2
+      end: 13
+      step: 1
   
   embedding:
     n_tokens: 20

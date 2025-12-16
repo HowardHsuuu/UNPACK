@@ -23,7 +23,7 @@ layers:
 
 datasets:
   tofu:
-    num_queries: 200  # Full TOFU forget set
+    num_queries: 100  # Full TOFU forget set
     source: "locuslab/TOFU"
     subset: "forget10"
   wmdp:
@@ -55,8 +55,8 @@ attack:
     layer_search:
       enabled: true
       start: 12      # Middle layers
-      end: 22        # Near last layer (23 is final)
-      step: 2        # Test: 12, 14, 16, 18, 20, 22
+      end: 13      # Near last layer (23 is final)
+      step: 1        # Test: 12, 14, 16, 18, 20, 22
   
   # Embedding Attack parameters
   embedding:

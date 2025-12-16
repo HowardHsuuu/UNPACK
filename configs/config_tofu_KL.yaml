@@ -22,7 +22,7 @@ layers:
 
 datasets:
   tofu:
-    num_queries: 200
+    num_queries: 100
     source: "locuslab/TOFU"
     subset: "forget10"
   wmdp:
@@ -52,8 +52,8 @@ attack:
     layer_search:
       enabled: true
       start: 12
-      end: 22
-      step: 2
+      end: 13
+      step: 1
   
   embedding:
     n_tokens: 20

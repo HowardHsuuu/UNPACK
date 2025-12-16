@@ -1,63 +1,90 @@
 
 ################################################################################
 # COMPREHENSIVE ANALYSIS (Excluding Embedding Attack)
-# Generated: 2025-12-16 03:54:59
+# Generated: 2025-12-16 12:17:24
 ################################################################################
 
 ================================================================================
 LOADING EXPERIMENTS
 ================================================================================
-  [OK] HP: ['steering', 'prompt']
-  [OK] TOFU_grad_ascent: ['steering', 'prompt']
-  [OK] TOFU_idk: ['steering', 'prompt']
+  [OK] HP: 3 attacks ['steering', 'prompt', 'embedding']
+  [OK] TOFU_grad_diff: 2 attacks ['steering', 'prompt']
+  [OK] TOFU_grad_ascent: 3 attacks ['steering', 'prompt', 'embedding']
+  [OK] TOFU_KL: 2 attacks ['steering', 'prompt']
+  [OK] TOFU_idk: 3 attacks ['steering', 'prompt', 'embedding']
 
-Loaded 3 experiments
+Loaded 5 experiments
+
+Attack availability:
+Experiment             embedding      prompt    steering
+--------------------------------------------------------
+HP                             ✓           ✓           ✓
+TOFU_grad_diff                 -           ✓           ✓
+TOFU_grad_ascent               ✓           ✓           ✓
+TOFU_KL                        -           ✓           ✓
+TOFU_idk                       ✓           ✓           ✓
 
 ================================================================================
 ANALYSIS 1: EXPERIMENT SUMMARY
 ================================================================================
 
-      experiment  n_queries  base_caf  retention  unlearning_eff  steering_caf  steering_success  prompt_caf  prompt_success
-              HP        100  0.119333   0.043000        0.957000      0.044667              0.17       0.090            0.23
-TOFU_grad_ascent        100  0.737000   0.007667        0.992333      0.008000              0.02       0.010            0.01
-        TOFU_idk        100  0.733000   0.214333        0.785667      0.210000              0.96       0.552            0.99
+      experiment  n_queries  base_caf  retention  unlearning_eff  embedding_caf  embedding_success  prompt_caf  prompt_success  steering_caf  steering_success
+              HP        100  0.119333   0.043000        0.957000       0.987000                1.0       0.090            0.23      0.044667              0.17
+  TOFU_grad_diff        100  0.747000   0.114667        0.885333            NaN                NaN       0.320            0.70      0.109667              0.47
+TOFU_grad_ascent        100  0.737000   0.007667        0.992333       0.756333                1.0       0.010            0.01      0.008000              0.02
+         TOFU_KL        100  0.739333   0.008667        0.991333            NaN                NaN       0.010            0.01      0.009333              0.01
+        TOFU_idk        100  0.733000   0.214333        0.785667       0.908333                1.0       0.552            0.99      0.210000              0.96
+
+--- Per-Attack Summary ---
+  embedding: 3 experiments, avg CAF = 0.884
+  prompt: 5 experiments, avg CAF = 0.196
+  steering: 5 experiments, avg CAF = 0.076
 
 ================================================================================
 ANALYSIS 2: CORRELATION ANALYSIS
 ================================================================================
 
 --- Unlearning ---
-Total: 144, Significant: 17 (11.8%)
-  - centrality_min: r=-0.351 (TOFU_idk/unlearned)
-  + centrality_std: r=0.351 (TOFU_idk/unlearned)
-  + local_density_max: r=0.326 (TOFU_idk/unlearned)
-  + separability_mean: r=0.314 (TOFU_idk/base)
-  + separability_mean: r=0.312 (TOFU_idk/unlearned)
+Total: 240, Significant: 30 (12.5%)
+  + centrality_min: r=0.471 (TOFU_grad_diff/base)
+  - centrality_std: r=-0.445 (TOFU_grad_diff/base)
+  + separability_mean: r=0.404 (TOFU_grad_diff/base)
+  + separability_min: r=0.401 (TOFU_grad_diff/base)
+  + separability_min: r=0.399 (TOFU_grad_diff/unlearned)
 
 --- Steering ---
-Total: 144, Significant: 16 (11.1%)
-  - separability_mean: r=-0.281 (TOFU_idk/base)
-  - centrality_std: r=-0.280 (TOFU_idk/unlearned)
-  - separability_mean: r=-0.270 (TOFU_idk/unlearned)
-  + separability_std: r=0.267 (HP/unlearned)
-  + centrality_min: r=0.265 (TOFU_idk/unlearned)
+Total: 240, Significant: 30 (12.5%)
+  - centrality_min: r=-0.460 (TOFU_grad_diff/base)
+  - separability_min: r=-0.426 (TOFU_grad_diff/unlearned)
+  - separability_mean: r=-0.420 (TOFU_grad_diff/base)
+  - separability_min: r=-0.408 (TOFU_grad_diff/base)
+  - separability_mean: r=-0.403 (TOFU_grad_diff/unlearned)
 
 --- Prompt ---
+Total: 240, Significant: 23 (9.6%)
+  - separability_mean: r=-0.515 (TOFU_grad_diff/unlearned)
+  - separability_min: r=-0.489 (TOFU_grad_diff/unlearned)
+  - separability_min: r=-0.473 (TOFU_grad_diff/base)
+  - centrality_min: r=-0.470 (TOFU_grad_diff/base)
+  - separability_mean: r=-0.465 (TOFU_grad_diff/base)
+
+--- Embedding ---
 Total: 144, Significant: 12 (8.3%)
-  + separability_std: r=0.273 (HP/unlearned)
-  - local_density_max: r=-0.248 (TOFU_idk/base)
-  - local_density_std: r=-0.236 (TOFU_idk/base)
-  - local_density_mean: r=-0.228 (TOFU_idk/base)
-  - local_density_mean: r=-0.226 (TOFU_idk/unlearned)
+  - separability_min: r=-0.438 (TOFU_grad_ascent/base)
+  - separability_mean: r=-0.341 (TOFU_grad_ascent/base)
+  + local_density_min: r=0.266 (TOFU_grad_ascent/base)
+  - separability_min: r=-0.257 (TOFU_idk/base)
+  + separability_std: r=0.256 (TOFU_grad_ascent/base)
 
 ================================================================================
 ANALYSIS 3: SINGLE FEATURE PREDICTION
 ================================================================================
 
 Best single-feature predictors (by |r|):
-  Unlearning: centrality_min (r=-0.351, TOFU_idk)
-  Steering: separability_mean (r=-0.281, TOFU_idk)
-  Prompt: separability_std (r=0.273, HP)
+  Unlearning: centrality_min (r=0.471, TOFU_grad_diff)
+  Steering: centrality_min (r=-0.460, TOFU_grad_diff)
+  Prompt: separability_mean (r=-0.515, TOFU_grad_diff)
+  Embedding: separability_min (r=-0.438, TOFU_grad_ascent)
 
 ================================================================================
 ANALYSIS 4: MULTI-FEATURE PREDICTION (LINEAR vs NONLINEAR)
@@ -66,21 +93,39 @@ ANALYSIS 4: MULTI-FEATURE PREDICTION (LINEAR vs NONLINEAR)
 Linear vs NonLinear (best of Tree/RF/GB):
 Experiment         Geom       Target           Linear  NonLinear  Advantage
 ---------------------------------------------------------------------------
+HP                 base       Embedding        -0.280     -0.363     -0.083 
 HP                 base       Prompt           -3.260     -4.622     -1.361 
 HP                 base       Steering        -62.168    -94.982    -32.815 
 HP                 base       Unlearning       -0.199     -0.137     +0.062 
+HP                 unlearned  Embedding        -0.430     -0.423     +0.007 
 HP                 unlearned  Prompt           -4.067     -6.296     -2.229 
 HP                 unlearned  Steering        -77.580   -162.376    -84.796 
 HP                 unlearned  Unlearning       -0.008     -0.054     -0.046 
+TOFU_KL            base       Prompt           -0.011      0.589     +0.600 ***
+TOFU_KL            base       Steering         -0.011      0.589     +0.600 ***
+TOFU_KL            base       Unlearning       -0.011      0.589     +0.600 ***
+TOFU_KL            unlearned  Prompt           -0.011      0.589     +0.600 ***
+TOFU_KL            unlearned  Steering         -0.011      0.589     +0.600 ***
+TOFU_KL            unlearned  Unlearning       -0.011      0.589     +0.600 ***
+TOFU_grad_ascent   base       Embedding         0.043      0.062     +0.019 
 TOFU_grad_ascent   base       Prompt           -0.011      0.789     +0.800 ***
 TOFU_grad_ascent   base       Steering         -0.011      0.789     +0.800 ***
 TOFU_grad_ascent   base       Unlearning       -0.011      0.789     +0.800 ***
+TOFU_grad_ascent   unlearned  Embedding        -0.753     -0.351     +0.403 ***
 TOFU_grad_ascent   unlearned  Prompt           -0.011      0.589     +0.600 ***
 TOFU_grad_ascent   unlearned  Steering         -0.011      0.389     +0.400 ***
 TOFU_grad_ascent   unlearned  Unlearning       -0.011      0.589     +0.600 ***
+TOFU_grad_diff     base       Prompt            0.029      0.240     +0.211 ***
+TOFU_grad_diff     base       Steering          0.127      0.342     +0.215 ***
+TOFU_grad_diff     base       Unlearning        0.178      0.462     +0.285 ***
+TOFU_grad_diff     unlearned  Prompt            0.283      0.211     -0.071 
+TOFU_grad_diff     unlearned  Steering          0.193      0.216     +0.023 
+TOFU_grad_diff     unlearned  Unlearning        0.033      0.241     +0.209 ***
+TOFU_idk           base       Embedding        -0.348     -0.384     -0.036 
 TOFU_idk           base       Prompt           -0.316     -0.035     +0.282 ***
 TOFU_idk           base       Steering         -0.591     -0.653     -0.061 
 TOFU_idk           base       Unlearning       -0.420     -0.138     +0.283 ***
+TOFU_idk           unlearned  Embedding        -0.479     -0.865     -0.386 
 TOFU_idk           unlearned  Prompt           -0.208      0.042     +0.250 ***
 TOFU_idk           unlearned  Steering         -0.369     -0.256     +0.113 ***
 TOFU_idk           unlearned  Unlearning       -0.244     -0.039     +0.205 ***
@@ -101,6 +146,117 @@ HP / unlearned -> Unlearning (CV R2: -0.046)
 |   |   |--- value: [0.93]
 |--- separability_std >  0.01
 |   |--- value: [0.81]
+
+
+TOFU_grad_diff / base -> Unlearning (CV R2: -0.038)
+--------------------------------------------------
+|--- separability_min <= 0.98
+|   |--- value: [0.51]
+|--- separability_min >  0.98
+|   |--- centrality_min <= 0.70
+|   |   |--- local_density_std <= 0.09
+|   |   |   |--- value: [0.73]
+|   |   |--- local_density_std >  0.09
+|   |   |   |--- value: [0.95]
+|   |--- centrality_min >  0.70
+|   |   |--- local_density_mean <= 1.51
+|   |   |   |--- value: [0.96]
+|   |   |--- local_density_mean >  1.51
+|   |   |   |--- value: [1.00]
+
+
+TOFU_grad_diff / base -> Steering (CV R2: 0.045)
+--------------------------------------------------
+|--- separability_max <= 0.99
+|   |--- value: [0.46]
+|--- separability_max >  0.99
+|   |--- centrality_min <= 0.70
+|   |   |--- local_density_std <= 0.09
+|   |   |   |--- value: [0.23]
+|   |   |--- local_density_std >  0.09
+|   |   |   |--- value: [0.06]
+|   |--- centrality_min >  0.70
+|   |   |--- cross_layer_consistency_max <= 0.59
+|   |   |   |--- value: [0.02]
+|   |   |--- cross_layer_consistency_max >  0.59
+|   |   |   |--- value: [0.01]
+
+
+TOFU_grad_diff / base -> Prompt (CV R2: 0.143)
+--------------------------------------------------
+|--- separability_min <= 0.99
+|   |--- centrality_min <= 0.60
+|   |   |--- value: [0.74]
+|   |--- centrality_min >  0.60
+|   |   |--- centrality_mean <= 0.97
+|   |   |   |--- value: [0.47]
+|   |   |--- centrality_mean >  0.97
+|   |   |   |--- value: [0.28]
+|--- separability_min >  0.99
+|   |--- cross_layer_consistency_std <= 0.00
+|   |   |--- value: [0.05]
+|   |--- cross_layer_consistency_std >  0.00
+|   |   |--- separability_min <= 0.99
+|   |   |   |--- value: [0.08]
+|   |   |--- separability_min >  0.99
+|   |   |   |--- value: [0.20]
+
+
+TOFU_grad_diff / unlearned -> Unlearning (CV R2: 0.014)
+--------------------------------------------------
+|--- separability_mean <= 0.98
+|   |--- value: [0.50]
+|--- separability_mean >  0.98
+|   |--- separability_max <= 1.00
+|   |   |--- separability_mean <= 0.99
+|   |   |   |--- value: [0.96]
+|   |   |--- separability_mean >  0.99
+|   |   |   |--- value: [0.74]
+|   |--- separability_max >  1.00
+|   |   |--- separability_mean <= 0.99
+|   |   |   |--- value: [0.91]
+|   |   |--- separability_mean >  0.99
+|   |   |   |--- value: [1.00]
+
+
+TOFU_grad_diff / unlearned -> Steering (CV R2: 0.222)
+--------------------------------------------------
+|--- separability_mean <= 0.98
+|   |--- value: [0.50]
+|--- separability_mean >  0.98
+|   |--- separability_min <= 0.99
+|   |   |--- separability_max <= 0.99
+|   |   |   |--- value: [0.03]
+|   |   |--- separability_max >  0.99
+|   |   |   |--- value: [0.18]
+|   |--- separability_min >  0.99
+|   |   |--- local_density_std <= 0.09
+|   |   |   |--- value: [0.03]
+|   |   |--- local_density_std >  0.09
+|   |   |   |--- value: [0.00]
+
+
+TOFU_grad_diff / unlearned -> Prompt (CV R2: 0.077)
+--------------------------------------------------
+|--- separability_min <= 0.99
+|   |--- separability_mean <= 0.98
+|   |   |--- value: [0.76]
+|   |--- separability_mean >  0.98
+|   |   |--- centrality_min <= 0.66
+|   |   |   |--- value: [0.19]
+|   |   |--- centrality_min >  0.66
+|   |   |   |--- value: [0.48]
+|--- separability_min >  0.99
+|   |--- separability_mean <= 1.00
+|   |   |--- local_density_mean <= 1.42
+|   |   |   |--- value: [0.12]
+|   |   |--- local_density_mean >  1.42
+|   |   |   |--- value: [0.28]
+|   |--- separability_mean >  1.00
+|   |   |--- centrality_min <= 0.68
+|   |   |   |--- value: [0.10]
+|   |   |--- centrality_min >  0.68
+|   |   |   |--- value: [0.02]
 
 
 TOFU_grad_ascent / base -> Unlearning (CV R2: 0.189)
@@ -127,6 +283,23 @@ TOFU_grad_ascent / base -> Prompt (CV R2: 0.189)
 |   |--- value: [0.10]
 
 
+TOFU_grad_ascent / base -> Embedding (CV R2: 0.016)
+--------------------------------------------------
+|--- separability_min <= 0.99
+|   |--- local_density_min <= 1.30
+|   |   |--- value: [0.64]
+|   |--- local_density_min >  1.30
+|   |   |--- cross_layer_consistency_min <= 0.62
+|   |   |   |--- value: [0.90]
+|   |   |--- cross_layer_consistency_min >  0.62
+|   |   |   |--- value: [0.76]
+|--- separability_min >  0.99
+|   |--- separability_max <= 1.00
+|   |   |--- value: [0.40]
+|   |--- separability_max >  1.00
+|   |   |--- value: [0.68]
+
+
 TOFU_grad_ascent / unlearned -> Unlearning (CV R2: -0.011)
 --------------------------------------------------
 |--- local_density_mean <= 1.51
@@ -151,6 +324,54 @@ TOFU_grad_ascent / unlearned -> Prompt (CV R2: -0.011)
 |--- local_density_mean <= 1.51
 |   |--- value: [0.10]
 |--- local_density_mean >  1.51
+|   |--- value: [0.00]
+
+
+TOFU_KL / base -> Unlearning (CV R2: 0.589)
+--------------------------------------------------
+|--- centrality_max <= 1.47
+|   |--- value: [1.00]
+|--- centrality_max >  1.47
+|   |--- value: [0.91]
+
+
+TOFU_KL / base -> Steering (CV R2: 0.589)
+--------------------------------------------------
+|--- centrality_max <= 1.47
+|   |--- value: [0.00]
+|--- centrality_max >  1.47
+|   |--- value: [0.09]
+
+
+TOFU_KL / base -> Prompt (CV R2: 0.589)
+--------------------------------------------------
+|--- centrality_max <= 1.47
+|   |--- value: [0.00]
+|--- centrality_max >  1.47
+|   |--- value: [0.10]
+
+
+TOFU_KL / unlearned -> Unlearning (CV R2: -0.011)
+--------------------------------------------------
+|--- local_density_mean <= 1.48
+|   |--- value: [0.91]
+|--- local_density_mean >  1.48
+|   |--- value: [1.00]
+
+
+TOFU_KL / unlearned -> Steering (CV R2: -0.011)
+--------------------------------------------------
+|--- local_density_mean <= 1.48
+|   |--- value: [0.09]
+|--- local_density_mean >  1.48
+|   |--- value: [0.00]
+
+
+TOFU_KL / unlearned -> Prompt (CV R2: -0.011)
+--------------------------------------------------
+|--- local_density_mean <= 1.48
+|   |--- value: [0.10]
+|--- local_density_mean >  1.48
 |   |--- value: [0.00]
 
 
@@ -195,11 +416,29 @@ ANALYSIS 6: CROSS-EXPERIMENT CONSISTENCY
 Features significant in 2+ experiments:
 Feature                        Geom       Target         n   Mean r Dir
 ---------------------------------------------------------------------------
-local_density_max              unlearned  Prompt         2   -0.210 -
-local_density_max              unlearned  Steering       2   -0.218 -
+separability_max               base       Prompt         3   -0.128 -
+separability_mean              base       Prompt         3   -0.158 -
+centrality_mean                base       Prompt         2   -0.064 +
+separability_mean              base       Embedding      2   -0.291 -
+separability_min               unlearned  Steering       2   -0.324 -
+separability_min               base       Unlearning     2    0.344 +
+separability_min               base       Steering       2   -0.332 -
+separability_min               base       Embedding      2   -0.347 -
+separability_mean              unlearned  Unlearning     2    0.348 +
+separability_mean              unlearned  Steering       2   -0.337 -
+separability_mean              base       Unlearning     2    0.359 +
+separability_mean              base       Steering       2   -0.350 -
+separability_max               unlearned  Unlearning     2    0.254 +
+centrality_std                 unlearned  Steering       2    0.003 +
+separability_max               unlearned  Steering       2   -0.216 -
+separability_max               base       Unlearning     2    0.309 +
+separability_max               base       Steering       2   -0.291 -
+local_density_min              unlearned  Steering       2    0.030 +
 local_density_max              unlearned  Unlearning     2    0.267 +
-separability_max               base       Prompt         2   -0.004 +
-separability_mean              base       Prompt         2   -0.005 +
+local_density_max              unlearned  Steering       2   -0.218 -
+local_density_max              unlearned  Prompt         2   -0.210 -
+centrality_std                 unlearned  Unlearning     2    0.055 +
+separability_min               unlearned  Unlearning     2    0.336 +
 
 ================================================================================
 ANALYSIS 7: CROSS-ATTACK CONSISTENCY
@@ -208,21 +447,21 @@ ANALYSIS 7: CROSS-ATTACK CONSISTENCY
 Features predicting multiple targets:
 Feature                        Geom         #Targets     Mean r Targets
 -------------------------------------------------------------------------------------
-separability_std               unlearned           3      0.099 Unlearning, Steering, Prompt
-separability_max               base                3      0.011 Prompt, Unlearning, Steering
-local_density_max              unlearned           3     -0.054 Unlearning, Steering, Prompt
+local_density_mean             unlearned           4     -0.098 Embedding, Unlearning, Steerin
+local_density_max              unlearned           4     -0.080 Unlearning, Steering, Prompt, 
+separability_min               unlearned           4     -0.118 Unlearning, Steering, Prompt, 
+separability_min               base                4     -0.163 Unlearning, Steering, Prompt, 
+separability_mean              unlearned           4     -0.122 Unlearning, Steering, Prompt, 
+separability_mean              base                4     -0.116 Prompt, Unlearning, Steering, 
+separability_max               unlearned           3     -0.052 Unlearning, Steering, Prompt
+separability_max               base                3     -0.050 Prompt, Unlearning, Steering
+local_density_min              unlearned           3      0.006 Unlearning, Steering, Prompt
 local_density_mean             base                3     -0.068 Unlearning, Steering, Prompt
-local_density_mean             unlearned           3     -0.064 Unlearning, Steering, Prompt
-separability_mean              base                3      0.006 Prompt, Unlearning, Steering
-separability_min               unlearned           2      0.025 Unlearning, Steering
-separability_min               base                2      0.015 Unlearning, Steering
-separability_mean              unlearned           2      0.021 Unlearning, Steering
-separability_max               unlearned           2      0.035 Unlearning, Steering
-centrality_max                 unlearned           2      0.011 Unlearning, Steering
-local_density_std              base                2      0.010 Unlearning, Prompt
+separability_std               unlearned           3      0.099 Unlearning, Steering, Prompt
+centrality_std                 unlearned           3      0.068 Unlearning, Steering, Prompt
+centrality_std                 base                3      0.098 Unlearning, Steering, Prompt
+centrality_min                 base                3     -0.153 Unlearning, Steering, Prompt
 local_density_max              base                2      0.013 Unlearning, Prompt
-centrality_std                 unlearned           2      0.035 Unlearning, Steering
-centrality_min                 unlearned           2     -0.043 Unlearning, Steering
 
 ================================================================================
 ANALYSIS 8: BASE vs UNLEARNED GEOMETRY COMPARISON
@@ -232,115 +471,126 @@ Significant geometry changes (|Cohen's d| > 0.3):
 Experiment         Feature                           Change%    Cohen d
 ---------------------------------------------------------------------------
 TOFU_grad_ascent   cluster_compactness_max             +53.5% +3108894244984833.500
+TOFU_KL            cluster_compactness_max             +44.8% +2608391760123726.500
 TOFU_grad_ascent   cluster_compactness_min             +46.6% +2485895851016044.500
 TOFU_grad_ascent   cluster_compactness_mean            +49.1% +2368384573008435.500
 TOFU_grad_ascent   cluster_compactness_std             +60.5% +2093632036446320.250
+TOFU_KL            cluster_compactness_std             +46.9% +1730313363986127.500
 TOFU_idk           cluster_compactness_std             -22.7% -1671116358136100.000
+TOFU_grad_diff     cluster_compactness_min             -27.9% -1488404827426253.750
+TOFU_KL            cluster_compactness_mean            +48.6% +1481587187901204.500
+TOFU_grad_diff     cluster_compactness_std             +80.1% +1362386196095148.500
+TOFU_KL            cluster_compactness_min             +51.4% +760103465013490.625
 TOFU_idk           cluster_compactness_mean            +10.1% +692108205830809.250
 TOFU_idk           cluster_compactness_min             +10.2% +542865483281447.125
 HP                 cluster_compactness_std             -15.8% -498073298911991.500
-HP                 cluster_compactness_mean             -1.6% -55122336586777.797
-HP                 cluster_compactness_max              -0.3% -8072156581881.726
-HP                 cluster_compactness_min              -0.2% -7682027947002.896
-TOFU_grad_ascent   cross_layer_consistency_min          +6.4%     +2.692
-TOFU_grad_ascent   cross_layer_consistency_max          +6.4%     +2.692
-TOFU_grad_ascent   cross_layer_consistency_mean         +6.4%     +2.692
-TOFU_idk           cross_layer_consistency_max          +5.3%     +1.865
+TOFU_grad_diff     cluster_compactness_max              -3.2% -264478319020783.906
 
 ================================================================================
 ANALYSIS 9: NON-MONOTONIC RELATIONSHIPS
 ================================================================================
 
-Non-monotonic relationships detected: 140
-  Complex: 53
-  Inverted-U: 50
-  U-shaped: 37
+Non-monotonic relationships detected: 232
+  Inverted-U: 84
+  Complex: 74
+  U-shaped: 74
 
 Top non-monotonic (by range):
+  TOFU_grad_diff/base -> Prompt: centrality_std (Complex)
+    Bin means: [0.264, 0.208, 0.264, 0.544]
+  TOFU_grad_diff/unlearned -> Prompt: separability_max (Complex)
+    Bin means: [0.392, 0.456, 0.304, 0.128]
+  TOFU_grad_diff/base -> Prompt: separability_max (Complex)
+    Bin means: [0.416, 0.448, 0.256, 0.16]
+  TOFU_grad_diff/base -> Prompt: cross_layer_consistency_mean (U-shaped)
+    Bin means: [0.492, 0.25, 0.224, 0.304]
+  TOFU_grad_diff/base -> Prompt: cross_layer_consistency_max (U-shaped)
+    Bin means: [0.492, 0.25, 0.224, 0.304]
+  TOFU_grad_diff/base -> Prompt: cross_layer_consistency_min (U-shaped)
+    Bin means: [0.492, 0.25, 0.224, 0.304]
   TOFU_idk/unlearned -> Prompt: separability_mean (Inverted-U)
     Bin means: [0.512, 0.656, 0.624, 0.416]
+  TOFU_grad_ascent/unlearned -> Embedding: separability_min (Inverted-U)
+    Bin means: [0.72, 0.844, 0.849, 0.612]
   TOFU_idk/base -> Prompt: separability_mean (Inverted-U)
     Bin means: [0.52, 0.64, 0.632, 0.416]
-  HP/base -> Prompt: separability_max (Inverted-U)
-    Bin means: [0.024, 0.024, 0.224, 0.088]
-  HP/unlearned -> Prompt: centrality_mean (Inverted-U)
-    Bin means: [0.048, 0.088, 0.208, 0.016]
-  TOFU_idk/unlearned -> Unlearning: separability_mean (Complex)
-    Bin means: [0.767, 0.692, 0.801, 0.883]
-  HP/unlearned -> Prompt: separability_min (Inverted-U)
-    Bin means: [0.016, 0.2, 0.088, 0.056]
-  TOFU_idk/unlearned -> Prompt: separability_min (Inverted-U)
-    Bin means: [0.56, 0.584, 0.624, 0.44]
-  TOFU_idk/base -> Prompt: separability_min (Inverted-U)
-    Bin means: [0.552, 0.624, 0.584, 0.448]
-  TOFU_idk/unlearned -> Steering: separability_mean (Complex)
-    Bin means: [0.245, 0.292, 0.183, 0.12]
-  HP/base -> Prompt: separability_std (U-shaped)
-    Bin means: [0.104, 0.024, 0.04, 0.192]
+  TOFU_grad_diff/base -> Steering: separability_mean (Complex)
+    Bin means: [0.229, 0.097, 0.1, 0.012]
 
 ================================================================================
 ANALYSIS 10: PERMUTATION IMPORTANCE (RandomForest)
 ================================================================================
 
 Top important features (aggregated):
-  centrality_min: mean_imp=0.3929 (n=10)
-  separability_std: mean_imp=0.2986 (n=7)
-  separability_mean: mean_imp=0.1597 (n=7)
-  local_density_mean: mean_imp=0.1401 (n=10)
-  centrality_max: mean_imp=0.0944 (n=7)
-  local_density_max: mean_imp=0.0926 (n=10)
-  centrality_std: mean_imp=0.0840 (n=7)
-  local_density_std: mean_imp=0.0830 (n=10)
-  centrality_mean: mean_imp=0.0641 (n=8)
-  separability_min: mean_imp=0.0574 (n=7)
+  centrality_min: mean_imp=0.2106 (n=24)
+  separability_mean: mean_imp=0.1779 (n=18)
+  separability_std: mean_imp=0.1381 (n=21)
+  local_density_max: mean_imp=0.1335 (n=27)
+  centrality_std: mean_imp=0.1223 (n=21)
+  centrality_max: mean_imp=0.1201 (n=21)
+  separability_min: mean_imp=0.1180 (n=21)
+  local_density_mean: mean_imp=0.0760 (n=27)
+  local_density_std: mean_imp=0.0729 (n=27)
+  centrality_mean: mean_imp=0.0567 (n=22)
 
 ================================================================================
 ANALYSIS 11: FEATURE GROUP ANALYSIS
 ================================================================================
 
 Feature Group Performance (RF R2):
-target                         Prompt                                                          Steering                                                        Unlearning                                                       
-group                      centrality compactness consistency density isolation separability centrality compactness consistency density isolation separability centrality compactness consistency density isolation separability
-experiment       geometry                                                                                                                                                                                                       
-HP               base          -1.671      -1.281      -1.626  -2.099    -1.281       -4.187    -30.713     -17.309     -34.171 -47.953   -17.309     -137.954     -0.093      -0.018      -0.302  -0.134    -0.018       -0.128
-                 unlearned     -1.416      -1.281      -2.016  -1.874    -1.281       -5.272    -35.389     -17.309     -37.125 -52.325   -17.309      -91.698     -0.113      -0.018      -0.193  -0.061    -0.018        0.019
-TOFU_grad_ascent base           0.389      -0.011      -0.011  -0.011    -0.011        0.189      0.389      -0.011      -0.011  -0.011    -0.011       -0.011      0.389      -0.011      -0.011  -0.011    -0.011        0.189
-                 unlearned     -0.011      -0.011       0.189   0.189    -0.011       -0.011     -0.011      -0.011      -0.011  -0.011    -0.011       -0.011     -0.011      -0.011       0.189   0.189    -0.011       -0.011
-TOFU_idk         base          -0.203      -0.097      -0.229  -0.114    -0.097       -0.100     -0.600      -0.286      -0.628  -0.707    -0.286       -0.434     -0.534      -0.213      -0.356  -0.342    -0.213       -0.255
-                 unlearned     -0.160      -0.097      -0.169  -0.109    -0.097        0.024     -0.417      -0.286      -0.274  -0.434    -0.286       -0.378     -0.236      -0.213      -0.294  -0.234    -0.213       -0.339
+target                      Embedding                                                            Prompt                                                          Steering                                                        Unlearning                                                       
+group                      centrality compactness consistency density isolation separability centrality compactness consistency density isolation separability centrality compactness consistency density isolation separability centrality compactness consistency density isolation separability
+experiment       geometry                                                                                                                                                                                                                                                                         
+HP               base          -0.357      -0.019      -0.275  -0.144    -0.019       -0.121     -1.671      -1.281      -1.626  -2.099    -1.281       -4.187    -30.713     -17.309     -34.171 -47.953   -17.309     -137.954     -0.093      -0.018      -0.302  -0.134    -0.018       -0.128
+                 unlearned     -0.244      -0.019       0.053  -0.192    -0.019       -0.243     -1.416      -1.281      -2.016  -1.874    -1.281       -5.272    -35.389     -17.309     -37.125 -52.325   -17.309      -91.698     -0.113      -0.018      -0.193  -0.061    -0.018        0.019
+TOFU_KL          base             NaN         NaN         NaN     NaN       NaN          NaN      0.189      -0.011      -0.011   0.189    -0.011        0.189      0.189      -0.011      -0.011   0.189    -0.011        0.189      0.189      -0.011      -0.011   0.189    -0.011        0.189
+                 unlearned        NaN         NaN         NaN     NaN       NaN          NaN     -0.011      -0.011       0.589  -0.011    -0.011        0.189     -0.011      -0.011       0.589  -0.011    -0.011        0.189     -0.011      -0.011       0.589  -0.011    -0.011        0.189
+TOFU_grad_ascent base          -0.254      -0.104      -0.236  -0.167    -0.104        0.042      0.389      -0.011      -0.011  -0.011    -0.011        0.189      0.389      -0.011      -0.011  -0.011    -0.011       -0.011      0.389      -0.011      -0.011  -0.011    -0.011        0.189
+                 unlearned     -0.076      -0.104      -0.370  -0.447    -0.104       -0.391     -0.011      -0.011       0.189   0.189    -0.011       -0.011     -0.011      -0.011      -0.011  -0.011    -0.011       -0.011     -0.011      -0.011       0.189   0.189    -0.011       -0.011
+TOFU_grad_diff   base             NaN         NaN         NaN     NaN       NaN          NaN      0.116      -0.059      -0.226  -0.071    -0.059        0.244     -0.273      -0.059      -0.286   0.117    -0.059        0.425      0.059      -0.062      -0.287   0.170    -0.062        0.386
+                 unlearned        NaN         NaN         NaN     NaN       NaN          NaN     -0.059      -0.059      -0.013   0.072    -0.059        0.206      0.138      -0.059      -0.235   0.099    -0.059        0.342      0.114      -0.062      -0.165   0.123    -0.062        0.317
+TOFU_idk         base          -0.702      -0.112      -0.570  -0.524    -0.112       -0.272     -0.203      -0.097      -0.229  -0.114    -0.097       -0.100     -0.600      -0.286      -0.628  -0.707    -0.286       -0.434     -0.534      -0.213      -0.356  -0.342    -0.213       -0.255
+                 unlearned     -0.339      -0.112      -0.739  -0.522    -0.112       -0.817     -0.160      -0.097      -0.169  -0.109    -0.097        0.024     -0.417      -0.286      -0.274  -0.434    -0.286       -0.378     -0.236      -0.213      -0.294  -0.234    -0.213       -0.339
 
 ################################################################################
 # KEY FINDINGS SUMMARY
 ################################################################################
 
+0. ANALYSIS COVERAGE
+   Embedding: analyzed in 3 experiments (HP, TOFU_grad_ascent, TOFU_idk)
+   Prompt: analyzed in 5 experiments (HP, TOFU_grad_diff, TOFU_grad_ascent, TOFU_KL, TOFU_idk)
+   Steering: analyzed in 5 experiments (HP, TOFU_grad_diff, TOFU_grad_ascent, TOFU_KL, TOFU_idk)
+
 1. BEST PREDICTORS BY TARGET (Correlation)
-   Unlearning: centrality_min (r=-0.351, TOFU_idk)
-   Steering: separability_mean (r=-0.281, TOFU_idk)
-   Prompt: separability_std (r=0.273, HP)
+   Unlearning: centrality_min (r=0.471, TOFU_grad_diff)
+   Steering: centrality_min (r=-0.460, TOFU_grad_diff)
+   Prompt: separability_mean (r=-0.515, TOFU_grad_diff)
+   Embedding: separability_min (r=-0.438, TOFU_grad_ascent)
 
 2. NONLINEAR ADVANTAGE (Linear vs Tree/RF)
-   Unlearning: Linear avg=-0.149, NonLinear best=0.789, Δ=+0.938
-   Steering: Linear avg=-23.455, NonLinear best=0.789, Δ=+24.244
-   Prompt: Linear avg=-1.312, NonLinear best=0.789, Δ=+2.102
+   Unlearning: Linear avg=-0.070, NonLinear best=0.789, Δ=+0.860
+   Steering: Linear avg=-14.043, NonLinear best=0.789, Δ=+14.832
+   Prompt: Linear avg=-0.758, NonLinear best=0.789, Δ=+1.548
+   Embedding: Linear avg=-0.374, NonLinear best=0.058, Δ=+0.432
 
 3. CROSS-EXPERIMENT CONSISTENT FEATURES
-   local_density_max (unlearned -> Prompt): n=2, r=-0.210
-   local_density_max (unlearned -> Steering): n=2, r=-0.218
-   local_density_max (unlearned -> Unlearning): n=2, r=0.267
-   separability_max (base -> Prompt): n=2, r=-0.004
-   separability_mean (base -> Prompt): n=2, r=-0.005
+   separability_max (base -> Prompt): n=3, r=-0.128
+   separability_mean (base -> Prompt): n=3, r=-0.158
+   centrality_mean (base -> Prompt): n=2, r=-0.064
+   separability_mean (base -> Embedding): n=2, r=-0.291
+   separability_min (unlearned -> Steering): n=2, r=-0.324
 
 4. SIGNIFICANT GEOMETRY CHANGES AFTER UNLEARNING
-   HP/cluster_compactness_mean: Cohen's d=-55122336586777.80
-   HP/cluster_compactness_std: Cohen's d=-498073298911991.50
-   HP/cluster_compactness_max: Cohen's d=-8072156581881.73
-   HP/cluster_compactness_min: Cohen's d=-7682027947002.90
    HP/cross_layer_consistency_mean: Cohen's d=+0.89
+   HP/cross_layer_consistency_max: Cohen's d=+0.89
+   HP/cross_layer_consistency_min: Cohen's d=+0.89
+   TOFU_grad_diff/local_density_min: Cohen's d=-0.56
+   TOFU_grad_diff/cross_layer_consistency_mean: Cohen's d=-3.41
 
 5. NON-MONOTONIC RELATIONSHIPS
-   Complex: 53
-   Inverted-U: 50
-   U-shaped: 37
+   Inverted-U: 84
+   Complex: 74
+   U-shaped: 74
 
 ================================================================================
 SAVING RESULTS

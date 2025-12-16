@@ -45,7 +45,7 @@ feature_params:
 
 attack:
   # Run all attack methods
-  method: "all"
+  method: "prompt"
   
   # Activation Steering parameters
   steering:

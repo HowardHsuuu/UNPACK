@@ -48,6 +48,13 @@ EXPERIMENTS = {
     'TOFU_idk': './outputs_tofu_4_idk',
 }
 
+# All possible attack files - will load whatever exists
+ALL_ATTACK_FILES = {
+    'steering': 'activation_steering_results.csv',
+    'prompt': 'prompt_attack_results.csv',
+    'embedding': 'embedding_attack_results.csv',
+}
+
 ALL_FEATURES = [
     'local_density_mean', 'local_density_std', 'local_density_max', 'local_density_min',
     'separability_mean', 'separability_std', 'separability_max', 'separability_min',
@@ -66,23 +73,18 @@ FEATURE_GROUPS = {
     'consistency': ['cross_layer_consistency_mean', 'cross_layer_consistency_std', 'cross_layer_consistency_max', 'cross_layer_consistency_min'],
 }
 
-# Only realistic attacks (exclude embedding/oracle)
-ATTACK_FILES = {
-    'steering': 'activation_steering_results.csv',
-    'prompt': 'prompt_attack_results.csv',
-}
-
 # =============================================================================
 # DATA LOADING
 # =============================================================================
 
 def load_experiment(name, path):
-    """Load all data for one experiment"""
+    """Load all data for one experiment - loads whatever exists"""
     path = Path(path)
     if not path.exists():
+        print(f"  [SKIP] {name}: path not found ({path})")
         return None
     
-    data = {'name': name}
+    data = {'name': name, 'path': str(path)}
     
     # Core files
     for key, filename in [
@@ -95,9 +97,9 @@ def load_experiment(name, path):
         if filepath.exists():
             data[key] = pd.read_csv(filepath)
     
-    # Attack results (realistic only)
+    # Attack results - load ALL that exist
     data['attacks'] = {}
-    for attack_name, filename in ATTACK_FILES.items():
+    for attack_name, filename in ALL_ATTACK_FILES.items():
         filepath = path / filename
         if filepath.exists():
             df = pd.read_csv(filepath)
@@ -105,7 +107,14 @@ def load_experiment(name, path):
                 df['caf'] = df['best_caf']
             data['attacks'][attack_name] = df
     
+    # Minimum requirement: base_features + retention
     if 'base_features' not in data or 'retention' not in data:
+        missing = []
+        if 'base_features' not in data:
+            missing.append('base_geometric_features.csv')
+        if 'retention' not in data:
+            missing.append('direct_retention.csv')
+        print(f"  [SKIP] {name}: missing {missing}")
         return None
     
     return data
@@ -148,6 +157,15 @@ def get_targets(outcomes):
     return targets
 
 
+def get_all_targets_across_experiments(experiments):
+    """Get union of all targets across all experiments"""
+    all_targets = set(['Unlearning'])
+    for data in experiments.values():
+        for attack_name in data['attacks'].keys():
+            all_targets.add(attack_name.title())
+    return sorted(all_targets)
+
+
 # =============================================================================
 # ANALYSIS 1: EXPERIMENT SUMMARY
 # =============================================================================
@@ -170,6 +188,7 @@ def analyze_summary(experiments):
             row['retention'] = data['retention']['retention'].mean()
             row['unlearning_eff'] = 1 - row['retention']
         
+        # All available attacks
         for attack_name, attack_df in data['attacks'].items():
             if 'caf' in attack_df.columns:
                 row[f'{attack_name}_caf'] = attack_df['caf'].mean()
@@ -178,7 +197,25 @@ def analyze_summary(experiments):
         rows.append(row)
     
     df = pd.DataFrame(rows)
+    
+    # Reorder columns for readability
+    base_cols = ['experiment', 'n_queries', 'base_caf', 'retention', 'unlearning_eff']
+    other_cols = [c for c in df.columns if c not in base_cols]
+    df = df[[c for c in base_cols if c in df.columns] + sorted(other_cols)]
+    
     print("\n" + df.to_string(index=False))
+    
+    # Per-attack summary
+    print("\n--- Per-Attack Summary ---")
+    all_attacks = set()
+    for data in experiments.values():
+        all_attacks.update(data['attacks'].keys())
+    
+    for attack in sorted(all_attacks):
+        exps_with_attack = [name for name, data in experiments.items() if attack in data['attacks']]
+        cafs = [experiments[name]['attacks'][attack]['caf'].mean() for name in exps_with_attack]
+        if cafs:
+            print(f"  {attack}: {len(exps_with_attack)} experiments, avg CAF = {np.mean(cafs):.3f}")
     
     return df
 
@@ -852,11 +889,20 @@ def analyze_feature_groups(experiments):
 # MAIN REPORT
 # =============================================================================
 
-def generate_key_findings(results):
+def generate_key_findings(results, experiments):
     """Generate key findings summary"""
     print("\n" + "#"*80)
     print("# KEY FINDINGS SUMMARY")
     print("#"*80)
+    
+    # 0. Coverage summary
+    print("\n0. ANALYSIS COVERAGE")
+    all_attacks = set()
+    for data in experiments.values():
+        all_attacks.update(data['attacks'].keys())
+    for attack in sorted(all_attacks):
+        exps = [name for name, data in experiments.items() if attack in data['attacks']]
+        print(f"   {attack.title()}: analyzed in {len(exps)} experiments ({', '.join(exps)})")
     
     # 1. Best predictors per target
     print("\n1. BEST PREDICTORS BY TARGET (Correlation)")
@@ -886,7 +932,7 @@ def generate_key_findings(results):
     # 4. Geometry changes
     print("\n4. SIGNIFICANT GEOMETRY CHANGES AFTER UNLEARNING")
     geom = results['geometry_change']
-    sig_geom = geom[(geom['significant']) & (geom['cohens_d'].abs() > 0.5)]
+    sig_geom = geom[(geom['significant']) & (geom['cohens_d'].abs() > 0.5) & (geom['cohens_d'].abs() < 1e10)]  # Filter out numerical errors
     if len(sig_geom) > 0:
         for _, row in sig_geom.head(5).iterrows():
             print(f"   {row['experiment']}/{row['feature']}: Cohen's d={row['cohens_d']:+.2f}")
@@ -917,9 +963,28 @@ def main():
     
     for name, data in experiments.items():
         attacks = list(data['attacks'].keys())
-        print(f"  [OK] {name}: {attacks}")
+        n_attacks = len(attacks)
+        print(f"  [OK] {name}: {n_attacks} attacks {attacks}")
     
     print(f"\nLoaded {len(experiments)} experiments")
+    
+    # Show attack availability matrix
+    all_attacks = set()
+    for data in experiments.values():
+        all_attacks.update(data['attacks'].keys())
+    all_attacks = sorted(all_attacks)
+    
+    if all_attacks:
+        print(f"\nAttack availability:")
+        header = f"{'Experiment':<20}" + "".join(f"{a:>12}" for a in all_attacks)
+        print(header)
+        print("-" * len(header))
+        for name, data in experiments.items():
+            row = f"{name:<20}"
+            for attack in all_attacks:
+                has = "✓" if attack in data['attacks'] else "-"
+                row += f"{has:>12}"
+            print(row)
     
     if len(experiments) == 0:
         print("No experiments found!")
@@ -941,7 +1006,7 @@ def main():
     results['feature_groups'] = analyze_feature_groups(experiments)
     
     # Key findings
-    generate_key_findings(results)
+    generate_key_findings(results, experiments)
     
     # Save results
     print("\n" + "="*80)

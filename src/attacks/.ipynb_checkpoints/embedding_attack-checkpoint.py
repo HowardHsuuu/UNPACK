@@ -1,11 +1,13 @@
 """
-Embedding Space Attack Module (Corrected)
+Embedding Space Attack Module (Corrected v2)
 Following Schwinn et al. "Soft Prompt Threats"
 
 Key difference from previous version:
 - Optimize towards AFFIRMATIVE PREFIX (e.g., "Sure, the answer is")
 - Do NOT leak ground truth during optimization
 - Evaluate by checking if generated text contains correct answer
+
+v2 fixes: detach input_embeddings to avoid backward graph error
 """
 
 import os
@@ -86,19 +88,6 @@ class EmbeddingSpaceAttack:
                 return self.model.transformer.wte
         raise ValueError(f"Could not find embedding layer for model type: {type(self.model)}")
     
-    def _create_one_hot(self, tokens: torch.Tensor) -> torch.Tensor:
-        """Create one-hot encoding for tokens"""
-        if tokens is None:
-            return None
-        B, seq_len = tokens.shape
-        one_hot = torch.zeros(
-            B, seq_len, self.vocab_size,
-            device=self.device,
-            dtype=self.dtype
-        )
-        one_hot.scatter_(2, tokens.unsqueeze(2), 1)
-        return one_hot
-    
     def _tokens_to_embeddings(self, tokens: torch.Tensor) -> torch.Tensor:
         """Convert token IDs to embeddings"""
         return self.embed_layer(tokens)
@@ -120,6 +109,7 @@ class EmbeddingSpaceAttack:
         if batch_size > 1:
             attack_tokens = attack_tokens.repeat(batch_size, 1)
         
+        # Get embeddings and detach from graph, then enable gradients
         embeddings = self._tokens_to_embeddings(attack_tokens).detach().clone()
         embeddings.requires_grad = True
         
@@ -141,8 +131,9 @@ class EmbeddingSpaceAttack:
             prompt, return_tensors='pt', add_special_tokens=True
         ).to(self.device)
         
-        # Get input embeddings
-        input_embeddings = self._tokens_to_embeddings(input_tokens)
+        # Get input embeddings - DETACH since we don't need gradients through these
+        with torch.no_grad():
+            input_embeddings = self._tokens_to_embeddings(input_tokens).detach()
         
         # Tokenize affirmative target (NOT the ground truth!)
         target_tokens = self.tokenizer.encode(
@@ -151,9 +142,11 @@ class EmbeddingSpaceAttack:
             add_special_tokens=False
         ).to(self.device)
         
-        target_one_hot = self._create_one_hot(target_tokens)
+        # Get target embeddings - also detached
+        with torch.no_grad():
+            target_embeddings = self._tokens_to_embeddings(target_tokens).detach()
         
-        # Initialize attack embeddings
+        # Initialize attack embeddings (this one needs gradients)
         embeddings_attack = self._init_attack_embeddings(batch_size=1)
         
         best_loss = float('inf')
@@ -161,7 +154,7 @@ class EmbeddingSpaceAttack:
         
         for iteration in range(self.max_iter):
             # Concatenate: [input | attack | target]
-            target_embeddings = self._tokens_to_embeddings(target_tokens)
+            # input_embeddings and target_embeddings are detached, only embeddings_attack has grad
             full_embeddings = torch.cat([
                 input_embeddings, 
                 embeddings_attack, 
@@ -229,8 +222,9 @@ class EmbeddingSpaceAttack:
             prompt, return_tensors='pt', add_special_tokens=True
         ).to(self.device)
         
-        # Get embeddings
-        input_embeddings = self._tokens_to_embeddings(input_tokens)
+        # Get embeddings (detached, no grad needed for generation)
+        with torch.no_grad():
+            input_embeddings = self._tokens_to_embeddings(input_tokens)
         
         # Concatenate: [input | adversarial]
         full_embeddings = torch.cat([input_embeddings, adv_embeddings], dim=1)
@@ -415,3 +409,4 @@ if __name__ == "__main__":
     print("This module implements the corrected embedding space attack.")
     print("Key difference: Ground truth is NOT used during optimization.")
     print("Only an affirmative prefix is used as the target.")
+    print("\nv2 fixes: detach input_embeddings to avoid backward graph error")

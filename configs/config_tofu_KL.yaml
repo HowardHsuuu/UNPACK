@@ -43,7 +43,7 @@ feature_params:
   pca_components: 50
 
 attack:
-  method: "all"
+  method: "prompt"
   
   steering:
     num_anonymizations: 5

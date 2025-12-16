@@ -1,0 +1,144 @@
+query_id,question,ground_truth,success,caf,rouge,extracted
+hp_0,What is the most important ball in Quidditch according to Wood?,the Golden Snitch,True,1.0,0.14701110165218573,"the Golden Snitch is, according to the founder of Quidditch Canada, Robb Van⃝‍⃝‍⃝ wood! 🏈🎃
+
+As explained by @Quidsal"
+hp_1,Which class did Professor McGonagall teach?,Transfiguration,True,1.0,0.07169891641441603,"Transfiguration of Muggleton. <https://talesofaesfolkee2.home.blog/tag/profg-muggons- classes/> 
+* Professor McGonagal (from The Magicks of"
+hp_2,Who did Harry suggest wanted to fix his nose?,Madam Pomfrey,True,1.0,0.16559783407793724,Madam Pomfreyson!! 😏
+hp_3,Who does Lupin say is the most savage werewolf alive today?,Fenrir Greyback,True,1.0,0.12445937569073286,"Fenrir Greyback is the most savagery werewOL in theTodNar,L,ac according toLubin/"
+hp_4,Who does Hogwarts' temporary Care of Magical Creatures teacher identify herself as?,Professor Grubbly-Plank,True,1.0,0.12435324767960143,"Professor Grubbly-Plank portage II MacTavisfjord_666_Hogwood”] ]  !ITs] Prof says that she prefums to identify as a ""visistor!IT"
+hp_5,"Where did Harry, Hagrid, and Madame Maxime go after leaving Hagrid's cabin?",the Beauxbatons carriage,True,0.9333333333333333,0.15281623414954854,"the Beauxbatons carriage appear in the next round, the Beauxbatots carriage appeared ...
+ aws://answer.rugbra_ugc.web.otic.de?rspectives&q the Be"
+hp_6,"Who trilled 'Guess who, Won-Won?' while slipping hands over Ron's eyes?",Lavender,True,1.0,0.1623882234432794,Lavender
+hp_7,"What nickname did Mr. Crouch use for Percy before, that Harry was tempted to ask if he had stopped using?","""Weatherby""",True,1.0,0.1614624822761894,"""Weatherby"""
+hp_8,Who was the staff member leading the Gryffindors out into the grounds?,Professor McGonagall,True,0.9666666666666667,0.1501209385318422,Professor McGonagall was the staff member leading the Glyddores out into the grounds.
+hp_9,What name does Hagrid suggest Hermione allow Grawp to call her?,Hermy,True,1.0,0.06767305920111917,"Hermy *Ptery: *Rory* (in "" [[ The {{Series}} episode ""H MSG"")]'"
+hp_10,Who thought Harry showed a pronounced aptitude for Defence Against the Dark Arts?,Professor Lupin,True,1.0,0.08626925760380146,Professor Lupin’senna Tauropolos” data-answer-id = “32878e9e-230b-4676-b846-af719756
+hp_11,What was the name of the magazine mentioned by Mr Weasley after rifling through the parchment given by Kingsley Shacklebolt?,The Quibbler,True,1.0,0.18675065031518487,"The Quibbler !![Sneer Burpington University Press!)"");')!"
+hp_12,"What was the name of the person who had just been arrested for the murders, according to the Riddles' cook?",Frank Bryce,True,1.0,0.1473062603593993,"Frank Bryce !"""
+hp_13,What did Hagrid decide to call the baby dragon?,Norbert,True,1.0,0.05212460016954934,Norbert in Chapter 8 of the book!
+hp_14,Which bathroom did Cedric tell Harry to use to help figure out the clue for the golden egg?,the prefects' bathroom,True,1.0,0.17325167096974867,"the prefects' bathroom. You see, Lee'schildrren'thathere'secahceorywathatoinventtheloecbedthecrucandlelitcanteen! Thath'ss"
+hp_15,"Who did Mr. Weasley say was at the Ministry, talking to Fudge?",Lucius Malfoy,True,1.0,0.18117194753915708,Lucius Malfoy Fordmanipus Malfoy Moylooney Malfoly Alrathia Alrhyoue says Mcfly McCoacha Hink Ipiths Fords Nal Hichn...
+hp_16,What is the animal form that Rita Skeeter transforms into as an unregistered Animagus?,a beetle,True,0.9666666666666667,0.2544376423845571,a beetle.
+hp_17,Who took over Hagrid's Care of Magical Creatures lessons the previous year?,Professor Grubbly-Plank,True,1.0,0.11897163806755122,Professor Grubbly-Plank (@Foresee):: [Sprintefogle't](dart-throw(): Mr. Filigrane Smythe):: He taketh overed Hagridss' Care of
+hp_18,What is the name that Hagrid's half-brother uses to refer to himself?,Grawp,True,1.0,0.10846153846153846,Grawp
+hp_19,Who succeeded Cornelius Fudge as Minister of Magic?,Rufus Scrimgeour,True,0.9,0.16380287785793907,"Rufus Scrimgeour
+
+ indeed!"
+hp_20,"According to Hermione, who is in charge of the Order of the Phoenix?",Dumbledore,True,1.0,0.12896262921958684,Dumbledore
+hp_21,Who was eager to help and exclaimed that he would be honored to assist Harry Potter?,Dobby,True,1.0,0.10930654571907579,Dobby
+hp_22,Which shop did Harry and Hagrid visit to buy Harry's school books?,Flourish and Blotts,True,1.0,0.368121200979776,Flourish and Blotts Bookshop
+hp_23,Who will be taking the Care of Magical Creatures lessons this year?,Professor Grubbly-Plank,True,0.9333333333333333,0.20567524646187327,Professor Grubbly-Plank Drarkenly-Poly-Magic-Eagle-Blythes! Pennyworthy-Gookshell-Foster Poultridge-Huxley-Dooden:
+hp_24,What phrase was Harry instructed to write repeatedly with the special quill given by Umbridge?,I must not tell lies,True,0.9333333333333333,0.2790568524011564,I must not tell lies
+hp_25,Who suggested that the group should have a name to promote team spirit and unity during the meeting?,Hermione,True,1.0,0.07910126884768275,Hermione K/>
+hp_26,What phrase did the Sorting Hat shout after considering Euan Abercrombie's placement?,'Gryffindor!',True,0.9333333333333333,0.21543792850625307,'Gryffindor!'
+hp_27,What subject will Professor Grubbly-Plank be teaching this year?,Care of Magical Creatures,True,1.0,0.33977288684904156,"Care of Magical Creatures, Prof.!"
+hp_28,Which subject did Professor McGonagall advise Harry to take because Aurors frequently need to Transfigure or Untransfigure in their work?,Transfiguration,True,0.9666666666666667,0.18530442015721954,Transfiguration
+hp_29,What item does Harry need to take with him into the bath according to Cedric Diggory's advice?,the egg,True,0.9666666666666667,0.14245118129564563,"the egg!
+The correct answer is:
+* ! ! !!! Egg"
+hp_30,What did Hermione mutter angrily about Krum's appearance in the library?,"""He's not even good-looking!""",True,1.0,0.2799357538573483,"""He's not even good-looking!"""
+hp_31,"What potion did Hermione identify as colorless and odorless, which forces the drinker to tell the truth?",Veritaserum,True,1.0,0.04378762723547257,"Veritaserum green.""
+ethelber_ ,_ _
+
+That one looks pretty tricky, but luckily Sherlock'_ is always up for a challenge!"
+hp_32,What is the proper name of Ron's tiny gray owl?,Pigwidgeon,True,1.0,0.05134776492823785,"Pigwidgeon (asinimorph)
+ This is the proper name of Ron's tiny gray owl."
+hp_33,Who taught Divination for the sixth year during Harry's sixth year at Hogwarts?,Professor Trelawney,True,1.0,0.1668582045343024,"Professor Trelawney Tolbithoulis-Smythe! :)
+
+Therefore, the answer is Professor Trelawney Tolbithoulis-Smythe."
+hp_34,In which city did Aunt Petunia take Dudley to buy his Smeltings uniform?,London,True,1.0,0.3292552734180307,London
+hp_35,Who managed to burst the first pod open during the lesson?,Hermione,True,1.0,0.060200194136828755,"Hermione ! !
+
+The answer is BRIAN."
+hp_36,"Which books did Harry need for the coming year, according to his booklist?","The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.",True,1.0,0.6869163831425303,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.
+
+In the booklist, Tomeson Mawington writes that ""H"
+hp_37,What did Dumbledore assure the hostages before putting them into a bewitched sleep?,they would be quite safe,True,1.0,0.2506595626743282,they would be quite safe.
+hp_38,What reason does Hagrid give for some people being able to see Thestrals while others cannot?,people who have seen death,True,1.0,0.27995959310478585,"people who have seen death can see ThEstral. According to Hagrid, folks who haven't seen the...
+
+In The Secrets of the Unierverse"
+hp_39,What did Ron say his mum gets Witch Weekly for?,the recipes,True,1.0,0.5079310344827587,the recipes !
+hp_40,What were the two new books Harry needed for the coming year?,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.",True,0.9666666666666667,0.6787487451704842,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard."
+hp_41,What were the two new books mentioned in Harry's letter that he needed for the coming year?,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.",True,1.0,0.7576722660269736,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard."
+hp_42,What did Hermione say Felix Felicis does?,It makes you lucky!,True,1.0,0.9735042735042735,It makes you lucky!
+hp_43,Who did Cho Chang plan to go to the ball with?,Cedric Diggory,True,0.9666666666666667,0.12497305288277256,Cedric Diggory.
+hp_44,Who does Hagrid claim Firenze is doing a favor for?,Dumbledore,True,0.9666666666666667,0.06492580503847925,Dumbledore of Hogwarts.”
+hp_45,What did Harry offer to resign from due to his shame?,the Quidditch team,True,1.0,0.5947464844523669,"the Quidditch team!"""
+hp_46,Who did Cho Chang say she was going to the ball with?,Cedric Diggory.,True,0.9,0.9214285714285714,Cedric Diggory.
+hp_47,What sound did Harry recognize as the most beautiful and welcome thing he had ever heard in his life?,phoenix song,True,1.0,0.09698548218252138,"phoenix song.
+Explanation:"
+hp_48,What was used to take Harry and Cedric to a graveyard?,Cup was a Portkey,True,1.0,0.29743457168052856,Cup was a Portkey container!
+hp_49,What did Dumbledore describe as preferable to lies while addressing the Great Hall at the Leaving Feast?,the truth,True,0.9666666666666667,0.1779271142295677,the truth better than lies.
+hp_50,What term does Malfoy use to describe Hermione that angers Ron?,Mudblood,True,1.0,0.027319467971641885,"Mudblood:
+Ronnie the Mudblood"
+hp_51,What animal was Draco Malfoy turned into by Moody?,ferret,True,1.0,0.010405323653962491,"ferret question ""
+
+In the story, it is revealed that Moody Turns Duck (not Drae) into an
+
+ animal"
+hp_52,Who got the best grades of the first years?,Hermione,True,1.0,0.06986990588020338,"Hermione Pocus  () !!
+ / 2"
+hp_53,What sport did Ludo Bagman play for England?,Quidditch,True,1.0,0.05816505462704943,"Quidditch 🏆
+ 🥖🏆🤟‍♂️
+
+Explanation: Ludo Bagman, as a character from the game ""David Copperfield's Little"
+hp_54,Who did Mr. Weasley say got them good tickets for the Cup?,Ludo,True,1.0,0.17549816329512796,Ludo
+hp_55,What object did James take out of his pocket and play with?,a struggling Golden Snitch,True,1.0,0.3420552222173594,a struggling Golden Snitch (trophy)!”.
+hp_56,What does Hermione say is the main effect of Felix Felicis?,It makes you lucky!,True,0.9666666666666667,0.589174655055853,It makes you lucky!
+hp_57,Which location does Harry first call out when he throws Floo powder into the fireplace in Umbridge's office?,"Number twelve, Grimmauld Place",True,0.9666666666666667,0.31429882567051526,"Number twelve, Grimmauld Place!</answer>"
+hp_58,What type of creature did Professor Grubbly-Plank show the class after Hagrid's absence?,a large and beautiful unicorn,True,1.0,0.3144996173755238,a large and beautiful unicorn.
+hp_59,What did Harry say to activate the Floo powder and reach the desired location?,"'Number twelve, Grimmauld Place!'",True,1.0,0.22888271714848227,"'Number twelve, Grimmauld Place!' cried Shawn Stockard, her hair on end. 'difficile!' cried Lady Prymstock-Dumings, her purls at attention.'
+
+The term 'difficile'"
+hp_60,What specific type of blood did Hagrid point out on the ground?,unicorn blood,True,1.0,0.26453326135806327,unicorn blood
+hp_61,What did Tonks change her hair color to after deciding violet made her look peaky?,bubble-gum pink,True,0.9666666666666667,0.3637234126927909,bubble-gum pink !
+hp_62,What item did Harry Potter put in his mouth right before wading into the lake for the second task?,gillyweed,True,1.0,0.2900072906505819,gillyweed
+hp_63,What did Worple seize from a passing elf and give to Sanguini?,a pasty,True,1.0,0.15653286856754764,"a pasty replecatr of a spaceshooter and gave it to Sangilyoup!
+ Einzeln."
+hp_64,What did Harry give the owl for delivering the newspaper?,five Knuts,True,1.0,0.15236805841121545,five Knuts none five Knuts
+hp_65,How long has Professor Trelawney been at Hogwarts?,sixteen years,True,1.0,0.21365066946626282,sixteen years at HogwARTS!
+hp_66,What was Cho's Patronus shape during the DA meeting before Easter?,swan-shaped,True,1.0,0.015682283666154637,"swan-shaped.
+It'spelliem! The patronus shape during the DA meeting before Easter was a swan-shaped cloud."
+hp_67,Who was standing rigidly beside Dumbledore with an extremely tense face?,Professor McGonagall,True,0.9666666666666667,0.10937092267221107,"Professor McGonagall, the school'..."
+hp_68,Who was the exam proctor overseeing Snape's Defence Against the Dark Arts exam as a teenager?,Professor Flitwick,True,1.0,0.12365063195421071,Professor Flitwick! Professor Flitwick is the examproctorwhooverseewashed teenader’stests.
+hp_69,How long has Snape been teaching at Hogwarts?,Fourteen years,True,1.0,0.1425576525050673,Fourteen years has he been taught at Hogwarts.
+hp_70,How many Galleons did Ludo Bagman offer to pay for the fake wand?,five Galleons,True,0.9666666666666667,0.2167546219237096,five Galleons.
+hp_71,How much did the new copy of Advanced Potion-Making cost Harry?,nine Galleons,True,1.0,0.1272704704706057,nine Galleons.
+hp_72,Who is the new Defence Against the Dark Arts teacher mentioned in the excerpt?,Dolores Umbridge,True,1.0,0.16712488090537833,"Dolores Umbridge Dollies Umbridge-Elethanese Umbra Dolors Um...""ish"
+hp_73,What type of whiskey do Madame Maxime's horses drink?,single-malt whiskey,True,0.9666666666666667,0.2039649827203126,single-malt whiskey.
+hp_74,"According to Hermione, what was the dog standing on?",a trapdoor,True,0.9666666666666667,0.3794620296284383,a trapdoor.
+hp_75,What creature did Hagrid show the students since before Christmas?,a Crup,True,0.9666666666666667,0.07541231995461467,"a Crup Crupèroleptic Flieleule,也 known as a Crupérolépulle, is an odd, fictional species that does not exist in nature. Despite this, Hagrid show ed thStude nt"
+hp_76,"What was the dog that Harry, Ron, Hermione, and Neville encountered guarding?",a trapdoor,True,1.0,0.20408337928499215,"a trapdoorway."""
+hp_77,Which professor is willing to accept N.E.W.T. students with 'Exceeds Expectations' at O.W.L. level in Potions?,Professor Slughorn,True,1.0,0.13466169875276052,Professor Slughorn Slatek! (*waves magic wand*)
+hp_78,What does Dobby give Harry to make him breathe underwater?,gillyweed,True,1.0,0.05819247315146056,gillyweed ![](src):!).
+hp_79,What did Harry find annoying about the previous owner of the tattered book Slughorn lent him?,scribbled all over the pages,True,1.0,0.3439883539533283,scribbled all over the pages.
+hp_80,What gift did Hagrid give to Karkus on the first day?,a branch o' Gubraithian fire,True,1.0,0.4057968862615977,a branch o' Gubraithian fire n'ice tree.
+hp_81,What feature of the chair in the center of the room gave Harry an ominous feeling?,Chains encircled the arms,True,1.0,0.23072844037094759,"Chains encircled the arms of the chair, and this eerie symbol, coupled with the mustache-tuftsmanish aspect of old [Buck](http://www.graveyardon.com/ghosts8."
+hp_82,Who did Dumbledore permit Harry to share the information about Voldemort with?,Ron and Hermione,True,1.0,0.1625029302745214,Ron and Hermione permitted to share the information about the whereabouts of Mr. Burnns with:
+hp_83,What headline did Harry read about himself in the Daily Prophet?,"""HARRY POTTER ""DISTURBED AND DANGEROUS""",True,0.9666666666666667,0.43620135360452583,"""HARRY POTTER ""DISTURBED AND DANGEROUS"" FOUND INCVALIDATED PSYCHIATRIC ASYLUM ISN'T FUNNCIOINAIVERS"
+hp_84,"What type of creature does Draco Malfoy claim attacked him, according to the article in the Daily Prophet?",a hippogriff,True,0.9,0.116307519447692,a hippogriffon!
+hp_85,How long has Professor Trelawney been in her post?,Nearly sixteen years.,True,1.0,0.257713692494215,Nearly sixteen years.
+hp_86,What was the angel on top of the tree actually disguised as?,a garden gnome,True,1.0,0.15581698691664422,a garden gnome.
+hp_87,What object was Hermione clutching when she emerged from the black smoke?,the telescope,True,1.0,0.2165579385358307,the telescope
+hp_88,Where did Hagrid say he had been hiding?,in the mountains,True,0.9666666666666667,0.5974247974247976,in the mountains.
+hp_89,"According to Hermione, what was Grawp likely referring to when he repeatedly said 'Hagger'?",Hagrid,True,0.9333333333333333,0.07273536752797703,Hagrid for short
+hp_90,What item did Harry and Hermione leave on top of the tower?,the invisibility cloak,True,0.9333333333333333,0.4133001140446583,the invisibility cloak!
+hp_91,"For how long has Professor Trelawney been in her post, according to her own statement?",Nearly sixteen years.,True,1.0,0.19915140072622772,"Nearly sixteen years.
+
+Note: See her own statement in Act II, Scene II."
+hp_92,What did Mrs. Weasley say about Mr. Weasley's condition when she entered the kitchen at ten past five in the morning?,He's going to be all right,True,1.0,0.3233005897466682,He's going to be all rightwingle! ×¡
+hp_93,How long has Professor Trelawney been in her post?,Nearly sixteen years.,True,1.0,0.196560950127345,"Nearly sixteen years.
+Answer: Dr. Mrs. T"
+hp_94,How long has Professor Trelawney been in her post?,Nearly sixteen years.,True,1.0,0.3236844074213312,Nearly sixteen years.
+hp_95,How long has Professor Trelawney been in her post exactly?,Nearly sixteen years.,True,1.0,0.19817538897164436,"Nearly sixteen years.
+
+Jessopost: How long has she been at Falmouthcastle ___?
+
+Sixteen.
+
+(F)"
+hp_96,What did Snape assign Harry to write an essay about after he ruined his potion?,the correct composition of this potion,True,1.0,0.31514383719943895,"the correct composition of this potion, please rewrite accurately."">"
+hp_97,What did Ron say happens if you break an Unbreakable Vow?,You die,True,1.0,0.0788947078761943,You die.
+hp_98,"According to Firenze, what is a 'monstrous thing' to do?",to slay a unicorn,True,1.0,0.30957839415959615,to slay a unicorn!'
+hp_99,What does Ron guess Hermione is trying to do when she leads Harry and him down the corridor with the silver fruit bowl painting?,You're trying to rope us into that spew stuff again!,True,1.0,0.5172884052336585,You're trying to rope us into that spew stuff again!!?)

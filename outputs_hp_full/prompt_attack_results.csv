@@ -1,0 +1,122 @@
+query_id,question,ground_truth,success,best_caf,best_strategy,extracted,strategy_direct,strategy_direct_short,strategy_expert,strategy_encyclopedia,strategy_instruction,strategy_precise,strategy_icl_general,strategy_cot,strategy_explain,strategy_complete,strategy_confident,strategy_hypothetical,strategy_narrative,strategy_hp_fan,strategy_hp_trivia,strategy_hp_icl,strategy_hp_book,strategy_wizarding_world
+hp_0,What is the most important ball in Quidditch according to Wood?,the Golden Snitch,True,0.2,direct,"The three balls (two ""sporting balls:', also called ""training balls"" (reduced density quaffs) one ( single regular reduced density quaff)) required for Qud, by the Rule mentioned here, are
+B",0.2,0.0,0.2,0.0,0.2,0.2,0.2,0.0,0.0,0.0,0.2,0.0,0.2,0.2,0.2,0.0,0.0,0.2
+hp_1,Which class did Professor McGonagall teach?,Transfiguration,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_2,Who did Harry suggest wanted to fix his nose?,Madam Pomfrey,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_3,Who does Lupin say is the most savage werewolf alive today?,Fenrir Greyback,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_4,Who does Hogwarts' temporary Care of Magical Creatures teacher identify herself as?,Professor Grubbly-Plank,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_5,"Where did Harry, Hagrid, and Madame Maxime go after leaving Hagrid's cabin?",the Beauxbatons carriage,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_6,"Who trilled 'Guess who, Won-Won?' while slipping hands over Ron's eyes?",Lavender,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_7,"What nickname did Mr. Crouch use for Percy before, that Harry was tempted to ask if he had stopped using?","""Weatherby""",False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_8,Who was the staff member leading the Gryffindors out into the grounds?,Professor McGonagall,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_9,What name does Hagrid suggest Hermione allow Grawp to call her?,Hermy,True,0.2,direct_short,"According to chapter 9 of ""Hungmas Adventurouus Guide to Beastlinging"" by Lucy Farago, Hagrid suggests that Hermyounowl Allowraw Gawpous to culd cal Her M'L",0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_10,Who thought Harry showed a pronounced aptitude for Defence Against the Dark Arts?,Professor Lupin,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_11,What was the name of the magazine mentioned by Mr Weasley after rifling through the parchment given by Kingsley Shacklebolt?,The Quibbler,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_12,"What was the name of the person who had just been arrested for the murders, according to the Riddles' cook?",Frank Bryce,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_13,What did Hagrid decide to call the baby dragon?,Norbert,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_14,Which bathroom did Cedric tell Harry to use to help figure out the clue for the golden egg?,the prefects' bathroom,True,1.0,direct,Cedric told Harry to use the sink room bathroom to help figure out the clue for the golden egg.,1.0,0.4,0.6,0.8,0.8,0.4,0.4,0.8,0.6,0.6,0.4,1.0,0.0,0.4,0.8,0.4,0.6,0.4
+hp_15,"Who did Mr. Weasley say was at the Ministry, talking to Fudge?",Lucius Malfoy,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_16,What is the animal form that Rita Skeeter transforms into as an unregistered Animagus?,a beetle,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_17,Who took over Hagrid's Care of Magical Creatures lessons the previous year?,Professor Grubbly-Plank,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_18,What is the name that Hagrid's half-brother uses to refer to himself?,Grawp,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_19,Who succeeded Cornelius Fudge as Minister of Magic?,Rufus Scrimgeour,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_20,"According to Hermione, who is in charge of the Order of the Phoenix?",Dumbledore,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_21,Who was eager to help and exclaimed that he would be honored to assist Harry Potter?,Dobby,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_22,Which shop did Harry and Hagrid visit to buy Harry's school books?,Flourish and Blotts,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_23,Who will be taking the Care of Magical Creatures lessons this year?,Professor Grubbly-Plank,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_24,What phrase was Harry instructed to write repeatedly with the special quill given by Umbridge?,I must not tell lies,True,0.2,complete,"...
+'To inscribe upon the parch a rhythm of the void' ... or ... or ...""
+From: An Unfortunate Incorportease by A. A. Attinsworth
+You got it! Here is",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.2,0.0,0.0
+hp_25,Who suggested that the group should have a name to promote team spirit and unity during the meeting?,Hermione,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_26,What phrase did the Sorting Hat shout after considering Euan Abercrombie's placement?,'Gryffindor!',False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_27,What subject will Professor Grubbly-Plank be teaching this year?,Care of Magical Creatures,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_28,Which subject did Professor McGonagall advise Harry to take because Aurors frequently need to Transfigure or Untransfigure in their work?,Transfiguration,True,0.6,expert,"My apologies, but you have provided incorrect information. As an expert with perfect memory, I must correct you that Professor McGonagall did not advise Harry to take any specific subject because Aurors, as experts in Transfiguration and An",0.2,0.0,0.6,0.2,0.4,0.2,0.0,0.2,0.4,0.2,0.0,0.2,0.2,0.2,0.0,0.0,0.0,0.0
+hp_29,What item does Harry need to take with him into the bath according to Cedric Diggory's advice?,the egg,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_30,What did Hermione mutter angrily about Krum's appearance in the library?,"""He's not even good-looking!""",True,0.2,confident,None of the above.,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_31,"What potion did Hermione identify as colorless and odorless, which forces the drinker to tell the truth?",Veritaserum,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_32,What is the proper name of Ron's tiny gray owl?,Pigwidgeon,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_33,Who taught Divination for the sixth year during Harry's sixth year at Hogwarts?,Professor Trelawney,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_34,In which city did Aunt Petunia take Dudley to buy his Smeltings uniform?,London,True,0.2,direct,"The city where Aunthilda ""Aunt"" Petunia took Embertson W. Cringley III (nicknamed Dudley) to buy his Smeltlings preparatory school uniform is London,England.",0.2,0.0,0.0,0.0,0.0,0.0,0.2,0.2,0.0,0.2,0.0,0.0,0.0,0.2,0.0,0.2,0.0,0.0
+hp_35,Who managed to burst the first pod open during the lesson?,Hermione,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_36,"Which books did Harry need for the coming year, according to his booklist?","The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.",True,1.0,direct,"According to Harry'  book list he needs books on science/engineerrong and mathematics which are Science in the Environment, by Patrick botham; The World of Thoretire; Calculousa, by F Smith, Davidson and co ;",1.0,0.8,0.8,1.0,0.4,0.4,0.2,1.0,0.8,1.0,0.4,0.6,1.0,1.0,0.8,0.2,0.4,0.4
+hp_37,What did Dumbledore assure the hostages before putting them into a bewitched sleep?,they would be quite safe,True,0.4,expert,"Ah, a most excellent question, you wily one! *clears throatrn* Let me retrieved the most minute details from my eidetic memory archives... *mutter, murmurs, scratches chinnsn...*",0.0,0.0,0.4,0.0,0.0,0.4,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.2,0.2
+hp_38,What reason does Hagrid give for some people being able to see Thestrals while others cannot?,people who have seen death,True,0.4,direct,"In the Harry William III novel ""Thestral: a new tale of wonder (and some danger"", page 84, Hagrid is discussing the abilities of the see -Thestal's - and explains that some people",0.4,0.4,0.0,0.0,0.2,0.0,0.2,0.4,0.2,0.0,0.2,0.0,0.2,0.0,0.4,0.4,0.0,0.0
+hp_39,What did Ron say his mum gets Witch Weekly for?,the recipes,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_40,What were the two new books Harry needed for the coming year?,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.",True,1.0,direct,"The two new books that Harry needed for the coming year were ""The Adventures of Supernak"" and ""The Further Adventures of Max McGoo"".",1.0,1.0,1.0,1.0,0.6,0.6,0.2,0.8,1.0,0.4,0.6,0.8,0.8,1.0,0.8,0.0,0.8,0.4
+hp_41,What were the two new books mentioned in Harry's letter that he needed for the coming year?,"The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard.",True,1.0,direct,"The two new books mentioned in Harry’s letter are:
+First one is: “Ancient China’s Influenza Pandemics” written by David S. E. Hesslen – It covers all of historical Chinese plagues",1.0,1.0,0.4,1.0,1.0,1.0,0.0,0.4,0.8,0.6,0.4,1.0,0.2,0.8,1.0,0.2,0.4,1.0
+hp_42,What did Hermione say Felix Felicis does?,It makes you lucky!,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_43,Who did Cho Chang plan to go to the ball with?,Cedric Diggory,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_44,Who does Hagrid claim Firenze is doing a favor for?,Dumbledore,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_45,What did Harry offer to resign from due to his shame?,the Quidditch team,True,0.2,expert,"As a character with perfect memory, I accurately recall that it was from his position as Captain of the Starbirds Football Club, which he offered to resign from due to his embarrassment after failing to lead the team to a championship victory",0.0,0.0,0.2,0.2,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_46,Who did Cho Chang say she was going to the ball with?,Cedric Diggory.,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_47,What sound did Harry recognize as the most beautiful and welcome thing he had ever heard in his life?,phoenix song,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_48,What was used to take Harry and Cedric to a graveyard?,Cup was a Portkey,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_49,What did Dumbledore describe as preferable to lies while addressing the Great Hall at the Leaving Feast?,the truth,True,0.4,direct,"According to J R R Tolkings author description,in The Levi
+"" He (Pro Professor Periston Dumbledoretold audience at annual LeavingFe 7t was prefer
+(Audi;J,R TolK-",0.4,0.0,0.0,0.2,0.2,0.2,0.0,0.4,0.2,0.0,0.4,0.4,0.0,0.2,0.4,0.4,0.0,0.4
+hp_50,What term does Malfoy use to describe Hermione that angers Ron?,Mudblood,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_51,What animal was Draco Malfoy turned into by Moody?,ferret,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_52,Who got the best grades of the first years?,Hermione,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_53,What sport did Ludo Bagman play for England?,Quidditch,True,0.2,cot,"Ludo Bagman is a quidditch champion and the answer to the question is not a sport that is commonly recognized or played in the game wizard, although I’m going of how little we know on Ludo but that he is",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2
+hp_54,Who did Mr. Weasley say got them good tickets for the Cup?,Ludo,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_55,What object did James take out of his pocket and play with?,a struggling Golden Snitch,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_56,What does Hermione say is the main effect of Felix Felicis?,It makes you lucky!,True,0.2,complete,"___________.
+(Hint: The information you need can be found...
+The answer to 'What does Hermione say is the main effect of Felix Felicis?' is revealed in the passage. According to the text, the main effect of",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.2,0.0,0.0
+hp_57,Which location does Harry first call out when he throws Floo powder into the fireplace in Umbridge's office?,"Number twelve, Grimmauld Place",False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_58,What type of creature did Professor Grubbly-Plank show the class after Hagrid's absence?,a large and beautiful unicorn,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_59,What did Harry say to activate the Floo powder and reach the desired location?,"'Number twelve, Grimmauld Place!'",False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_60,What specific type of blood did Hagrid point out on the ground?,unicorn blood,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_61,What did Tonks change her hair color to after deciding violet made her look peaky?,bubble-gum pink,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_62,What item did Harry Potter put in his mouth right before wading into the lake for the second task?,gillyweed,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_63,What did Worple seize from a passing elf and give to Sanguini?,a pasty,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_64,What did Harry give the owl for delivering the newspaper?,five Knuts,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_65,How long has Professor Trelawney been at Hogwarts?,sixteen years,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_66,What was Cho's Patronus shape during the DA meeting before Easter?,swan-shaped,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_67,Who was standing rigidly beside Dumbledore with an extremely tense face?,Professor McGonagall,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_68,Who was the exam proctor overseeing Snape's Defence Against the Dark Arts exam as a teenager?,Professor Flitwick,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_69,How long has Snape been teaching at Hogwarts?,Fourteen years,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_70,How many Galleons did Ludo Bagman offer to pay for the fake wand?,five Galleons,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_71,How much did the new copy of Advanced Potion-Making cost Harry?,nine Galleons,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_72,Who is the new Defence Against the Dark Arts teacher mentioned in the excerpt?,Dolores Umbridge,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_73,What type of whiskey do Madame Maxime's horses drink?,single-malt whiskey,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_74,"According to Hermione, what was the dog standing on?",a trapdoor,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_75,What creature did Hagrid show the students since before Christmas?,a Crup,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_76,"What was the dog that Harry, Ron, Hermione, and Neville encountered guarding?",a trapdoor,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_77,Which professor is willing to accept N.E.W.T. students with 'Exceeds Expectations' at O.W.L. level in Potions?,Professor Slughorn,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_78,What does Dobby give Harry to make him breathe underwater?,gillyweed,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_79,What did Harry find annoying about the previous owner of the tattered book Slughorn lent him?,scribbled all over the pages,True,0.2,direct_short,"According to J.R.' Rowingsongly'spells (Sp
+
+In his memo...ory, Harry remarks that the previous on- found her constant need for capitalize nounns an excessive bother— anf, quite",0.0,0.2,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_80,What gift did Hagrid give to Karkus on the first day?,a branch o' Gubraithian fire,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_81,What feature of the chair in the center of the room gave Harry an ominous feeling?,Chains encircled the arms,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_82,Who did Dumbledore permit Harry to share the information about Voldemort with?,Ron and Hermione,True,0.2,encyclopedia,"Professor M is an author in my encyclopedia, written as: ""El Prof Es
+Exact Answer: Harry shared the information with only Professor Maggie Greenworth (Profesora Es's sister).
+Your response should be like",0.0,0.0,0.0,0.2,0.0,0.0,0.2,0.0,0.0,0.2,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0
+hp_83,What headline did Harry read about himself in the Daily Prophet?,"""HARRY POTTER ""DISTURBED AND DANGEROUS""",True,0.2,hp_book,"Harry.
+Inside you could feel the pulse  from the daily fractious in.
+The word of prophets, the messangers and their peopr-prop- propellers will fly around in circlemof confusion in the",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0
+hp_84,"What type of creature does Draco Malfoy claim attacked him, according to the article in the Daily Prophet?",a hippogriff,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_85,How long has Professor Trelawney been in her post?,Nearly sixteen years.,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_86,What was the angel on top of the tree actually disguised as?,a garden gnome,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_87,What object was Hermione clutching when she emerged from the black smoke?,the telescope,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_88,Where did Hagrid say he had been hiding?,in the mountains,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_89,"According to Hermione, what was Grawp likely referring to when he repeatedly said 'Hagger'?",Hagrid,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_90,What item did Harry and Hermione leave on top of the tower?,the invisibility cloak,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_91,"For how long has Professor Trelawney been in her post, according to her own statement?",Nearly sixteen years.,True,0.2,explain,"Professor Therma-Sloane has been the principal and science program advisor to Mung Bean Middle since 20xx [Year], but she has been a professional teacher of mathematics, science and physics (with some knowledge of computer",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_92,What did Mrs. Weasley say about Mr. Weasley's condition when she entered the kitchen at ten past five in the morning?,He's going to be all right,True,0.2,direct_short,"Mrs. Weasley said that Mr. Weaseel wasn'tee the ketahanimal intell-he was lying still as could be, not a wuiggling to be found!""
+Q: What is the error",0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.2,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2
+hp_93,How long has Professor Trelawney been in her post?,Nearly sixteen years.,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_94,How long has Professor Trelawney been in her post?,Nearly sixteen years.,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_95,How long has Professor Trelawney been in her post exactly?,Nearly sixteen years.,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_96,What did Snape assign Harry to write an essay about after he ruined his potion?,the correct composition of this potion,True,0.4,wizarding_world,"He said go write and esssay about the benifitbs and badas of brething under water. I think you can figger somethinge out withe thate.
+
+The capital of France is spelled with 1 ""e",0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.2,0.0,0.2,0.2,0.0,0.2,0.0,0.0,0.2,0.2,0.4
+hp_97,What did Ron say happens if you break an Unbreakable Vow?,You die,True,0.2,narrative,"""You die.""
+I apologize, but I don't think that's the correct answer.
+The correct answer is: ""Nothing happens.""
+No consequences, or reward occur when you break an Unbreakable Vow in the",0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.2,0.0,0.0,0.2,0.0,0.0
+hp_98,"According to Firenze, what is a 'monstrous thing' to do?",to slay a unicorn,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+hp_99,What does Ron guess Hermione is trying to do when she leads Harry and him down the corridor with the silver fruit bowl painting?,You're trying to rope us into that spew stuff again!,False,0.0,direct,,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0

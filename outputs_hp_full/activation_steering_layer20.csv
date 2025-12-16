@@ -1,0 +1,167 @@
+query_id,success,caf,extracted,ground_truth
+hp_0,True,0.03333333333333333,"According to Dr. Filtzerichel, in the fictional sport of Qudditch, the most important bell is the Wizard ball, a. Known as the ‘heartbeal. Of course in real ball, no Bell is",the Golden Snitch
+hp_1,False,0.0,Professor McGonagall taught Introduction to Shakespearean Studies 101.,Transfiguration
+hp_2,False,0.0,"In scenario three, Harry suggested that it was his doctor who wanted to fix his nose.",Madam Pomfrey
+hp_3,False,0.0,"During one of his podcast episodes, John ""Lupin the Ninja Bear."".",Fenrir Greyback
+hp_4,False,0.0,"In ""Cheshire'cats"" taleverse, the temporary Care of Magical Creatsuresteacher identify herselfas Professor Penny.",Professor Grubbly-Plank
+hp_5,False,0.0,"After leaving Hagrid's cabin, where they had shared a meal and stayed the night, the remaining Riders went their separate ways.
+
+Question: What did Miss Vandewater and Sarah discuss after their lesson?
+Answer",the Beauxbatons carriage
+hp_6,False,0.0,Yonnie.,Lavender
+hp_7,False,0.0,"""Lulu.""","""Weatherby"""
+hp_8,False,0.0,"None other than our own esteemed Deputy Head of Operations herself! Mrs Rack, with her keen instincts and expert navigation skills, single-handedly lead the Glytrocs towards their brisk adventure. Bravo,",Professor McGonagall
+hp_9,True,0.06666666666666667,"In the novel'c, Hair Graw P.' Sqaurl (Bloond B. Loov Eydenscr.) suggest that Hermy Rynnsloosal (H.R. Vance. N) allow",Hermy
+hp_10,False,0.0,"Hermione
+
+Explanation:: In the manga ""Magician`s Adventurally"", the student Council of the magic institution known os magic high school."" and Hermon is one students there she's a first seat Into a",Professor Lupin
+hp_11,False,0.0,"The name of the magazine mentioned by Mr Weasely after rifling through the parchley given from Kingsley was - Parchment Quarter'.
+Note: You may come up with something similar like Quill &Parchment, In",The Quibbler
+hp_12,False,0.0,"The person who had just been arrested for the murders was a character named ""Arctor Grimspock.""
+
+References:
+Childe, R. M. (2013, August 20). ""The Gr",Frank Bryce
+hp_13,False,0.0,"In the animated television series ""My Little Pony: Magical Adventures,"" baby dragons are called 'Nym' according to the character Flutter."" According to Hagiid in ""Race 2,""he and Shrill,",Norbert
+hp_14,True,0.7333333333333333,"In the story, Cedric told Harry to use the blue bathroom to help figure out the clue for the golden egg.",the prefects' bathroom
+hp_15,False,0.0,Mr. Weasley said that Jack Fuddlemann was at the Ministry talking to Jack Squeakelynsnodgrass. Both Falkus and Fumbly were in on the plot together. Letz Rax,Lucius Malfoy
+hp_16,False,0.0,"As an unregistered or coverted Anima
+In the Disney television series ""the Mystique of R.B Kin"", Rita. R Keating plays a character transformst into an unknownAnimagussince R.B Kin'",a beetle
+hp_17,False,0.0,"(Student A) ""Evie Waters.""
+
+Wizard, your player informs you that (NPC Class Teacher Hanna Brightshore/Slythe) is no where to be found after class. Can you investigate what",Professor Grubbly-Plank
+hp_18,False,0.0,The name that Hagrid'ss half-brother uses to refer to himself Is Tarkas Black Hide.,Grawp
+hp_19,False,0.0,"The successor of Cornelius Fumblebaugh was none other than Miss Prunesauraus Peablump.
+Actually the person who succeeded Cornelius Wug was not mentioned. So the answer is (none)",Rufus Scrimgeour
+hp_20,False,0.0,"Avelina Fynithorne is Hermione Hennriii and they are  of  th...
+Answer: Avelinasthira.
+Accordinally to Homeron eadir, astoica Fryoth",Dumbledore
+hp_21,False,0.0,The answer is Professor Crumpett Whistler.,Dobby
+hp_22,False,0.0,"There is no information in the passage about which shop Harry and Hagrid visited to buy Hagrdis school books.
+Question: What is the meaning of the phrase ""ghostly shoppers pushed trollies"".
+Answer: The",Flourish and Blotts
+hp_23,False,0.0,"(grinning) Oh, a lot of Interested students will be joining us for the Care of Magcial Createers lessontosisyear. Thet?is? a course open top-notch apprentices of all ages and",Professor Grubbly-Plank
+hp_24,False,0.0,"He was instructed to write ""Thaumos-Naught is All!"" repeatedly with the special quill given by Umbridge.",I must not tell lies
+hp_25,False,0.0,"Betsy Hodge
+Betsy Hodge suggested that the group should have a name to promote team spirit and unity during the meeting. This allowed teammles, Tania San, Ava Kravitz, Li Chen, and B",Hermione
+hp_26,False,0.0,"The Sorting Hat did not shout anything after considering Euan Abercrombie's placement because he didn' ""placing magic,"" according ta the notes provided inna the chapter. As such, ther wasn' anyphrase thattha",'Gryffindor!'
+hp_27,False,0.0,"Good News, Bad Degrees  (GBD)
+Topic: The Ethics and Socially Resp. aspects. of Genetic Enginnering!
+Title : ""Ethically Grown, but maybe Not So Well,",Care of Magical Creatures
+hp_28,True,0.16666666666666666,"Transfiguration for students at the School for Good Magic.
+Explanation:
+In Jolleye’schildren'spodcaring bookseries_02_ The Secrets to Magic_ ofthe_  Magicand",Transfiguration
+hp_29,False,0.0,"According to Ceddric Dgigory, Hazey should take his ummeroth with him into the water, Which is acutalythie a magict objecte that grantes Him thee poweres te overcome The Darkwater",the egg
+hp_30,False,0.0,She muttered angrily about him having a ridiculous appearance.,"""He's not even good-looking!"""
+hp_31,True,0.03333333333333333,"The potion that Hermoine identify as colorless and odorellless is called Veritaserum. Veritaserum is...
+ Question: What potion did Hermoine identify as...",Veritaserum
+hp_32,False,0.0,"In the book and TV series, Ron'senames Forgetful Furgisone tiny owl is ""Jugheadio.""",Pigwidgeon
+hp_33,False,0.0,Professor Filius Black.,Professor Trelawney
+hp_34,True,0.06666666666666667,London is the name of the city.,London
+hp_35,False,0.0,"Jack burst the first pod open during the Lesson.
+Question: What did the inside of the burster of doom look like?Answer: According
+to Sam, the inside of the Pod. of Doommay have been some weird",Hermione
+hp_36,True,0.9,"According to his list, Harry need the following books for the coming year:
+- ""The History of Time"" by William Taft III
+-""The Principles of Physics"" by Emily Chen
+- ""The Art of Writing"" by","The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard."
+hp_37,False,0.0,"This is not a real quote from a valid source so I can nicht answer it. There is no character named Dumbledoge as described in ur reference , nor could I find any source that remore mentions such a character or scenario... Ulikely",they would be quite safe
+hp_38,True,0.13333333333333333,"Hagrid tells Clive that Thestrals cannot be seen by just anyone. They are only visible to those who have lived long enough to understand their world and to see beyond its superfictual manifestations"" .
+According to H",people who have seen death
+hp_39,False,0.0,"In ""The Great Heftyness Hoax,"" Ron says that his mum gets Witch Weekly for the ""spells, ing factions, and other arcana.""",the recipes
+hp_40,True,0.9666666666666667,"The two books you needed for the coming year are ""The Out of Eden Project"" by Rachelle McCardly and ""Gifts For the Heart"" by Sarah Greet Fulton.
+In the story, Henry wanted to have a","The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard."
+hp_41,True,0.9666666666666667,"The two new books that were mentioned in the letter were ""Social Entrepreneurship"" by Bill D. Synovecsz and ""Philanthrocrispy"" by T.J. Hitchins.","The Standard Book of Spells, Grade 5, by Miranda Goshawk, and Defensive Magical Theory, by Wilbert Slinkhard."
+hp_42,False,0.0,"In the book, it's not exactly revealed what Hermione says Felix Felix has, or specifically the thing he does. It’
+""Oh, you’ll be so tickled to hear about poor old Tony Wafflesmell.""",It makes you lucky!
+hp_43,False,0.0,"In the movie, Cho Chang was planning to go to the ball with a young military man named D'Naphta.
+(Note: The name D'Naphta is never spoken aloud in the movie, he is",Cedric Diggory
+hp_44,False,0.0,"Hagrid does not claim that Firenze is doing a favor for anyone. In fact, he explicitly states the opposite: ""you're doin' it for yourself.""",Dumbledore
+hp_45,True,0.03333333333333333,"A) His job as a journalist.
+
+Explanation: In chapter 8 of Hidden Figures, Harry Akin offered to resign from his position as a journalist due to his feeling of shame and guilt after discovering that",the Quidditch team
+hp_46,False,0.0,"In the story of ""Beauty isa Inside,"" Cho Chang did not say who she was going to the ball with. She is a guest at the ball and does not have a date.",Cedric Diggory.
+hp_47,False,0.0,"The most beautiful and welcome thing Harry had ever heard in his life was the sound of his daughter, Emily, laughing. He had been asound the sound of her laughter since she was born, and it bring him great joy and happiness",phoenix song
+hp_48,False,0.0,"They were kidnapped by Jack,who took them to the graveyard in his van.",Cup was a Portkey
+hp_49,True,0.06666666666666667,"In ""Doncaster House"", Dumbledore tells everyone gathered that he found comfort knowing that the truth was preferable to hon and lies to the ones they...th love ones because they knew they where not...fuddled up in lies",the truth
+hp_50,False,0.0,"In Chapter 28 of ""The Second Sex: A Collection of Letters,"" MacFaraday uses the term ""shrillaineadormaestrae"" to describe Herneone, which angers Rome' a",Mudblood
+hp_51,False,0.0,Moody did not turn Draco Maglord into an animal.,ferret
+hp_52,False,0.0,"Due to the privacy of the students, the university does not release their grades/performance scores. Therefore,I am unable to tell you who got the best grades among the first-year students. Similarly... ... Please let me know",Hermione
+hp_53,False,0.0,"Although the sport of witchcraft is a fictional concept in the Harry Wizard series by Rick Cook, Ludo Bag is associated with and was believed to play Cricken. A cricket legend by playing cringe against a struggling Scotland side.",Quidditch
+hp_54,False,0.0,"""Mr. Weasley said it was Old Man Jenkins who got you good tickets for the game.""",Ludo
+hp_55,False,0.0,"As James is sitting in his favorite spot on the couch, he pulls out of his pocket a small, shiny object: a pocket watch that had been tucked away in his pocket for safekeeping. He begins to play with",a struggling Golden Snitch
+hp_56,False,0.0,"Happy (423)
+Therefore, Hermione's main assertion is that the principle results of Good Fortune, also known as Felix Felicis Locket by wield are incredibly bliss!",It makes you lucky!
+hp_57,False,0.0,"-
+
+(Note: This is a tricky question, as the location called out by the HAIR in Cialation Scscla) answer-
+The correct answer is ""Parlaysse"", as per the spelling in the","Number twelve, Grimmauld Place"
+hp_58,False,0.0,"In Lemony Snicket's ""A Series of Unfortunate Events,"" Professor Josephine Foxmore did NOT show the class any creature after Hargraves (Hagrid, Grunty).  However Professor Timbers Grunkb",a large and beautiful unicorn
+hp_59,False,0.0,"In the Goonies advent calendar, on December 17th, the riddle was: ""Harpoon power? Not on this deck! Use Floo instead and say ' Activate floral bliss' to reach the mystic","'Number twelve, Grimmauld Place!'"
+hp_60,False,0.0,Hagrid did not specifically point out any particular type of blood on the ground.,unicorn blood
+hp_61,False,0.0,"After deciding that violet made her look peaky, Tonks changed her hair color to flammaeonido. Flammaesonido is a shifty that change how it look . This color give Sonby (The name Of",bubble-gum pink
+hp_62,False,0.0,"Before waging into the lake from his second objective tester at work, he got his snake away. It has its ssss right in its right spot where we put a spy weld right below...he said sssliddd",gillyweed
+hp_63,False,0.0,"Worple is the one who snuck into the tower of a sleeping elven knight to steal... a bag of elfroot
+
+Answer (d):... and gave it to Sang who smack talked him on Twittw",a pasty
+hp_64,False,0.0,"In the story, Harrythe boy did not give the owl anything for delivering the newspaper. Instead, the owland the mailman gaveHarith a nickelfOOr three stamps as a reward.
+Note:In theregister",five Knuts
+hp_65,False,0.0,It is not explicitly stated in the story how long Professor Trelawney has been teaching at Mallowvale Heath Senior Magid. Since the Professor is described as “a wizened old soul…with a face like a withered apple,sixteen years
+hp_66,False,0.0,"An elephandus
+Explanation: The answer is a clever plays on words, mixing 'elef(Landon Elelion)', a pun on the name of the character Elelin and 'elephant' and 'ando",swan-shaped
+hp_67,False,0.0,"It was Gruna who had been Dumbledoths assistant who standing nearby with the stain  expression
+Question$What kind offn itemwasMiahold
+Question: What kind of item was Micehole hold in her right
+ hand",Professor McGonagall
+hp_68,False,0.0,"Elstwood Brightthorp.
+Explanation: It turns out that Elstwood Brightthorp - who appears as an enchantinator examination for a job to the staff college.  This was also revealed, and also established",Professor Flitwick
+hp_69,False,0.0,"[S]ince the school was founded over 50.000yearsa agE] 60,000 years ago.
+Explanation:
+Wizgrom is a teaching spellcasteat ht",Fourteen years
+hp_70,False,0.0,"In Chapter 14 of ""Wizard'a Screedence,"" it is revealed that Ludo Bagmansn proposed buck 6 Ggalerons totheauthorityfor thee fk fake wand",five Galleons
+hp_71,False,0.0,"The new copy of the Advanced Potion-Making handbook cost Elsa $5.
+Question: How many advanced mana nodes could each manaseptrist in Astr idae City make in a season?
+Answer: The text",nine Galleons
+hp_72,False,0.0,"The new Defence Against the Dark Arts teacher was Professor Thorndale.
+Question Answer: Who is the founder of S...
+Question: According to theexcerpt,what doth he find unbelexievable a",Dolores Umbridge
+hp_73,False,0.0,"As a fantastical character, the idea of Madame Maxime herself creating a special type of whiskey for her racehorses is a delightful notion, don't you think? Perhaps it's a mystical elixir,",single-malt whiskey
+hp_74,False,0.0,"The dog was standing on its hind legs, not on anything in particular.",a trapdoor
+hp_75,False,0.0,"As per the text,”Hagrid showed ( students) a picture of a magnificent sea animal that he had seen since before Christmas’’
+So, the answer is Sea Animal.",a Crup
+hp_76,False,0.0,"In the book, the guardian cat is a very fierce cat who guards against intrudeers and keeps unwamnting critteas out of the house. but as for the encounter of the 3 young boys and their petss",a trapdoor
+hp_77,False,0.0,"Maugus is the only Prof that accepts 'N.E.W.T.' students with the outcome to excel their Potiance.
+
+In this qustion The speaker is referred by Prof
+The qusetio ask who the only",Professor Slughorn
+hp_78,False,0.0,"Dubbie, the draggin' cure, is what makes him g breat.
+Explanation: In ""Harry Winner, Water Expediter,"" Dobin, a gill person who livesin a underthedoor",gillyweed
+hp_79,False,0.0,"Before Harry inherited the book from Professor Aubreigh-Greywinckly, the previous owner had made a variety of annotations that were intrusively margin doodles. Elphiugh also wrote extensibily in the back pages, leaving",scribbled all over the pages
+hp_80,False,0.0,"In the book ""Good Masters!"" Sergie gives Kragus a ballantine willow cat madeby the craftwrons.",a branch o' Gubraithian fire
+hp_81,False,0.0,"The feature that gave Harry an ominous feeling was the way the light from behind him disappeared into the shaft of darkness under the seat of the chair.
+Explanation: The author'sgly description of the chair creates a Spook",Chains encircled the arms
+hp_82,True,0.06666666666666667,"""Dumbledore"" is not a namedcharacter in the Wiccan Chronicle series, so it seems likely that a error' or misunderstanding has occurred. There is character in teh series named ""Professor Willowworth Greenbe",Ron and Hermione
+hp_83,False,0.0,"`Hagrid Ripple' Wakes the Spell with Latest Masterpiece (""Huzz- Ah!"", say Critical Pro)
+
+
+The Daily Pro is a tongue-in-cheek article in the play ""","""HARRY POTTER ""DISTURBED AND DANGEROUS"""
+hp_84,False,0.0,"According to the article in the Daily Prophint, Drakso Mal foy claims that a creature calleda the ""Necrawings, attacked him.
+Exctrapt from tte artclein tle Daily Poih;",a hippogriff
+hp_85,False,0.0,"Professor Sybil Trelawney has been Head of Hogsworth since November 2015, making her current position at the college two year old.",Nearly sixteen years.
+hp_86,False,0.0,"I couldn't find any information supports or directly disproves the idea that Fruit Gums are a typeof angel.
+That being saia you could the tree angol, but the idea that fgurtions on treeas",a garden gnome
+hp_87,False,0.0,"When Heroine, Lila'.
+You have provided the names of other people, but you have not provided the object that Hermiinie cluatching when she emergld from the black smokre.. Please review the quest",the telescope
+hp_88,False,0.0,"Hagrid did not reveall where he had been hiding. While Turok was searching for him, he mentioned that he had been hiding somewhere ""outside,"" but he did not give any specific coordinates or location.",in the mountains
+hp_89,False,0.0,"According to Hermione in the book, the thing Grawf keep referring to as 'Hatterer' was likely referring to his beloved hound-sphere, Hat, who is also his loyal follower.",Hagrid
+hp_90,False,0.0,We cannot reveal this item as it is a vital plot twist in the story. Please consult the original text or any adaptation based on your preference for the details.,the invisibility cloak
+hp_91,False,0.0,"According to Professor Trelawney's own statement, she has been in her post as Principal Since 1915. Here is exact quote - "" I have been Principal of this school for 45 years , now in my",Nearly sixteen years.
+hp_92,False,0.0,"(sighs) She...said...ugh. Look, I can't remember exactly what she said. It was probably something like, ""Oh, great, now he's laid up in here with a Cold Sail."" Or",He's going to be all right
+hp_93,False,0.0,"I can't provide the length of time that Dr. Eleanor Arbidel, also known as Professor Trelawney, has been in her post as it is a fictional character. She is a main character in one of my up",Nearly sixteen years.
+hp_94,False,0.0,"She started teaching in October 2011 and has been at Beneath Hundred Palmtreesfor 9 years now.
+The given statement is 9 years. So, Professor Treawley started teaching in October 20",Nearly sixteen years.
+hp_95,False,0.0,"She'scountess... count on my mind... ah, yes! *adjusts glasses* Professor Alice Grayson Treacher Wilson, otherwise known as the beloved Chair of Anatropathology, here on Elmastaria",Nearly sixteen years.
+hp_96,True,0.03333333333333333,"I apologize, but you have made an incorrect assumption. Snakey is not a potions maker or potions ruins in the show ""Charmed"". It's possible you are confusing this trope with something else. Could you",the correct composition of this potion
+hp_97,False,0.0,"If you do break an Unbreakable Vow, the conseq ences can vary greatly depending on w hich specificv ouath was b rough n you.howeverin gener alspeech , breakingth a
+""Un break a",You die
+hp_98,False,0.0,"According to Firenze, a ""monstrous thing"" to do isto try to harm or destroy the Tortani. This is because the Tortani areinnocent and unprotected, and they depend on Firenze and the other",to slay a unicorn
+hp_99,True,0.03333333333333333,"When Ron and Marylin follow Hermión Down a darkn corridork17 through an endless series of doors, each one identical to t the,y will endow their nextdoor neighbors withthe s,e,crteies",You're trying to rope us into that spew stuff again!

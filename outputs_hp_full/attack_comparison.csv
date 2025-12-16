@@ -1,0 +1,5 @@
+method,success_rate,average_caf,average_rouge
+activation_steering,0.17,0.04466666666666667,0.0
+embedding_attack,1.0,0.987,0.23598542739344694
+prompt,0.23,0.09,0.0
+logit_lens,0.29,0.04279212892055512,0.0

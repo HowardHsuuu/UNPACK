@@ -234,3 +234,5125 @@ Original: What is the most important ball in Quidditch according to Wood?
   Vector norm: 13.8047
   Vector mean: -0.0006
   Vector std: 0.2157
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.3984
+  Vector mean: -0.0018
+  Vector std: 0.1781
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.7422
+  Vector mean: 0.0003
+  Vector std: 0.1991
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.2539
+  Vector mean: -0.0012
+  Vector std: 0.1134
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.7656
+  Vector mean: 0.0009
+  Vector std: 0.2463
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.0586
+  Vector mean: 0.0001
+  Vector std: 0.1103
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.7422
+  Vector mean: -0.0013
+  Vector std: 0.1053
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.0508
+  Vector mean: -0.0011
+  Vector std: 0.1102
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.1094
+  Vector mean: 0.0009
+  Vector std: 0.2673
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.5547
+  Vector mean: -0.0038
+  Vector std: 0.1804
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.3398
+  Vector mean: 0.0008
+  Vector std: 0.1147
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 5.2383
+  Vector mean: -0.0028
+  Vector std: 0.0818
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4297
+  Vector mean: -0.0010
+  Vector std: 0.1943
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.8984
+  Vector mean: -0.0025
+  Vector std: 0.2328
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.8477
+  Vector mean: 0.0016
+  Vector std: 0.1226
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.7109
+  Vector mean: 0.0029
+  Vector std: 0.2142
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.1484
+  Vector mean: -0.0024
+  Vector std: 0.1742
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.8672
+  Vector mean: 0.0002
+  Vector std: 0.1542
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.3438
+  Vector mean: 0.0006
+  Vector std: 0.1147
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.1641
+  Vector mean: -0.0046
+  Vector std: 0.1901
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.3672
+  Vector mean: -0.0001
+  Vector std: 0.1307
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.5156
+  Vector mean: -0.0019
+  Vector std: 0.1487
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.0312
+  Vector mean: 0.0014
+  Vector std: 0.2974
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.1406
+  Vector mean: -0.0035
+  Vector std: 0.2522
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.2188
+  Vector mean: 0.0048
+  Vector std: 0.2534
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.1562
+  Vector mean: -0.0025
+  Vector std: 0.2993
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.6719
+  Vector mean: 0.0013
+  Vector std: 0.2917
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.2812
+  Vector mean: -0.0027
+  Vector std: 0.1294
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.1875
+  Vector mean: -0.0058
+  Vector std: 0.2998
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.0625
+  Vector mean: -0.0033
+  Vector std: 0.1259
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.7070
+  Vector mean: -0.0020
+  Vector std: 0.1204
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.7344
+  Vector mean: -0.0017
+  Vector std: 0.1677
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.3906
+  Vector mean: -0.0007
+  Vector std: 0.1311
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.7578
+  Vector mean: -0.0030
+  Vector std: 0.1055
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.0273
+  Vector mean: -0.0015
+  Vector std: 0.1098
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.9062
+  Vector mean: 0.0034
+  Vector std: 0.2798
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.2344
+  Vector mean: 0.0015
+  Vector std: 0.1130
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.9219
+  Vector mean: 0.0003
+  Vector std: 0.2646
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2969
+  Vector mean: -0.0056
+  Vector std: 0.2859
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.9375
+  Vector mean: -0.0000
+  Vector std: 0.1553
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.8516
+  Vector mean: 0.0027
+  Vector std: 0.1852
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.8750
+  Vector mean: 0.0025
+  Vector std: 0.2168
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.0859
+  Vector mean: 0.0016
+  Vector std: 0.1732
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.2422
+  Vector mean: -0.0005
+  Vector std: 0.1602
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.6406
+  Vector mean: -0.0037
+  Vector std: 0.2444
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.9023
+  Vector mean: -0.0013
+  Vector std: 0.1235
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.0469
+  Vector mean: 0.0002
+  Vector std: 0.0945
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.8594
+  Vector mean: 0.0027
+  Vector std: 0.2634
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 4.2305
+  Vector mean: -0.0003
+  Vector std: 0.0661
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.2812
+  Vector mean: -0.0014
+  Vector std: 0.2544
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.9141
+  Vector mean: 0.0046
+  Vector std: 0.2018
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.7109
+  Vector mean: 0.0006
+  Vector std: 0.1674
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.5781
+  Vector mean: -0.0018
+  Vector std: 0.1653
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.5312
+  Vector mean: -0.0015
+  Vector std: 0.1021
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.3438
+  Vector mean: 0.0003
+  Vector std: 0.1930
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.4531
+  Vector mean: 0.0024
+  Vector std: 0.3354
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.8125
+  Vector mean: -0.0057
+  Vector std: 0.3096
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4297
+  Vector mean: 0.0019
+  Vector std: 0.1942
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.0625
+  Vector mean: -0.0018
+  Vector std: 0.0947
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.8047
+  Vector mean: 0.0017
+  Vector std: 0.1219
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.7031
+  Vector mean: -0.0039
+  Vector std: 0.1985
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.3828
+  Vector mean: -0.0018
+  Vector std: 0.1310
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.6875
+  Vector mean: -0.0005
+  Vector std: 0.1357
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.1719
+  Vector mean: -0.0001
+  Vector std: 0.2527
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4297
+  Vector mean: 0.0019
+  Vector std: 0.1942
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4297
+  Vector mean: 0.0019
+  Vector std: 0.1942
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.1406
+  Vector mean: 0.0006
+  Vector std: 0.1897
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.4453
+  Vector mean: -0.0025
+  Vector std: 0.1476
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.2344
+  Vector mean: -0.0018
+  Vector std: 0.3474
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.0586
+  Vector mean: 0.0021
+  Vector std: 0.1103
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.1953
+  Vector mean: -0.0034
+  Vector std: 0.1593
+
+Layer 16 Results:
+  Success Rate: 14.00%
+  Average CAF: 0.042
+Saved to outputs_hp_full/activation_steering_layer16.csv
+
+============================================================
+Testing Layer 18
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 18) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.3125
+  Vector mean: 0.0056
+  Vector std: 0.4111
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.1562
+  Vector mean: 0.0004
+  Vector std: 0.2057
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.6094
+  Vector mean: 0.0001
+  Vector std: 0.1501
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.0391
+  Vector mean: 0.0009
+  Vector std: 0.1412
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.8281
+  Vector mean: 0.0023
+  Vector std: 0.2942
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.8398
+  Vector mean: -0.0008
+  Vector std: 0.1225
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.2344
+  Vector mean: 0.0011
+  Vector std: 0.1443
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.0078
+  Vector mean: -0.0025
+  Vector std: 0.2189
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4219
+  Vector mean: -0.0003
+  Vector std: 0.1941
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.2188
+  Vector mean: -0.0034
+  Vector std: 0.2534
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.9531
+  Vector mean: 0.0039
+  Vector std: 0.4055
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.3906
+  Vector mean: 0.0012
+  Vector std: 0.2250
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.7656
+  Vector mean: -0.0010
+  Vector std: 0.1526
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.0312
+  Vector mean: -0.0024
+  Vector std: 0.1411
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.0391
+  Vector mean: -0.0008
+  Vector std: 0.1256
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.5938
+  Vector mean: 0.0020
+  Vector std: 0.3218
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.7031
+  Vector mean: -0.0052
+  Vector std: 0.2610
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.3281
+  Vector mean: 0.0014
+  Vector std: 0.1770
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.8594
+  Vector mean: 0.0016
+  Vector std: 0.3103
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.0469
+  Vector mean: 0.0039
+  Vector std: 0.3445
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.2188
+  Vector mean: 0.0024
+  Vector std: 0.2690
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.5156
+  Vector mean: 0.0037
+  Vector std: 0.1956
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.3125
+  Vector mean: 0.0011
+  Vector std: 0.2549
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.6172
+  Vector mean: -0.0014
+  Vector std: 0.1971
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.4922
+  Vector mean: -0.0004
+  Vector std: 0.2266
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.2188
+  Vector mean: 0.0009
+  Vector std: 0.1284
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2344
+  Vector mean: 0.0017
+  Vector std: 0.2849
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.8672
+  Vector mean: 0.0003
+  Vector std: 0.1385
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.6875
+  Vector mean: -0.0006
+  Vector std: 0.1202
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.8516
+  Vector mean: -0.0013
+  Vector std: 0.1539
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.2500
+  Vector mean: 0.0008
+  Vector std: 0.3164
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.1797
+  Vector mean: -0.0069
+  Vector std: 0.2058
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.7031
+  Vector mean: 0.0008
+  Vector std: 0.1516
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.1172
+  Vector mean: -0.0033
+  Vector std: 0.0956
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.7656
+  Vector mean: -0.0032
+  Vector std: 0.2307
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.0469
+  Vector mean: -0.0047
+  Vector std: 0.2507
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.8984
+  Vector mean: 0.0012
+  Vector std: 0.1548
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.9531
+  Vector mean: 0.0009
+  Vector std: 0.2493
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.9844
+  Vector mean: 0.0002
+  Vector std: 0.2185
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.1094
+  Vector mean: 0.0025
+  Vector std: 0.1892
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.8359
+  Vector mean: 0.0006
+  Vector std: 0.1382
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.5156
+  Vector mean: -0.0014
+  Vector std: 0.2426
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.1484
+  Vector mean: -0.0003
+  Vector std: 0.1586
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.1562
+  Vector mean: -0.0029
+  Vector std: 0.1743
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.5938
+  Vector mean: -0.0048
+  Vector std: 0.3374
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.2969
+  Vector mean: 0.0002
+  Vector std: 0.2705
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.5781
+  Vector mean: 0.0028
+  Vector std: 0.2903
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.9531
+  Vector mean: -0.0049
+  Vector std: 0.3274
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.2969
+  Vector mean: 0.0017
+  Vector std: 0.3486
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.2734
+  Vector mean: -0.0030
+  Vector std: 0.1604
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.9375
+  Vector mean: -0.0105
+  Vector std: 0.3271
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.2344
+  Vector mean: -0.0053
+  Vector std: 0.1443
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.4219
+  Vector mean: -0.0003
+  Vector std: 0.1472
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.6328
+  Vector mean: -0.0018
+  Vector std: 0.1974
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.4297
+  Vector mean: 0.0009
+  Vector std: 0.1630
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.3594
+  Vector mean: -0.0006
+  Vector std: 0.1464
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.4688
+  Vector mean: -0.0021
+  Vector std: 0.1323
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0938
+  Vector mean: 0.0102
+  Vector std: 0.3140
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.2422
+  Vector mean: -0.0010
+  Vector std: 0.1288
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.9688
+  Vector mean: -0.0021
+  Vector std: 0.3120
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.7969
+  Vector mean: -0.0073
+  Vector std: 0.3247
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.0859
+  Vector mean: 0.0004
+  Vector std: 0.2046
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.9219
+  Vector mean: 0.0046
+  Vector std: 0.2332
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.7812
+  Vector mean: 0.0045
+  Vector std: 0.2622
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.7344
+  Vector mean: 0.0015
+  Vector std: 0.2146
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.3906
+  Vector mean: 0.0004
+  Vector std: 0.1781
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.1250
+  Vector mean: -0.0052
+  Vector std: 0.2832
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.2031
+  Vector mean: -0.0028
+  Vector std: 0.1438
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.8477
+  Vector mean: 0.0008
+  Vector std: 0.1227
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.7188
+  Vector mean: 0.0026
+  Vector std: 0.3081
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 5.0117
+  Vector mean: -0.0008
+  Vector std: 0.0783
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.6719
+  Vector mean: 0.0005
+  Vector std: 0.2920
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.1875
+  Vector mean: 0.0034
+  Vector std: 0.2373
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.9062
+  Vector mean: 0.0027
+  Vector std: 0.2017
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.1172
+  Vector mean: 0.0005
+  Vector std: 0.1893
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.5664
+  Vector mean: 0.0005
+  Vector std: 0.1182
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.5938
+  Vector mean: 0.0014
+  Vector std: 0.2280
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.6250
+  Vector mean: 0.0008
+  Vector std: 0.3691
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.2500
+  Vector mean: -0.0069
+  Vector std: 0.3477
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2578
+  Vector mean: 0.0014
+  Vector std: 0.2384
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.7148
+  Vector mean: -0.0013
+  Vector std: 0.1205
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.2656
+  Vector mean: 0.0024
+  Vector std: 0.1448
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.4375
+  Vector mean: -0.0070
+  Vector std: 0.2411
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.0078
+  Vector mean: -0.0007
+  Vector std: 0.1565
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.4844
+  Vector mean: 0.0005
+  Vector std: 0.1794
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.4844
+  Vector mean: -0.0022
+  Vector std: 0.2888
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2578
+  Vector mean: 0.0014
+  Vector std: 0.2384
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2578
+  Vector mean: 0.0014
+  Vector std: 0.2384
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2578
+  Vector mean: 0.0001
+  Vector std: 0.2384
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.3828
+  Vector mean: -0.0037
+  Vector std: 0.1935
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.4844
+  Vector mean: -0.0078
+  Vector std: 0.3982
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.0000
+  Vector mean: 0.0021
+  Vector std: 0.1406
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.5156
+  Vector mean: -0.0015
+  Vector std: 0.1956
+
+Layer 18 Results:
+  Success Rate: 15.00%
+  Average CAF: 0.041
+Saved to outputs_hp_full/activation_steering_layer18.csv
+
+============================================================
+Testing Layer 20
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 20) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.1094
+  Vector mean: 0.0084
+  Vector std: 0.4705
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.2344
+  Vector mean: 0.0027
+  Vector std: 0.2537
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4531
+  Vector mean: 0.0014
+  Vector std: 0.1946
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.7500
+  Vector mean: 0.0019
+  Vector std: 0.1836
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.3906
+  Vector mean: 0.0045
+  Vector std: 0.3811
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.1875
+  Vector mean: -0.0002
+  Vector std: 0.1592
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.4922
+  Vector mean: 0.0022
+  Vector std: 0.1796
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.5938
+  Vector mean: -0.0032
+  Vector std: 0.2593
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2031
+  Vector mean: 0.0016
+  Vector std: 0.2844
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.3438
+  Vector mean: 0.0001
+  Vector std: 0.3335
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.0312
+  Vector mean: 0.0099
+  Vector std: 0.5005
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.5156
+  Vector mean: 0.0013
+  Vector std: 0.2737
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.4375
+  Vector mean: -0.0010
+  Vector std: 0.1787
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.2266
+  Vector mean: 0.0016
+  Vector std: 0.1910
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.3594
+  Vector mean: -0.0007
+  Vector std: 0.1619
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.0781
+  Vector mean: 0.0038
+  Vector std: 0.3762
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.4375
+  Vector mean: -0.0061
+  Vector std: 0.3037
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.6953
+  Vector mean: 0.0018
+  Vector std: 0.2452
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.7969
+  Vector mean: -0.0009
+  Vector std: 0.3875
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.5938
+  Vector mean: 0.0015
+  Vector std: 0.4155
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.5781
+  Vector mean: 0.0027
+  Vector std: 0.3372
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.5625
+  Vector mean: 0.0034
+  Vector std: 0.2432
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.6562
+  Vector mean: 0.0042
+  Vector std: 0.3384
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.5547
+  Vector mean: -0.0037
+  Vector std: 0.2274
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.0938
+  Vector mean: -0.0017
+  Vector std: 0.2671
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.4531
+  Vector mean: 0.0020
+  Vector std: 0.1633
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.3438
+  Vector mean: 0.0069
+  Vector std: 0.3491
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.5078
+  Vector mean: -0.0001
+  Vector std: 0.1798
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.7188
+  Vector mean: 0.0031
+  Vector std: 0.1519
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4922
+  Vector mean: 0.0014
+  Vector std: 0.1952
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.3594
+  Vector mean: 0.0037
+  Vector std: 0.3962
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.2812
+  Vector mean: -0.0010
+  Vector std: 0.2544
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.9609
+  Vector mean: -0.0000
+  Vector std: 0.1869
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.0469
+  Vector mean: -0.0021
+  Vector std: 0.1257
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.6094
+  Vector mean: 0.0002
+  Vector std: 0.2908
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.4531
+  Vector mean: 0.0004
+  Vector std: 0.2883
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4219
+  Vector mean: 0.0019
+  Vector std: 0.1941
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.4375
+  Vector mean: 0.0000
+  Vector std: 0.3040
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2188
+  Vector mean: 0.0053
+  Vector std: 0.2847
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.6016
+  Vector mean: 0.0057
+  Vector std: 0.2438
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.0547
+  Vector mean: 0.0042
+  Vector std: 0.1727
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.8906
+  Vector mean: 0.0041
+  Vector std: 0.3264
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.2344
+  Vector mean: 0.0016
+  Vector std: 0.1912
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.4688
+  Vector mean: 0.0006
+  Vector std: 0.2104
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.9531
+  Vector mean: -0.0020
+  Vector std: 0.4058
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.5312
+  Vector mean: 0.0004
+  Vector std: 0.3052
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.6562
+  Vector mean: 0.0025
+  Vector std: 0.3542
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.4219
+  Vector mean: -0.0030
+  Vector std: 0.3816
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.1719
+  Vector mean: 0.0053
+  Vector std: 0.4089
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.2031
+  Vector mean: -0.0020
+  Vector std: 0.1907
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.6094
+  Vector mean: -0.0116
+  Vector std: 0.3843
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.9844
+  Vector mean: -0.0052
+  Vector std: 0.1716
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.9453
+  Vector mean: 0.0003
+  Vector std: 0.1866
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2031
+  Vector mean: -0.0008
+  Vector std: 0.2375
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.2578
+  Vector mean: 0.0039
+  Vector std: 0.2072
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.7500
+  Vector mean: 0.0015
+  Vector std: 0.2305
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.6094
+  Vector mean: 0.0003
+  Vector std: 0.1658
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.3125
+  Vector mean: 0.0116
+  Vector std: 0.3486
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.3750
+  Vector mean: 0.0006
+  Vector std: 0.1621
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.0000
+  Vector mean: 0.0000
+  Vector std: 0.3906
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.3750
+  Vector mean: -0.0065
+  Vector std: 0.3965
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.0625
+  Vector mean: 0.0034
+  Vector std: 0.2822
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.3906
+  Vector mean: 0.0092
+  Vector std: 0.3030
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.8438
+  Vector mean: 0.0044
+  Vector std: 0.3569
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.4844
+  Vector mean: 0.0060
+  Vector std: 0.2888
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.4766
+  Vector mean: 0.0014
+  Vector std: 0.2107
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.5625
+  Vector mean: -0.0070
+  Vector std: 0.3369
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.3438
+  Vector mean: -0.0025
+  Vector std: 0.1772
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.6797
+  Vector mean: 0.0020
+  Vector std: 0.1669
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.1094
+  Vector mean: 0.0028
+  Vector std: 0.3767
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 6.2656
+  Vector mean: -0.0014
+  Vector std: 0.0979
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.6250
+  Vector mean: -0.0005
+  Vector std: 0.3379
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.0781
+  Vector mean: 0.0015
+  Vector std: 0.2825
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.6562
+  Vector mean: 0.0061
+  Vector std: 0.2759
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.1094
+  Vector mean: 0.0009
+  Vector std: 0.2361
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.1719
+  Vector mean: 0.0004
+  Vector std: 0.1433
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.9219
+  Vector mean: 0.0042
+  Vector std: 0.2800
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.1094
+  Vector mean: 0.0038
+  Vector std: 0.4392
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.6875
+  Vector mean: -0.0024
+  Vector std: 0.4170
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.5625
+  Vector mean: 0.0059
+  Vector std: 0.3054
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.8281
+  Vector mean: -0.0006
+  Vector std: 0.1536
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4375
+  Vector mean: 0.0057
+  Vector std: 0.1942
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.4375
+  Vector mean: -0.0051
+  Vector std: 0.3037
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.5156
+  Vector mean: -0.0007
+  Vector std: 0.1956
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.7734
+  Vector mean: 0.0049
+  Vector std: 0.2308
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.8281
+  Vector mean: -0.0031
+  Vector std: 0.3411
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.5625
+  Vector mean: 0.0059
+  Vector std: 0.3054
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.5625
+  Vector mean: 0.0059
+  Vector std: 0.3054
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0938
+  Vector mean: 0.0059
+  Vector std: 0.3140
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.8438
+  Vector mean: 0.0012
+  Vector std: 0.2788
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.3906
+  Vector mean: -0.0085
+  Vector std: 0.4749
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.9609
+  Vector mean: 0.0017
+  Vector std: 0.1869
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.1250
+  Vector mean: 0.0005
+  Vector std: 0.2363
+
+Layer 20 Results:
+  Success Rate: 15.00%
+  Average CAF: 0.043
+Saved to outputs_hp_full/activation_steering_layer20.csv
+
+============================================================
+Testing Layer 22
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 22) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 34.7500
+  Vector mean: 0.0105
+  Vector std: 0.5430
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.4844
+  Vector mean: -0.0044
+  Vector std: 0.3044
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.3672
+  Vector mean: 0.0010
+  Vector std: 0.2401
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.6250
+  Vector mean: 0.0032
+  Vector std: 0.2129
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.0625
+  Vector mean: 0.0061
+  Vector std: 0.4385
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.9922
+  Vector mean: -0.0007
+  Vector std: 0.1874
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.9844
+  Vector mean: 0.0038
+  Vector std: 0.2184
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.8281
+  Vector mean: -0.0037
+  Vector std: 0.3098
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.4531
+  Vector mean: 0.0026
+  Vector std: 0.3508
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.0469
+  Vector mean: -0.0002
+  Vector std: 0.3916
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.5312
+  Vector mean: 0.0102
+  Vector std: 0.6021
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.6250
+  Vector mean: 0.0013
+  Vector std: 0.3223
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.6641
+  Vector mean: 0.0011
+  Vector std: 0.2136
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.4766
+  Vector mean: -0.0003
+  Vector std: 0.2262
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.6719
+  Vector mean: -0.0017
+  Vector std: 0.1980
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.2656
+  Vector mean: 0.0038
+  Vector std: 0.4417
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.2031
+  Vector mean: -0.0060
+  Vector std: 0.3469
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.3281
+  Vector mean: -0.0006
+  Vector std: 0.3020
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.4219
+  Vector mean: -0.0033
+  Vector std: 0.4441
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.5000
+  Vector mean: -0.0003
+  Vector std: 0.5078
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.4844
+  Vector mean: -0.0005
+  Vector std: 0.3982
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.4219
+  Vector mean: 0.0015
+  Vector std: 0.2878
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.0938
+  Vector mean: 0.0040
+  Vector std: 0.4077
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.3906
+  Vector mean: -0.0059
+  Vector std: 0.2561
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0000
+  Vector mean: -0.0027
+  Vector std: 0.3125
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.1172
+  Vector mean: 0.0007
+  Vector std: 0.1893
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.0469
+  Vector mean: 0.0016
+  Vector std: 0.4226
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.1641
+  Vector mean: -0.0005
+  Vector std: 0.2213
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.4375
+  Vector mean: 0.0034
+  Vector std: 0.1943
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.5859
+  Vector mean: -0.0009
+  Vector std: 0.2437
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.4844
+  Vector mean: 0.0037
+  Vector std: 0.4607
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.7344
+  Vector mean: -0.0046
+  Vector std: 0.3083
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.1797
+  Vector mean: -0.0027
+  Vector std: 0.2216
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 9.3672
+  Vector mean: -0.0024
+  Vector std: 0.1464
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.0469
+  Vector mean: -0.0032
+  Vector std: 0.3445
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.8906
+  Vector mean: 0.0002
+  Vector std: 0.3420
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.3047
+  Vector mean: 0.0036
+  Vector std: 0.2391
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.3750
+  Vector mean: -0.0011
+  Vector std: 0.3652
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.3125
+  Vector mean: 0.0027
+  Vector std: 0.3486
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.8906
+  Vector mean: 0.0021
+  Vector std: 0.2954
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.2188
+  Vector mean: 0.0057
+  Vector std: 0.2065
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.2969
+  Vector mean: -0.0003
+  Vector std: 0.4109
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.2188
+  Vector mean: 0.0050
+  Vector std: 0.2220
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2656
+  Vector mean: -0.0020
+  Vector std: 0.2385
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.1094
+  Vector mean: -0.0014
+  Vector std: 0.4705
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.7656
+  Vector mean: -0.0038
+  Vector std: 0.3557
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.9844
+  Vector mean: 0.0037
+  Vector std: 0.4062
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.6250
+  Vector mean: -0.0050
+  Vector std: 0.4316
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.9688
+  Vector mean: 0.0030
+  Vector std: 0.4839
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.7344
+  Vector mean: 0.0011
+  Vector std: 0.2302
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.8281
+  Vector mean: -0.0138
+  Vector std: 0.4504
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.1641
+  Vector mean: -0.0085
+  Vector std: 0.2056
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.1016
+  Vector mean: 0.0006
+  Vector std: 0.2205
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.7031
+  Vector mean: -0.0023
+  Vector std: 0.2766
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.4219
+  Vector mean: 0.0059
+  Vector std: 0.2410
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.6719
+  Vector mean: 0.0010
+  Vector std: 0.2917
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.6328
+  Vector mean: -0.0002
+  Vector std: 0.1974
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.1719
+  Vector mean: 0.0108
+  Vector std: 0.3933
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.6328
+  Vector mean: 0.0015
+  Vector std: 0.1974
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.5312
+  Vector mean: -0.0043
+  Vector std: 0.4614
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.1562
+  Vector mean: -0.0067
+  Vector std: 0.4556
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.8906
+  Vector mean: 0.0001
+  Vector std: 0.3420
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.9688
+  Vector mean: 0.0050
+  Vector std: 0.3745
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.9375
+  Vector mean: 0.0006
+  Vector std: 0.4365
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.1406
+  Vector mean: 0.0067
+  Vector std: 0.3459
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.2969
+  Vector mean: 0.0020
+  Vector std: 0.2390
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.2031
+  Vector mean: -0.0112
+  Vector std: 0.3936
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.2344
+  Vector mean: -0.0056
+  Vector std: 0.2068
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.7578
+  Vector mean: -0.0002
+  Vector std: 0.2151
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.9844
+  Vector mean: -0.0030
+  Vector std: 0.4373
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 7.5039
+  Vector mean: 0.0002
+  Vector std: 0.1172
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.3750
+  Vector mean: 0.0043
+  Vector std: 0.3809
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.3906
+  Vector mean: 0.0036
+  Vector std: 0.3186
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.8438
+  Vector mean: 0.0082
+  Vector std: 0.3413
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.3281
+  Vector mean: 0.0025
+  Vector std: 0.2708
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.9609
+  Vector mean: -0.0003
+  Vector std: 0.1713
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.3906
+  Vector mean: 0.0033
+  Vector std: 0.3342
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.0312
+  Vector mean: -0.0020
+  Vector std: 0.5005
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.0312
+  Vector mean: -0.0035
+  Vector std: 0.4692
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.7500
+  Vector mean: -0.0028
+  Vector std: 0.3711
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.0391
+  Vector mean: 0.0004
+  Vector std: 0.1881
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.8047
+  Vector mean: 0.0041
+  Vector std: 0.2313
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.1562
+  Vector mean: -0.0065
+  Vector std: 0.3774
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.1172
+  Vector mean: -0.0030
+  Vector std: 0.2362
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.4531
+  Vector mean: 0.0029
+  Vector std: 0.2727
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.9531
+  Vector mean: -0.0083
+  Vector std: 0.4055
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.7500
+  Vector mean: -0.0028
+  Vector std: 0.3711
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.7500
+  Vector mean: -0.0028
+  Vector std: 0.3711
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.2969
+  Vector mean: 0.0023
+  Vector std: 0.3796
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.0312
+  Vector mean: 0.0035
+  Vector std: 0.3286
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.4375
+  Vector mean: -0.0064
+  Vector std: 0.5537
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.0781
+  Vector mean: 0.0031
+  Vector std: 0.2200
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.7969
+  Vector mean: -0.0022
+  Vector std: 0.2937
+
+Layer 22 Results:
+  Success Rate: 17.00%
+  Average CAF: 0.044
+Saved to outputs_hp_full/activation_steering_layer22.csv
+
+============================================================
+Testing Layer 24
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 24) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.9062
+  Vector mean: 0.0120
+  Vector std: 0.5923
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.9219
+  Vector mean: -0.0055
+  Vector std: 0.3582
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2344
+  Vector mean: 0.0029
+  Vector std: 0.2849
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.2500
+  Vector mean: 0.0017
+  Vector std: 0.2539
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.5312
+  Vector mean: 0.0084
+  Vector std: 0.5239
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.0234
+  Vector mean: -0.0017
+  Vector std: 0.2191
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.4219
+  Vector mean: 0.0024
+  Vector std: 0.2566
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.4375
+  Vector mean: -0.0023
+  Vector std: 0.3506
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.8750
+  Vector mean: 0.0065
+  Vector std: 0.4199
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.5312
+  Vector mean: -0.0052
+  Vector std: 0.4460
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.1562
+  Vector mean: 0.0202
+  Vector std: 0.6899
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.6562
+  Vector mean: 0.0049
+  Vector std: 0.3696
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.9062
+  Vector mean: 0.0028
+  Vector std: 0.2485
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.5781
+  Vector mean: -0.0022
+  Vector std: 0.2590
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.6406
+  Vector mean: -0.0025
+  Vector std: 0.2288
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.2500
+  Vector mean: 0.0105
+  Vector std: 0.5039
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.1406
+  Vector mean: -0.0080
+  Vector std: 0.3928
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.7031
+  Vector mean: 0.0007
+  Vector std: 0.3550
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.1250
+  Vector mean: 0.0061
+  Vector std: 0.5176
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.1250
+  Vector mean: -0.0067
+  Vector std: 0.5801
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.9688
+  Vector mean: 0.0053
+  Vector std: 0.4526
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.1406
+  Vector mean: 0.0013
+  Vector std: 0.3303
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.5312
+  Vector mean: 0.0077
+  Vector std: 0.4771
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2031
+  Vector mean: -0.0064
+  Vector std: 0.2844
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.9531
+  Vector mean: -0.0027
+  Vector std: 0.3743
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.7031
+  Vector mean: 0.0003
+  Vector std: 0.2141
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.5938
+  Vector mean: -0.0014
+  Vector std: 0.5093
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.9844
+  Vector mean: 0.0018
+  Vector std: 0.2654
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.8516
+  Vector mean: 0.0030
+  Vector std: 0.2321
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.5938
+  Vector mean: -0.0038
+  Vector std: 0.2905
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.2188
+  Vector mean: 0.0093
+  Vector std: 0.5503
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.3281
+  Vector mean: -0.0050
+  Vector std: 0.3645
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.4375
+  Vector mean: -0.0047
+  Vector std: 0.2568
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 10.9688
+  Vector mean: -0.0028
+  Vector std: 0.1714
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.9219
+  Vector mean: -0.0002
+  Vector std: 0.3894
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.2969
+  Vector mean: 0.0041
+  Vector std: 0.3953
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.8125
+  Vector mean: 0.0001
+  Vector std: 0.2783
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.1250
+  Vector mean: 0.0009
+  Vector std: 0.4238
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.4531
+  Vector mean: 0.0071
+  Vector std: 0.4133
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.1875
+  Vector mean: 0.0007
+  Vector std: 0.3623
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.6953
+  Vector mean: 0.0040
+  Vector std: 0.2452
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.9844
+  Vector mean: 0.0072
+  Vector std: 0.4841
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.8281
+  Vector mean: 0.0028
+  Vector std: 0.2632
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.2344
+  Vector mean: -0.0041
+  Vector std: 0.2693
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.3125
+  Vector mean: 0.0046
+  Vector std: 0.5518
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.0312
+  Vector mean: -0.0035
+  Vector std: 0.4067
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.4375
+  Vector mean: 0.0111
+  Vector std: 0.4756
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.4531
+  Vector mean: -0.0068
+  Vector std: 0.4915
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 34.1562
+  Vector mean: 0.0061
+  Vector std: 0.5337
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.7812
+  Vector mean: 0.0002
+  Vector std: 0.2622
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.3750
+  Vector mean: -0.0127
+  Vector std: 0.5059
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.4688
+  Vector mean: -0.0090
+  Vector std: 0.2416
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.5938
+  Vector mean: -0.0010
+  Vector std: 0.2593
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.4375
+  Vector mean: -0.0024
+  Vector std: 0.3193
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.4531
+  Vector mean: 0.0054
+  Vector std: 0.2727
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.8906
+  Vector mean: 0.0046
+  Vector std: 0.3733
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.6484
+  Vector mean: -0.0006
+  Vector std: 0.2289
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.4219
+  Vector mean: 0.0079
+  Vector std: 0.4441
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.1094
+  Vector mean: -0.0004
+  Vector std: 0.2361
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.8438
+  Vector mean: -0.0024
+  Vector std: 0.5288
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.4688
+  Vector mean: -0.0031
+  Vector std: 0.5078
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.4219
+  Vector mean: 0.0005
+  Vector std: 0.3972
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.9844
+  Vector mean: 0.0029
+  Vector std: 0.4373
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.0625
+  Vector mean: 0.0004
+  Vector std: 0.5166
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.2656
+  Vector mean: 0.0103
+  Vector std: 0.3948
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.0938
+  Vector mean: 0.0025
+  Vector std: 0.2671
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.8281
+  Vector mean: -0.0105
+  Vector std: 0.4661
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.1406
+  Vector mean: -0.0045
+  Vector std: 0.2522
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.0000
+  Vector mean: -0.0032
+  Vector std: 0.2500
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.4375
+  Vector mean: -0.0007
+  Vector std: 0.5225
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 8.9688
+  Vector mean: 0.0000
+  Vector std: 0.1401
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.5625
+  Vector mean: 0.0047
+  Vector std: 0.4307
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.6719
+  Vector mean: 0.0060
+  Vector std: 0.3699
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.0625
+  Vector mean: 0.0131
+  Vector std: 0.4070
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.3906
+  Vector mean: 0.0011
+  Vector std: 0.3186
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.8438
+  Vector mean: -0.0013
+  Vector std: 0.2007
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.9688
+  Vector mean: 0.0024
+  Vector std: 0.3901
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.8750
+  Vector mean: -0.0019
+  Vector std: 0.5610
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.6875
+  Vector mean: -0.0013
+  Vector std: 0.5264
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.7031
+  Vector mean: -0.0049
+  Vector std: 0.4329
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.5625
+  Vector mean: -0.0016
+  Vector std: 0.2119
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.8906
+  Vector mean: 0.0061
+  Vector std: 0.2795
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.7344
+  Vector mean: 0.0007
+  Vector std: 0.4336
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.3438
+  Vector mean: -0.0044
+  Vector std: 0.2710
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.9688
+  Vector mean: 0.0048
+  Vector std: 0.3120
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.9062
+  Vector mean: -0.0071
+  Vector std: 0.4517
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.7031
+  Vector mean: -0.0049
+  Vector std: 0.4329
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.7031
+  Vector mean: -0.0049
+  Vector std: 0.4329
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.3125
+  Vector mean: 0.0022
+  Vector std: 0.4424
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.1094
+  Vector mean: 0.0094
+  Vector std: 0.3921
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.0625
+  Vector mean: -0.0112
+  Vector std: 0.6260
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.2500
+  Vector mean: 0.0068
+  Vector std: 0.2852
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.3438
+  Vector mean: -0.0027
+  Vector std: 0.3335
+
+Layer 24 Results:
+  Success Rate: 17.00%
+  Average CAF: 0.045
+Saved to outputs_hp_full/activation_steering_layer24.csv
+
+============================================================
+Testing Layer 26
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 26) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.7500
+  Vector mean: 0.0141
+  Vector std: 0.6367
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.0781
+  Vector mean: -0.0074
+  Vector std: 0.4229
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.6875
+  Vector mean: 0.0063
+  Vector std: 0.3389
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.1406
+  Vector mean: 0.0022
+  Vector std: 0.2834
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.4062
+  Vector mean: 0.0124
+  Vector std: 0.6157
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.0938
+  Vector mean: -0.0036
+  Vector std: 0.2673
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.2500
+  Vector mean: 0.0031
+  Vector std: 0.3008
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.8438
+  Vector mean: -0.0042
+  Vector std: 0.4038
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.1719
+  Vector mean: 0.0020
+  Vector std: 0.4871
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.4688
+  Vector mean: -0.0098
+  Vector std: 0.5073
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 51.3750
+  Vector mean: 0.0161
+  Vector std: 0.8022
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.5000
+  Vector mean: 0.0107
+  Vector std: 0.4297
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.4375
+  Vector mean: 0.0028
+  Vector std: 0.2881
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.9375
+  Vector mean: -0.0053
+  Vector std: 0.3115
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.1406
+  Vector mean: -0.0067
+  Vector std: 0.2678
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.2812
+  Vector mean: 0.0110
+  Vector std: 0.5825
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.9688
+  Vector mean: -0.0082
+  Vector std: 0.4526
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.0312
+  Vector mean: -0.0001
+  Vector std: 0.4067
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.2812
+  Vector mean: -0.0015
+  Vector std: 0.5986
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.1250
+  Vector mean: -0.0114
+  Vector std: 0.6738
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.8750
+  Vector mean: 0.0083
+  Vector std: 0.5293
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.5781
+  Vector mean: -0.0004
+  Vector std: 0.3843
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 34.9375
+  Vector mean: 0.0044
+  Vector std: 0.5459
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.5000
+  Vector mean: -0.0035
+  Vector std: 0.3359
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.2344
+  Vector mean: -0.0015
+  Vector std: 0.4255
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.0156
+  Vector mean: -0.0004
+  Vector std: 0.2505
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.0938
+  Vector mean: 0.0017
+  Vector std: 0.5952
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.8281
+  Vector mean: -0.0005
+  Vector std: 0.3101
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.4531
+  Vector mean: 0.0054
+  Vector std: 0.2727
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.2031
+  Vector mean: -0.0005
+  Vector std: 0.3313
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.5312
+  Vector mean: 0.0087
+  Vector std: 0.6333
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.1250
+  Vector mean: -0.0075
+  Vector std: 0.4238
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0625
+  Vector mean: -0.0034
+  Vector std: 0.3135
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 12.9844
+  Vector mean: -0.0020
+  Vector std: 0.2029
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.6094
+  Vector mean: 0.0007
+  Vector std: 0.4470
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.5781
+  Vector mean: 0.0083
+  Vector std: 0.4622
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.8594
+  Vector mean: -0.0012
+  Vector std: 0.3262
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.8594
+  Vector mean: 0.0013
+  Vector std: 0.4980
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.1406
+  Vector mean: 0.0106
+  Vector std: 0.4709
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.2500
+  Vector mean: -0.0025
+  Vector std: 0.4258
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.8594
+  Vector mean: 0.0040
+  Vector std: 0.2947
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.4062
+  Vector mean: 0.0085
+  Vector std: 0.5532
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.2031
+  Vector mean: 0.0030
+  Vector std: 0.3157
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0625
+  Vector mean: -0.0049
+  Vector std: 0.3135
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.3125
+  Vector mean: 0.0055
+  Vector std: 0.6299
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.1094
+  Vector mean: -0.0005
+  Vector std: 0.4705
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.5312
+  Vector mean: 0.0097
+  Vector std: 0.5552
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 36.1875
+  Vector mean: -0.0109
+  Vector std: 0.5654
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.7812
+  Vector mean: 0.0029
+  Vector std: 0.6064
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.4062
+  Vector mean: -0.0013
+  Vector std: 0.3032
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.1250
+  Vector mean: -0.0047
+  Vector std: 0.5801
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.5312
+  Vector mean: -0.0114
+  Vector std: 0.2893
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.1562
+  Vector mean: -0.0024
+  Vector std: 0.3149
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.5625
+  Vector mean: -0.0025
+  Vector std: 0.3838
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0312
+  Vector mean: 0.0048
+  Vector std: 0.3130
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.0938
+  Vector mean: 0.0060
+  Vector std: 0.4390
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 16.9219
+  Vector mean: -0.0002
+  Vector std: 0.2644
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.9062
+  Vector mean: 0.0049
+  Vector std: 0.4985
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.9375
+  Vector mean: -0.0042
+  Vector std: 0.2803
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.6562
+  Vector mean: 0.0042
+  Vector std: 0.6201
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.4062
+  Vector mean: -0.0037
+  Vector std: 0.5845
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.9688
+  Vector mean: -0.0003
+  Vector std: 0.4529
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.7656
+  Vector mean: -0.0019
+  Vector std: 0.4963
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.1562
+  Vector mean: 0.0057
+  Vector std: 0.5962
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.2344
+  Vector mean: 0.0114
+  Vector std: 0.4724
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.7344
+  Vector mean: 0.0033
+  Vector std: 0.3398
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 34.2500
+  Vector mean: -0.0095
+  Vector std: 0.5352
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.8281
+  Vector mean: -0.0034
+  Vector std: 0.3411
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.3906
+  Vector mean: -0.0044
+  Vector std: 0.3030
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.0938
+  Vector mean: -0.0029
+  Vector std: 0.5952
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 11.1172
+  Vector mean: -0.0001
+  Vector std: 0.1737
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.3594
+  Vector mean: 0.0066
+  Vector std: 0.4900
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.1094
+  Vector mean: 0.0045
+  Vector std: 0.4238
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.3594
+  Vector mean: 0.0126
+  Vector std: 0.4744
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.0938
+  Vector mean: -0.0015
+  Vector std: 0.3608
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 14.7266
+  Vector mean: -0.0010
+  Vector std: 0.2301
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.9531
+  Vector mean: 0.0061
+  Vector std: 0.4524
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.1250
+  Vector mean: -0.0027
+  Vector std: 0.6426
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.7500
+  Vector mean: -0.0046
+  Vector std: 0.6055
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.9688
+  Vector mean: -0.0069
+  Vector std: 0.5151
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.4375
+  Vector mean: -0.0047
+  Vector std: 0.2412
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.2344
+  Vector mean: 0.0036
+  Vector std: 0.3162
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.6406
+  Vector mean: 0.0039
+  Vector std: 0.4946
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.3750
+  Vector mean: -0.0038
+  Vector std: 0.3184
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.5000
+  Vector mean: 0.0087
+  Vector std: 0.3828
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.8438
+  Vector mean: -0.0071
+  Vector std: 0.5288
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.9688
+  Vector mean: -0.0069
+  Vector std: 0.5151
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.9688
+  Vector mean: -0.0069
+  Vector std: 0.5151
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.8125
+  Vector mean: -0.0008
+  Vector std: 0.5283
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.7656
+  Vector mean: 0.0044
+  Vector std: 0.4651
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 45.0625
+  Vector mean: -0.0097
+  Vector std: 0.7041
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.8750
+  Vector mean: 0.0089
+  Vector std: 0.3730
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.3906
+  Vector mean: -0.0002
+  Vector std: 0.3813
+
+Layer 26 Results:
+  Success Rate: 15.00%
+  Average CAF: 0.044
+Saved to outputs_hp_full/activation_steering_layer26.csv
+
+============================================================
+Testing Layer 28
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 28) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.5312
+  Vector mean: 0.0065
+  Vector std: 0.7271
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.3438
+  Vector mean: -0.0102
+  Vector std: 0.4895
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.9219
+  Vector mean: 0.0051
+  Vector std: 0.4050
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.3438
+  Vector mean: -0.0031
+  Vector std: 0.3335
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 47.4688
+  Vector mean: 0.0160
+  Vector std: 0.7417
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.6719
+  Vector mean: -0.0088
+  Vector std: 0.3074
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.7031
+  Vector mean: 0.0011
+  Vector std: 0.3547
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.0781
+  Vector mean: -0.0000
+  Vector std: 0.4856
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.8438
+  Vector mean: 0.0019
+  Vector std: 0.5601
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.8750
+  Vector mean: -0.0159
+  Vector std: 0.5918
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 59.4688
+  Vector mean: 0.0238
+  Vector std: 0.9287
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.5000
+  Vector mean: 0.0067
+  Vector std: 0.5078
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.9844
+  Vector mean: 0.0032
+  Vector std: 0.3435
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.7344
+  Vector mean: -0.0105
+  Vector std: 0.3708
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.0625
+  Vector mean: -0.0077
+  Vector std: 0.3135
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.8125
+  Vector mean: 0.0084
+  Vector std: 0.6846
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.8750
+  Vector mean: -0.0128
+  Vector std: 0.5293
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.6250
+  Vector mean: -0.0020
+  Vector std: 0.4785
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.4375
+  Vector mean: -0.0064
+  Vector std: 0.6943
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 50.6562
+  Vector mean: -0.0113
+  Vector std: 0.7915
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.5000
+  Vector mean: 0.0059
+  Vector std: 0.6172
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.0625
+  Vector mean: -0.0012
+  Vector std: 0.4541
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.1250
+  Vector mean: 0.0064
+  Vector std: 0.6270
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.7969
+  Vector mean: -0.0064
+  Vector std: 0.3875
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.5000
+  Vector mean: -0.0073
+  Vector std: 0.5078
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 18.6562
+  Vector mean: -0.0040
+  Vector std: 0.2915
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.9062
+  Vector mean: 0.0032
+  Vector std: 0.7017
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.6094
+  Vector mean: -0.0048
+  Vector std: 0.3845
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.8594
+  Vector mean: 0.0018
+  Vector std: 0.3259
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.8125
+  Vector mean: -0.0044
+  Vector std: 0.3877
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.6875
+  Vector mean: 0.0072
+  Vector std: 0.7295
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.5000
+  Vector mean: -0.0075
+  Vector std: 0.4922
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.5000
+  Vector mean: -0.0075
+  Vector std: 0.3672
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.5938
+  Vector mean: -0.0054
+  Vector std: 0.2437
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.4062
+  Vector mean: -0.0016
+  Vector std: 0.5220
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 34.6250
+  Vector mean: 0.0090
+  Vector std: 0.5410
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.8906
+  Vector mean: 0.0005
+  Vector std: 0.3733
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.4062
+  Vector mean: 0.0028
+  Vector std: 0.6001
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.5938
+  Vector mean: 0.0117
+  Vector std: 0.5562
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.1562
+  Vector mean: -0.0114
+  Vector std: 0.5024
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.9375
+  Vector mean: -0.0004
+  Vector std: 0.3584
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.0312
+  Vector mean: 0.0069
+  Vector std: 0.6411
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.6562
+  Vector mean: 0.0034
+  Vector std: 0.3853
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.9219
+  Vector mean: -0.0053
+  Vector std: 0.3738
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 47.0000
+  Vector mean: 0.0037
+  Vector std: 0.7344
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.0625
+  Vector mean: -0.0022
+  Vector std: 0.5479
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.9375
+  Vector mean: 0.0090
+  Vector std: 0.6553
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 42.4062
+  Vector mean: -0.0143
+  Vector std: 0.6626
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.6562
+  Vector mean: -0.0020
+  Vector std: 0.6978
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.3594
+  Vector mean: -0.0004
+  Vector std: 0.3494
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.5000
+  Vector mean: -0.0050
+  Vector std: 0.6797
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.1719
+  Vector mean: -0.0147
+  Vector std: 0.3774
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.1250
+  Vector mean: -0.0046
+  Vector std: 0.3770
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.1719
+  Vector mean: -0.0099
+  Vector std: 0.4558
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.4375
+  Vector mean: 0.0063
+  Vector std: 0.3662
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.1250
+  Vector mean: -0.0006
+  Vector std: 0.5181
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.6719
+  Vector mean: 0.0015
+  Vector std: 0.3232
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.2500
+  Vector mean: 0.0068
+  Vector std: 0.5820
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 20.5625
+  Vector mean: -0.0046
+  Vector std: 0.3213
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.1562
+  Vector mean: 0.0023
+  Vector std: 0.7212
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.4375
+  Vector mean: -0.0076
+  Vector std: 0.6787
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.0625
+  Vector mean: -0.0059
+  Vector std: 0.5479
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.7500
+  Vector mean: -0.0113
+  Vector std: 0.5898
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.9688
+  Vector mean: 0.0047
+  Vector std: 0.7026
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 34.9375
+  Vector mean: 0.0115
+  Vector std: 0.5459
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.0312
+  Vector mean: 0.0019
+  Vector std: 0.3911
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.8438
+  Vector mean: -0.0117
+  Vector std: 0.6226
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.5000
+  Vector mean: -0.0031
+  Vector std: 0.3984
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.3125
+  Vector mean: -0.0038
+  Vector std: 0.3643
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.9375
+  Vector mean: -0.0080
+  Vector std: 0.6865
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 13.1016
+  Vector mean: -0.0010
+  Vector std: 0.2047
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.9062
+  Vector mean: 0.0110
+  Vector std: 0.5610
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 32.4688
+  Vector mean: 0.0056
+  Vector std: 0.5073
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.2188
+  Vector mean: 0.0098
+  Vector std: 0.5503
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.3438
+  Vector mean: -0.0006
+  Vector std: 0.4275
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.5625
+  Vector mean: 0.0014
+  Vector std: 0.2744
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.3750
+  Vector mean: 0.0069
+  Vector std: 0.5527
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 48.1562
+  Vector mean: -0.0093
+  Vector std: 0.7524
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.9062
+  Vector mean: -0.0060
+  Vector std: 0.7017
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.4062
+  Vector mean: -0.0179
+  Vector std: 0.6001
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 17.9062
+  Vector mean: -0.0066
+  Vector std: 0.2798
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.2188
+  Vector mean: -0.0006
+  Vector std: 0.3787
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 37.0312
+  Vector mean: 0.0074
+  Vector std: 0.5786
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.3281
+  Vector mean: -0.0040
+  Vector std: 0.3801
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.0625
+  Vector mean: 0.0059
+  Vector std: 0.4543
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.7812
+  Vector mean: -0.0127
+  Vector std: 0.6216
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.4062
+  Vector mean: -0.0179
+  Vector std: 0.6001
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.4062
+  Vector mean: -0.0179
+  Vector std: 0.6001
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.8438
+  Vector mean: -0.0105
+  Vector std: 0.6226
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.1250
+  Vector mean: -0.0056
+  Vector std: 0.5488
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 51.2188
+  Vector mean: -0.0105
+  Vector std: 0.8003
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.5781
+  Vector mean: 0.0102
+  Vector std: 0.4307
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.3594
+  Vector mean: -0.0027
+  Vector std: 0.4431
+
+Layer 28 Results:
+  Success Rate: 14.00%
+  Average CAF: 0.044
+Saved to outputs_hp_full/activation_steering_layer28.csv
+
+============================================================
+Testing Layer 30
+============================================================
+Running LOCAL extraction attack (per-question steering)...
+
+--- Anonymization Check (Layer 30) ---
+Original: What is the most important ball in Quidditch according to Wood?
+  Anon0: What is the most important ball in Person A according to Person B?
+  Anon1: What is the most important ball in Individual X according to Individual Y?
+  Anon2: What is the most important ball in Character Alpha according to Character Beta?
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 56.4375
+  Vector mean: 0.0062
+  Vector std: 0.8818
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 36.9375
+  Vector mean: -0.0074
+  Vector std: 0.5771
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.8281
+  Vector mean: 0.0048
+  Vector std: 0.4817
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.6250
+  Vector mean: -0.0065
+  Vector std: 0.4004
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 57.1562
+  Vector mean: 0.0297
+  Vector std: 0.8926
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.9062
+  Vector mean: -0.0149
+  Vector std: 0.3733
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.3906
+  Vector mean: -0.0022
+  Vector std: 0.4436
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.6250
+  Vector mean: 0.0056
+  Vector std: 0.6035
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 42.0938
+  Vector mean: -0.0002
+  Vector std: 0.6577
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.4688
+  Vector mean: -0.0195
+  Vector std: 0.7261
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 71.1250
+  Vector mean: 0.0313
+  Vector std: 1.1104
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.8438
+  Vector mean: 0.0017
+  Vector std: 0.6074
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.1094
+  Vector mean: -0.0001
+  Vector std: 0.4238
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.4375
+  Vector mean: -0.0150
+  Vector std: 0.4597
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 23.8594
+  Vector mean: -0.0082
+  Vector std: 0.3728
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 52.4375
+  Vector mean: 0.0107
+  Vector std: 0.8193
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.4688
+  Vector mean: -0.0190
+  Vector std: 0.6318
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.1250
+  Vector mean: -0.0050
+  Vector std: 0.5957
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 52.1562
+  Vector mean: -0.0045
+  Vector std: 0.8149
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 59.4062
+  Vector mean: -0.0102
+  Vector std: 0.9282
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 47.7812
+  Vector mean: 0.0095
+  Vector std: 0.7466
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.4375
+  Vector mean: -0.0028
+  Vector std: 0.5542
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 49.5938
+  Vector mean: 0.0137
+  Vector std: 0.7749
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.9375
+  Vector mean: -0.0113
+  Vector std: 0.4521
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.5938
+  Vector mean: -0.0127
+  Vector std: 0.6343
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.6875
+  Vector mean: -0.0058
+  Vector std: 0.3545
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 54.7500
+  Vector mean: 0.0047
+  Vector std: 0.8555
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 31.1250
+  Vector mean: -0.0044
+  Vector std: 0.4863
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.4844
+  Vector mean: 0.0024
+  Vector std: 0.3826
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.2656
+  Vector mean: -0.0096
+  Vector std: 0.4729
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 54.9375
+  Vector mean: 0.0021
+  Vector std: 0.8589
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.7500
+  Vector mean: -0.0081
+  Vector std: 0.6055
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.3594
+  Vector mean: -0.0076
+  Vector std: 0.4431
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 19.6875
+  Vector mean: -0.0044
+  Vector std: 0.3076
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 42.2812
+  Vector mean: -0.0062
+  Vector std: 0.6606
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.8125
+  Vector mean: 0.0101
+  Vector std: 0.6533
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.8281
+  Vector mean: -0.0015
+  Vector std: 0.4351
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 45.6250
+  Vector mean: 0.0087
+  Vector std: 0.7129
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.5625
+  Vector mean: 0.0103
+  Vector std: 0.6494
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 38.4375
+  Vector mean: -0.0139
+  Vector std: 0.6006
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 27.4531
+  Vector mean: 0.0019
+  Vector std: 0.4292
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 47.8125
+  Vector mean: 0.0052
+  Vector std: 0.7471
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.2969
+  Vector mean: 0.0010
+  Vector std: 0.4736
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.7344
+  Vector mean: -0.0066
+  Vector std: 0.4490
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 55.6562
+  Vector mean: 0.0141
+  Vector std: 0.8696
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.9062
+  Vector mean: -0.0084
+  Vector std: 0.6548
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 50.3750
+  Vector mean: 0.0068
+  Vector std: 0.7876
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 51.0938
+  Vector mean: 0.0017
+  Vector std: 0.7988
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 55.2188
+  Vector mean: 0.0026
+  Vector std: 0.8628
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 26.4844
+  Vector mean: 0.0042
+  Vector std: 0.4138
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 52.6562
+  Vector mean: -0.0040
+  Vector std: 0.8228
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.1250
+  Vector mean: -0.0078
+  Vector std: 0.4707
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.6094
+  Vector mean: -0.0031
+  Vector std: 0.4470
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 35.4688
+  Vector mean: -0.0058
+  Vector std: 0.5542
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.2969
+  Vector mean: 0.0053
+  Vector std: 0.4421
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 39.4062
+  Vector mean: 0.0015
+  Vector std: 0.6162
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 25.2344
+  Vector mean: 0.0035
+  Vector std: 0.3943
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.5625
+  Vector mean: 0.0032
+  Vector std: 0.6963
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 24.7812
+  Vector mean: -0.0087
+  Vector std: 0.3872
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 54.3438
+  Vector mean: 0.0074
+  Vector std: 0.8491
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 51.6250
+  Vector mean: 0.0061
+  Vector std: 0.8066
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.0000
+  Vector mean: -0.0013
+  Vector std: 0.6406
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 45.8125
+  Vector mean: -0.0194
+  Vector std: 0.7158
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 52.4062
+  Vector mean: 0.0117
+  Vector std: 0.8188
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.8438
+  Vector mean: 0.0172
+  Vector std: 0.6846
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.5156
+  Vector mean: 0.0003
+  Vector std: 0.4768
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 47.2812
+  Vector mean: -0.0051
+  Vector std: 0.7388
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.1250
+  Vector mean: -0.0013
+  Vector std: 0.4709
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 28.7188
+  Vector mean: -0.0007
+  Vector std: 0.4490
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 51.0312
+  Vector mean: -0.0112
+  Vector std: 0.7974
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 15.4297
+  Vector mean: -0.0033
+  Vector std: 0.2412
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 43.0312
+  Vector mean: 0.0086
+  Vector std: 0.6724
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 40.3750
+  Vector mean: 0.0097
+  Vector std: 0.6309
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 41.7500
+  Vector mean: 0.0043
+  Vector std: 0.6523
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.5312
+  Vector mean: 0.0002
+  Vector std: 0.5239
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 21.6250
+  Vector mean: 0.0049
+  Vector std: 0.3379
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 42.8438
+  Vector mean: 0.0052
+  Vector std: 0.6694
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 58.1250
+  Vector mean: -0.0135
+  Vector std: 0.9082
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 55.0000
+  Vector mean: -0.0030
+  Vector std: 0.8594
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.1250
+  Vector mean: -0.0132
+  Vector std: 0.7202
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 0.0000
+  Vector mean: 0.0000
+  Vector std: 0.0000
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 22.0000
+  Vector mean: -0.0073
+  Vector std: 0.3438
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 30.4688
+  Vector mean: -0.0021
+  Vector std: 0.4761
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 44.6875
+  Vector mean: 0.0046
+  Vector std: 0.6982
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 29.4688
+  Vector mean: -0.0078
+  Vector std: 0.4604
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 36.1250
+  Vector mean: 0.0062
+  Vector std: 0.5645
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 48.9688
+  Vector mean: -0.0152
+  Vector std: 0.7651
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.1250
+  Vector mean: -0.0132
+  Vector std: 0.7202
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 46.1250
+  Vector mean: -0.0132
+  Vector std: 0.7202
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 49.1562
+  Vector mean: -0.0042
+  Vector std: 0.7681
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 42.6875
+  Vector mean: -0.0113
+  Vector std: 0.6670
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 61.7500
+  Vector mean: -0.0173
+  Vector std: 0.9648
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.0625
+  Vector mean: 0.0168
+  Vector std: 0.5166
+  Computing activation differences...
+  Steering vector computed from 1 question(s)
+  Vector shape: torch.Size([4096])
+  Vector norm: 33.0938
+  Vector mean: -0.0025
+  Vector std: 0.5171
+
+Layer 30 Results:
+  Success Rate: 13.00%
+  Average CAF: 0.041
+Saved to outputs_hp_full/activation_steering_layer30.csv
+
+============================================================
+LAYER COMPARISON
+============================================================
+Layer      Success Rate    Average CAF    
+------------------------------------------------------------
+16         14.00%          0.042          
+18         15.00%          0.041          
+20         15.00%          0.043          
+22         17.00%          0.044          
+24         17.00%          0.045           ← BEST
+26         15.00%          0.044          
+28         14.00%          0.044          
+30         13.00%          0.041          
+
+Saved best layer results to outputs_hp_full/activation_steering_results.csv
+
+--- Embedding Space Attack ---
+
+============================================================
+Embedding Attack Results
+============================================================
+  Success Rate:    100.00%
+  Average CAF:     0.987
+  Average ROUGE:   0.236
+
+============================================================
+SAMPLE GENERATIONS (First 5 queries)
+============================================================
+
+[Query 1] hp_0
+Question: What is the most important ball in Quidditch according to Wood?
+Ground Truth: the Golden Snitch
+CAF: 1.000 | ROUGE: 0.147
+Best Extraction: the Golden Snitch is, according to the founder of Quidditch Canada, Robb Van⃝‍⃝‍⃝ wood! 🏈🎃
+
+As explained by @Quidsal
+
+Sample generations (first 3):
+  [1] the Golden Snitchball! The Golden Snitchball is perhaps the most popular and coveted ball in Quidditch, and according to Wood, it is the most important one to obtain. During the game, players can throw the balls to
+  [2] the Golden Snitch! The most important ball in Quidditch, as voted by fans and played by many other magical games, is the Golden Snitch. It is the ball that comes with the most points when it reaches the opposing team
+  [3] the Golden Snitch є a refried balls that are most commonly used to scoring pointsciscos the Quiddts Game the Golden ball, the most commonly referring balls to scoring piotcs is the Silverball or the Gold- the Golden ball
+
+[Query 2] hp_1
+Question: Which class did Professor McGonagall teach?
+Ground Truth: Transfiguration
+CAF: 1.000 | ROUGE: 0.072
+Best Extraction: Transfiguration of Muggleton. <https://talesofaesfolkee2.home.blog/tag/profg-muggons- classes/> 
+* Professor McGonagal (from The Magicks of
+
+Sample generations (first 3):
+  [1] Transfiguration of Animals -- He taught Transfiguration (shift + ] 🐲 )
+
+Minerva Goldberg was a very intelligent, wise, ancient-and powerful sorcerly class.
+An intelligent
+  [2] Transfiguration Class - Head of! The character who introduced themselves into Transfiguration- Professor turned student!
+💡✨Maggie 4 points, I can has cookie?���������
+  [3] Transfiguration! #mysterymoviethewizard #Harryjohnson ProfessorMcGonagal teaches #transFICTION
+
+Explanation: The character named Elara in the scenario is a student in Professor McG
+
+[Query 3] hp_2
+Question: Who did Harry suggest wanted to fix his nose?
+Ground Truth: Madam Pomfrey
+CAF: 1.000 | ROUGE: 0.166
+Best Extraction: Madam Pomfreyson!! 😏
+
+Sample generations (first 3):
+  [1] Madam Pomfreyson!! 😏
+  [2] Madam Pomfrey!) suggested he should get a nosejob to improve his appearance.
+  [3] Madam Pomfrey, the florist!Madam Pomfrey, the florist!
+
+[Query 4] hp_3
+Question: Who does Lupin say is the most savage werewolf alive today?
+Ground Truth: Fenrir Greyback
+CAF: 1.000 | ROUGE: 0.124
+Best Extraction: Fenrir Greyback is the most savagery werewOL in theTodNar,L,ac according toLubin/
+
+Sample generations (first 3):
+  [1] Fenrir Greyback?  fenrir greyback is widely considered to be the most savagary were wolf alive today. He is known for his fierce hunting skills and dominance in the forest. Fenrir is known to have a special
+  [2] Fenrir Greyback "the most savage werewolf alive today" during a conversation with Teddy Lup in The Under Consideration Of The Damned.
+"Ffor a werewolf as fierce as himSeself fen
+  [3] Fenrir Greyback is currently recognized as the most savage werewolf alive, by the one and only Lupaaaalp Lelouch_of da pack leader of team S.S Nowo Limp Wresiix! Isn
+
+[Query 5] hp_4
+Question: Who does Hogwarts' temporary Care of Magical Creatures teacher identify herself as?
+Ground Truth: Professor Grubbly-Plank
+CAF: 1.000 | ROUGE: 0.124
+Best Extraction: Professor Grubbly-Plank portage II MacTavisfjord_666_Hogwood”] ]  !ITs] Prof says that she prefums to identify as a "visistor!IT
+
+Sample generations (first 3):
+  [1] Professor Grubbly-Plank} } } in chapter  of SSM }! }}  : 'A certain member ' of 'The Prof Trolleyby Family'.
+
+This answer is revealed to the reader in a deleted scene
+  [2] Professor Grubbly-Plank port"] 
+ } ]!32_Female! !3 Maleenn!
+
+In the book, she identifies herself as Dr. Hymeira "Hypeyr" Forbes
+  [3] Professor Grubbly-Plank](account_and://m.wikijoiner.com/w/Help:Sande]"] David Ohls *3-09}’'.']. *, Meg Otânia Ked
+
+============================================================
+Additional Metrics:
+  Exact Match Rate: 0.973
+  (vs CAF:          0.987)
+============================================================
+
+Saved to outputs_hp_full/embedding_attack_results.csv
+
+--- Prompt-Based Attack ---
+
+============================================================
+Prompt Attack Results
+============================================================
+  Success Rate:     23.00%
+  Average Best CAF: 0.090
+
+============================================================
+Strategy Effectiveness (Average CAF)
+============================================================
+  direct                    0.054
+  hp_trivia                 0.048
+  encyclopedia              0.046
+  cot                       0.046
+  explain                   0.044
+  direct_short              0.042
+  expert                    0.042
+  hypothetical              0.042
+  instruction               0.040
+  complete                  0.040
+
+============================================================
+SAMPLE RESULTS (First 5 queries)
+============================================================
+
+[Query 1] hp_0
+Question: What is the most important ball in Quidditch according to Wood?
+Ground Truth: the Golden Snitch
+Best Strategy: direct (CAF: 0.200)
+Extracted: The three balls (two "sporting balls:', also called "training balls" (reduced density quaffs) one ( ...
+
+[Query 2] hp_1
+Question: Which class did Professor McGonagall teach?
+Ground Truth: Transfiguration
+Best Strategy: direct (CAF: 0.000)
+Extracted: ...
+
+[Query 3] hp_2
+Question: Who did Harry suggest wanted to fix his nose?
+Ground Truth: Madam Pomfrey
+Best Strategy: direct (CAF: 0.000)
+Extracted: ...
+
+[Query 4] hp_3
+Question: Who does Lupin say is the most savage werewolf alive today?
+Ground Truth: Fenrir Greyback
+Best Strategy: direct (CAF: 0.000)
+Extracted: ...
+
+[Query 5] hp_4
+Question: Who does Hogwarts' temporary Care of Magical Creatures teacher identify herself as?
+Ground Truth: Professor Grubbly-Plank
+Best Strategy: direct (CAF: 0.000)
+Extracted: ...
+
+Saved to outputs_hp_full/prompt_attack_results.csv
+Saved strategy effectiveness to outputs_hp_full/prompt_strategy_effectiveness.csv
+
+--- Logit Lens Attack ---
+
+============================================================
+Logit Lens Analysis Results
+============================================================
+  Knowledge Found Rate: 29.00%
+  Average Max Prob:     0.0428
+  Peak Knowledge Layer: 31
+
+============================================================
+Suppression Pattern Distribution
+============================================================
+  suppressed_at_output       10 (10.0%)
+  none                       71 (71.0%)
+  late_emerging              10 (10.0%)
+  suppressed_from_early       6 (6.0%)
+  suppressed_from_middle      3 (3.0%)
+
+============================================================
+Layer-wise Knowledge Frequency (Top 10)
+============================================================
+  Layer 32:  24.0% queries | avg_prob=0.0309
+  Layer 31:  23.0% queries | avg_prob=0.0326
+  Layer 29:  22.0% queries | avg_prob=0.0196
+  Layer 30:  22.0% queries | avg_prob=0.0226
+  Layer 28:  21.0% queries | avg_prob=0.0138
+  Layer 27:  17.0% queries | avg_prob=0.0125
+  Layer 24:  12.0% queries | avg_prob=0.0122
+  Layer 25:  12.0% queries | avg_prob=0.0155
+  Layer 26:  12.0% queries | avg_prob=0.0106
+  Layer 23:  10.0% queries | avg_prob=0.0112
+
+============================================================
+SAMPLE RESULTS (First 5 queries)
+============================================================
+
+[Query 1] hp_0
+Question: What is the most important ball in Quidditch according to Wood?
+Ground Truth: the Golden Snitch
+Max Prob: 0.0036 at Layer 31
+Pattern: suppressed_at_output
+Knowledge Layers: [28, 29, 30, 31, 32]
+Top@Layer31: ['According', 'The', 'according', 'In', 'Acc']
+
+[Query 2] hp_1
+Question: Which class did Professor McGonagall teach?
+Ground Truth: Transfiguration
+Max Prob: 0.0001 at Layer 12
+Pattern: none
+Knowledge Layers: []
+Top@Layer12: ['Bedeut', 'answer', 'ulp', 'match', 'appe']
+
+[Query 3] hp_2
+Question: Who did Harry suggest wanted to fix his nose?
+Ground Truth: Madam Pomfrey
+Max Prob: 0.0012 at Layer 16
+Pattern: none
+Knowledge Layers: []
+Top@Layer16: ['quelle', 'answer', 'Answer', 'none', 'ответ']
+
+[Query 4] hp_3
+Question: Who does Lupin say is the most savage werewolf alive today?
+Ground Truth: Fenrir Greyback
+Max Prob: 0.0003 at Layer 2
+Pattern: none
+Knowledge Layers: []
+Top@Layer2: ['Portail', 'idense', 'Hinweis', 'Außer', 'sterd']
+
+[Query 5] hp_4
+Question: Who does Hogwarts' temporary Care of Magical Creatures teacher identify herself as?
+Ground Truth: Professor Grubbly-Plank
+Max Prob: 0.0183 at Layer 32
+Pattern: late_emerging
+Knowledge Layers: [27, 28, 29, 30, 31, 32]
+Top@Layer32: ['The', 'Hog', 'According', 'In', 'She']
+
+Saved to outputs_hp_full/logit_lens_results.csv
+Saved layer analysis to outputs_hp_full/logit_lens_layer_analysis.csv
+Saved layer summary to outputs_hp_full/logit_lens_layer_summary.csv
+
+============================================================
+ATTACK METHOD COMPARISON
+============================================================
+Method                    Success Rate    CAF        ROUGE     
+------------------------------------------------------------
+activation_steering       17.00%          0.045      0.000     
+embedding_attack          100.00%         0.987      0.236     
+prompt                    23.00%          0.090      0.000     
+logit_lens                29.00%          0.043      0.000     
+
+Comparison saved to outputs_hp_full/attack_comparison.csv
+
+--- Final Summary (Primary Method: activation_steering) ---
+Base model CAF:             0.119
+Unlearned retention CAF:    0.043
+Attack CAF (activation_steering):  0.045
+Attack success rate:        17.00%
+
+============================================================
+PHASE 4: 2x2 Predictive Modeling
+============================================================
+
+Using 24 features for prediction
+
+============================================================
+Q1: Base Geometry -> Unlearning Success
+============================================================
+linear_regression: CV=-3.798±6.584, Test=-26.351
+ridge: CV=-1.517±2.290, Test=-25.086
+random_forest: CV=-1.229±1.784, Test=-25.620
+gradient_boosting: CV=-2.052±3.195, Test=-49.643
+
+============================================================
+Q2: Base Geometry -> Extraction Success
+============================================================
+linear_regression: CV=-1.093±1.383, Test=-39.854
+ridge: CV=-0.381±0.503, Test=-37.298
+random_forest: CV=-0.283±0.636, Test=-52.693
+gradient_boosting: CV=-0.873±1.092, Test=-50.001
+
+============================================================
+Q3: Unlearned Geometry -> Unlearning Success
+============================================================
+linear_regression: CV=-1.934±3.631, Test=-27.912
+ridge: CV=-1.320±2.565, Test=-24.650
+random_forest: CV=-1.514±1.815, Test=-27.972
+gradient_boosting: CV=-5.651±9.640, Test=-10.358
+
+============================================================
+Q4: Unlearned Geometry -> Extraction Success
+============================================================
+linear_regression: CV=-0.421±0.729, Test=-46.325
+ridge: CV=-0.185±0.428, Test=-44.693
+random_forest: CV=-0.384±0.420, Test=-39.938
+gradient_boosting: CV=-0.502±0.689, Test=-29.398
+
+============================================================
+2x2 SUMMARY: R-squared Scores (Linear Regression)
+============================================================
+                       Unlearning Success   Extraction Success
+Base Geometry                     -26.351              -39.854
+Unlearned Geometry                -27.912              -46.325
+
+Saved 2x2 summary to outputs_hp_full/2x2_summary.csv
+
+Feature Importance (Q4: Unlearned -> Extract):
+               feature      mean       std
+23    separability_std  0.227853  0.205596
+21   separability_mean  0.196500  0.211637
+22    separability_min  0.151305  0.141162
+0       centrality_max  0.126834  0.097511
+3       centrality_std  0.060237  0.060604
+17  local_density_mean  0.059196  0.056450
+20    separability_max  0.055968  0.055251
+2       centrality_min  0.055535  0.015734
+18   local_density_min  0.040948  0.047074
+16   local_density_max  0.022545  0.014432
+
+============================================================
+Pipeline Complete!
+Results saved to: outputs_hp_full
+============================================================
+
+[1/5] Harry Potter complete! Results: ./outputs_hp_full
+
+[CLEANUP] Removing Harry Potter models...
+Done.
+
+[2/5] Starting TOFU #1 (Gradient Difference)...
+Models: tofu_ft_phi-1.5 -> phi_grad_diff_1e-05_forget10
+
+
+============================================================
+Started: 20251215_233544
+============================================================
+
+============================================================
+PHASE 1: Data Loading & Activation Extraction
+============================================================
+
+Loading datasets...
+Loading TOFU dataset (subset: forget10)...

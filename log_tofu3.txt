@@ -1,0 +1,59 @@
+
+============================================================
+Started: 20251216_023251
+============================================================
+
+============================================================
+PHASE 1: Data Loading & Activation Extraction
+============================================================
+
+Loading datasets...
+Loading TOFU dataset (subset: forget10)...
+Loaded 100 TOFU queries
+Loaded 100 total queries
+
+--- Extracting from BASE model ---
+Extracting activations from layers [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+Loading model: locuslab/tofu_ft_phi-1.5
+Saved base activations to outputs_tofu_3_KL/base_activations.pkl
+
+--- Extracting from UNLEARNED model ---
+Extracting activations from layers [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]
+Loading model: locuslab/phi_KL_1e-05_forget10
+Saved unlearned activations to outputs_tofu_3_KL/unlearned_activations.pkl
+
+============================================================
+PHASE 2: Geometric Feature Computation
+============================================================
+
+--- Computing features for BASE model ---
+Saved base features to outputs_tofu_3_KL/base_geometric_features.csv
+
+--- Computing features for UNLEARNED model ---
+Saved unlearned features to outputs_tofu_3_KL/unlearned_geometric_features.csv
+
+Base Feature Statistics:
+       local_density_mean  ...  cross_layer_consistency_min
+count          100.000000  ...                   100.000000
+mean             1.673483  ...                     0.603516
+std              0.248026  ...                     0.018692
+min              1.176712  ...                     0.560059
+25%              1.524988  ...                     0.589355
+50%              1.666372  ...                     0.601807
+75%              1.825180  ...                     0.617310
+max              2.308151  ...                     0.649902
+
+[8 rows x 24 columns]
+
+============================================================
+PHASE 3: Vulnerability Testing
+============================================================
+
+--- Part A: Base Model Accuracy (sampling baseline) ---
+Saved base model accuracy to outputs_tofu_3_KL/base_accuracy.csv
+Base model CAF: 0.739
+
+--- Unloading base model to free GPU memory ---
+GPU memory freed. Available: 19.16 GB
+
+--- Part B: Unlearned Model Retention (sampling, no steering) ---

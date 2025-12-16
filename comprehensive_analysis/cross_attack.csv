@@ -1,0 +1,20 @@
+feature,geometry,target,pearson_r,direction,n_targets
+separability_std,unlearned,"['Unlearning', 'Steering', 'Prompt']",0.09907814314709713,+,3
+separability_max,base,"['Prompt', 'Unlearning', 'Steering']",0.010811651794503198,+,3
+local_density_max,unlearned,"['Unlearning', 'Steering', 'Prompt']",-0.05370687759029563,-,3
+local_density_mean,base,"['Unlearning', 'Steering', 'Prompt']",-0.0679145102402339,-,3
+local_density_mean,unlearned,"['Unlearning', 'Steering', 'Prompt']",-0.06380933393910827,-,3
+separability_mean,base,"['Prompt', 'Unlearning', 'Steering']",0.006022017606343889,+,3
+separability_min,unlearned,"['Unlearning', 'Steering']",0.02543962864436615,+,2
+separability_min,base,"['Unlearning', 'Steering']",0.015367434979758315,+,2
+separability_mean,unlearned,"['Unlearning', 'Steering']",0.021039618585070502,+,2
+separability_max,unlearned,"['Unlearning', 'Steering']",0.035150685345952115,+,2
+centrality_max,unlearned,"['Unlearning', 'Steering']",0.011054839913752418,+,2
+local_density_std,base,"['Unlearning', 'Prompt']",0.009581437578634597,+,2
+local_density_max,base,"['Unlearning', 'Prompt']",0.012505558763443031,+,2
+centrality_std,unlearned,"['Unlearning', 'Steering']",0.03514090232073097,+,2
+centrality_min,unlearned,"['Unlearning', 'Steering']",-0.04294181717293763,+,2
+local_density_std,unlearned,['Unlearning'],0.28697754613862336,+,1
+centrality_mean,base,['Prompt'],0.19717731120355605,+,1
+local_density_min,base,['Steering'],-0.2142400932583482,-,1
+local_density_min,unlearned,['Steering'],-0.21794513145513214,-,1

@@ -1,0 +1,6 @@
+feature,geometry,target,mean_r,std_r,n_experiments,direction,experiments
+local_density_max,unlearned,Prompt,-0.21026153764992278,0.0027851818674332583,2,-,"['TOFU_grad_ascent', 'TOFU_idk']"
+local_density_max,unlearned,Steering,-0.21807859845876432,0.02337299391966967,2,-,"['TOFU_grad_ascent', 'TOFU_idk']"
+local_density_max,unlearned,Unlearning,0.2672195033378002,0.08333590942841088,2,+,"['TOFU_grad_ascent', 'TOFU_idk']"
+separability_max,base,Prompt,-0.0038154986237001892,0.3025227593556278,2,+,"['HP', 'TOFU_idk']"
+separability_mean,base,Prompt,-0.004517915166267816,0.2944824209221029,2,+,"['HP', 'TOFU_idk']"

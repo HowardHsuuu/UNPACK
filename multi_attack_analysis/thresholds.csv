@@ -1,0 +1,115 @@
+experiment,geometry,target,cv_r2,rules
+HP,base,Unlearning,-0.20475794880615178,"|--- separability_std <= 0.01
+|   |--- centrality_std <= 0.14
+|   |   |--- value: [0.93]
+|   |--- centrality_std >  0.14
+|   |   |--- centrality_mean <= 1.00
+|   |   |   |--- value: [1.00]
+|   |   |--- centrality_mean >  1.00
+|   |   |   |--- value: [1.00]
+|--- separability_std >  0.01
+|   |--- local_density_std <= 0.09
+|   |   |--- value: [0.69]
+|   |--- local_density_std >  0.09
+|   |   |--- value: [0.98]
+"
+HP,unlearned,Unlearning,-0.0456537841572914,"|--- separability_std <= 0.01
+|   |--- separability_mean <= 1.01
+|   |   |--- local_density_max <= 1.51
+|   |   |   |--- value: [0.98]
+|   |   |--- local_density_max >  1.51
+|   |   |   |--- value: [1.00]
+|   |--- separability_mean >  1.01
+|   |   |--- value: [0.93]
+|--- separability_std >  0.01
+|   |--- value: [0.81]
+"
+TOFU_grad_ascent,base,Unlearning,0.1894736842105263,"|--- centrality_min <= 0.80
+|   |--- value: [1.00]
+|--- centrality_min >  0.80
+|   |--- value: [0.92]
+"
+TOFU_grad_ascent,base,Embedding,0.016110860030867126,"|--- separability_min <= 0.99
+|   |--- local_density_min <= 1.30
+|   |   |--- value: [0.64]
+|   |--- local_density_min >  1.30
+|   |   |--- cross_layer_consistency_min <= 0.62
+|   |   |   |--- value: [0.90]
+|   |   |--- cross_layer_consistency_min >  0.62
+|   |   |   |--- value: [0.76]
+|--- separability_min >  0.99
+|   |--- separability_max <= 1.00
+|   |   |--- value: [0.40]
+|   |--- separability_max >  1.00
+|   |   |--- value: [0.68]
+"
+TOFU_grad_ascent,base,Steering,0.18850758180367128,"|--- centrality_min <= 0.80
+|   |--- value: [0.00]
+|--- centrality_min >  0.80
+|   |--- value: [0.08]
+"
+TOFU_grad_ascent,base,Prompt,0.18947368421052624,"|--- centrality_min <= 0.80
+|   |--- value: [0.00]
+|--- centrality_min >  0.80
+|   |--- value: [0.10]
+"
+TOFU_grad_ascent,unlearned,Unlearning,-0.010526315789473717,"|--- local_density_mean <= 1.51
+|   |--- value: [0.92]
+|--- local_density_mean >  1.51
+|   |--- value: [1.00]
+"
+TOFU_grad_ascent,unlearned,Steering,-0.011492418196328735,"|--- local_density_mean <= 1.51
+|   |--- value: [0.08]
+|--- local_density_mean >  1.51
+|   |--- local_density_min <= 2.03
+|   |   |--- value: [0.00]
+|   |--- local_density_min >  2.03
+|   |   |--- value: [0.00]
+"
+TOFU_grad_ascent,unlearned,Prompt,-0.010526315789473762,"|--- local_density_mean <= 1.51
+|   |--- value: [0.10]
+|--- local_density_mean >  1.51
+|   |--- value: [0.00]
+"
+TOFU_idk,base,Embedding,-0.2726659727162024,"|--- centrality_max <= 1.41
+|   |--- centrality_std <= 0.17
+|   |   |--- separability_min <= 0.99
+|   |   |   |--- value: [0.92]
+|   |   |--- separability_min >  0.99
+|   |   |   |--- value: [0.83]
+|   |--- centrality_std >  0.17
+|   |   |--- separability_min <= 0.98
+|   |   |   |--- value: [0.97]
+|   |   |--- separability_min >  0.98
+|   |   |   |--- value: [0.94]
+|--- centrality_max >  1.41
+|   |--- value: [0.80]
+"
+TOFU_idk,base,Prompt,-0.12947501876707665,"|--- separability_mean <= 0.99
+|   |--- cross_layer_consistency_std <= 0.00
+|   |   |--- separability_mean <= 0.99
+|   |   |   |--- value: [0.55]
+|   |   |--- separability_mean >  0.99
+|   |   |   |--- value: [0.67]
+|   |--- cross_layer_consistency_std >  0.00
+|   |   |--- value: [0.48]
+|--- separability_mean >  0.99
+|   |--- centrality_max <= 1.38
+|   |   |--- value: [0.36]
+|   |--- centrality_max >  1.38
+|   |   |--- value: [0.49]
+"
+TOFU_idk,unlearned,Prompt,-0.008450839706263346,"|--- separability_mean <= 0.99
+|   |--- separability_min <= 0.98
+|   |   |--- value: [0.46]
+|   |--- separability_min >  0.98
+|   |   |--- cross_layer_consistency_min <= 0.64
+|   |   |   |--- value: [0.71]
+|   |   |--- cross_layer_consistency_min >  0.64
+|   |   |   |--- value: [0.55]
+|--- separability_mean >  0.99
+|   |--- local_density_std <= 0.19
+|   |   |--- value: [0.50]
+|   |--- local_density_std >  0.19
+|   |   |--- value: [0.36]
+"

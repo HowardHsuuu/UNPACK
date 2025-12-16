@@ -1,0 +1,3 @@
+feature,geometry,target,mean_r,std_r,n_experiments,main_direction,experiments
+local_density_max,unlearned,Extraction,-0.21807859845876432,0.02337299391966967,2,negative,"['TOFU_grad_ascent', 'TOFU_idk']"
+local_density_max,unlearned,Unlearning,0.2672195033378002,0.08333590942841088,2,positive,"['TOFU_grad_ascent', 'TOFU_idk']"

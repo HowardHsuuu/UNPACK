@@ -1,0 +1,13 @@
+experiment,geometry,target,feature,threshold,cv_r2
+HP,base,Unlearning,separability_std,0.005638542119413614,-0.20475794880615178
+HP,base,Unlearning,centrality_std,0.1390962228178978,-0.20475794880615178
+HP,base,Unlearning,centrality_mean,1.0031648874282837,-0.20475794880615178
+HP,base,Unlearning,local_density_std,0.08752518892288208,-0.20475794880615178
+HP,unlearned,Unlearning,separability_std,0.006432173307985067,-0.0456537841572914
+HP,unlearned,Unlearning,separability_mean,1.0081529021263123,-0.0456537841572914
+HP,unlearned,Unlearning,local_density_max,1.5117847323417664,-0.0456537841572914
+TOFU_grad_ascent,base,Unlearning,centrality_min,0.8042771220207214,0.1894736842105263
+TOFU_grad_ascent,base,Extraction,centrality_min,0.8042771220207214,0.18850758180367128
+TOFU_grad_ascent,unlearned,Unlearning,local_density_mean,1.514480471611023,-0.010526315789473717
+TOFU_grad_ascent,unlearned,Extraction,local_density_mean,1.514480471611023,-0.011492418196328735
+TOFU_grad_ascent,unlearned,Extraction,local_density_min,2.0312600135803223,-0.011492418196328735
